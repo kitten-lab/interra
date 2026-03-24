@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/README.md.md",
+                "file": "docs/architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README.md"
+              "title": "architecture"
             }
           }
         ]
@@ -194,8 +194,9 @@
   },
   "active": "1f5f05c2a81f26c4",
   "lastOpenFiles": [
-    "lore/README.md",
     "docs/README.md.md",
+    "docs/architecture.md",
+    "lore/README.md",
     "lore",
     "docs",
     "platform"
