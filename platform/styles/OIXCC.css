@@ -73,7 +73,7 @@
     --oix-navi-btnBorderStyleHover:solid;
     --oix-navi-btnBorderColorHover:var(--color-bright);
 
-    --font-family-accent: 'Mona Sans Black', 'Inter';
-    --font-family-standard: 'Mona Sans', 'Inter';
+    --font-family-accent: 'Sixtyfour', 'Inter';
+    --font-family-standard: 'VT323', 'Inter';
     --oix-navi-boxGlow: 0rem 0rem 4rem var(--color-darkA);
 }

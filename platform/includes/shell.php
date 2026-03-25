@@ -9,6 +9,8 @@
 <title><?= $page_title ?></title>
 
     <!-- THE CALLING OF THE STYLESHEET PROCESSION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/styles/iox-core.css">
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="/styles/<?= $storeMark; ?>.css">

@@ -127,7 +127,7 @@ body {
 .oix-mast_houseMark {
     color: var(--oix-mast-houseMarkColor);
     font-family: var(--font-family-accent);
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
     text-shadow: 0.05rem 0.05rem 0rem var(--oix-mast-houseMarkInsetColor);
     padding-top: 0.5rem;
     margin-right: -0.8rem;

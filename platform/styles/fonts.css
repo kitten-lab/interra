@@ -1,16 +1,10 @@
 
 
-@font-face {
-    font-family: 'Mona Sans';
-    src: url('/styles/fonts/MonaSansDisplay-Regular.woff2') format('woff2'),
-         url('/styles/fonts/MonaSansDisplay-Regular') format('woff');
-    font-weight: 400; /* Adjust weights as needed */
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mona Sans Black';
-    src: url('/styles/fonts/MonaSansDisplayExpanded-Black.woff2') format('woff2'),
-         url('/styles/fonts/MonaSansDisplayExpanded-Black') format('woff');
-    font-weight: 400; /* Adjust weights as needed */
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap');
+/* "Coral Pixels" */
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Jersey+10+Charted&display=swap'); 
+/* "Jersey 10 Charted" */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* "VT323" */
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+/* "Sixtyfour" */
