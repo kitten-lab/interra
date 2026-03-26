@@ -8,5 +8,4 @@ function resolveShell($sys) {
     return file_exists($prime) ? $prime : $kroot;
     }
 // ----------------------------------------------------------------
-
 ?>

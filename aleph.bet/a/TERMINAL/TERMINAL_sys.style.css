@@ -1,0 +1,236 @@
+:root {
+    --my-fav-color: #ffffff;
+    --my-dark-color: #242424;
+    --my-dark-colors: #444444;
+    --my-fav-colorInvis: #31313113;
+}
+
+.dom_header { color: red; }
+
+body {
+    background-color: var(--my-dark-color);
+    height: 100dvh;
+  background-size: 10px 33px; /* Controls the size of the grid cells */
+  background-image: 
+    linear-gradient(to right, var(--my-dark-colors) 1px, transparent 1px), /* Vertical lines */
+    linear-gradient(to bottom, var(--my-dark-colors) 1px, transparent 1px); /* Horizontal lines */
+    font-family: VT323;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+
+/* MAKE A concept of connection ======================================================= */
+.monitor-container {
+    position: relative;
+  height: 60dvh;
+  aspect-ratio: 12 / 7;  
+  background-color: var(--my-fav-colorInvis); /* Bezel color */
+  border: 0.4vh solid var(--my-fav-color); /* Outer bezel */
+  border-radius: 4vh;
+  margin: auto;
+  margin-top:2dvh;
+  padding: 40px 20px; /* Space between bezel and content */
+  padding-bottom: 80px;
+  box-shadow: inset 0 0 13px var(--my-fav-color), 0 0 100px var(--my-fav-color);
+  overflow: hidden; /* Keeps screen content inside */
+}
+
+.monitor-container::before {
+    content: "KRAS";
+    color: var(--my-fav-color);
+    font-family: 'Sixtyfour';
+    font-size: 1.2rem;
+    margin: auto;
+    align-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1dvh;
+}
+
+.monitor-interior {
+  width: 90%;
+  height: 88%;
+  background-color: var(--my-fav-colorInvis); /* Bezel color */
+  border: 0.1vh solid var(--my-fav-color); /* Outer bezel */
+  border-radius: 2vh;
+  margin: auto;
+  padding: 20px; /* Space between bezel and content */
+  box-shadow: inset 0 0 5px var(--my-fav-color), 0 0 20px var(--my-fav-color);
+  padding-bottom: 50px;
+  overflow: hidden; /* Keeps screen content inside */
+}
+
+.screen-content {
+  width: 97%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.897); /* Page color */
+  color: var(--my-fav-color);
+  border-radius: 1vh;
+  padding: 10px;
+  border: 0.1rem solid var(--my-fav-color);
+  box-shadow: inset 0 0 13px var(--my-fav-color), inset 0 0 40px #00000085, inset 0 0 5px var(--my-fav-color), 0 0 20px var(--my-fav-color);
+  overflow-y: scroll; /* Scrollable content inside monitor */
+    font-family: "VT323";
+}
+
+.computer_scene {
+  width: 88dvh;
+  height: 34dvh;
+  margin:auto;
+  perspective: 3000px; /* Establishes the 3D viewing distance */
+}
+
+.computer_cube {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  margin: auto;
+  transform-style: preserve-3d; /* Allows children to be in 3D space */
+  transform: rotateX(-6deg) rotateY(0deg) translateZ(0px) translateY(2rem); /* Initial rotation for static view */
+}
+
+.computer_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--my-fav-color);
+  justify-content: center;
+  background-color: var(--my-fav-colorInvis);
+    border: 3px solid var(--my-fav-color);
+  box-shadow: inset 0 0 13px var(--my-fav-color), 0 0 20px var(--my-fav-color);
+}
+
+.front::before {
+    position: absolute;
+    content: "|<>|";
+    font-family: "Sixtyfour";
+}
+
+.front::after {
+    position: absolute;
+    content: "CONCEPT OF CONNECTION";
+    font-family: "Sixtyfour";
+    margin-top: -6dvh;
+    padding: 3px;
+}
+
+/* Positioning each face with transforms */
+.front  { transform: translateZ(3vh); 
+  border-radius: 0 0 3rem 3rem;} /* 100px is half the width/height */
+.top    { transform: rotateX(90deg) rotateY(0deg) translateZ(9vh) translateY(-2.5vh); 
+  border-radius: 3rem 3rem 0 0;}
+.pole {transform: translateY(-10vh) rotateZ(65deg); width: 10px;
+  border-radius: 0 0 3rem 3rem;} 
+.pole2 {transform: translateY(-10vh) translateX(88dvh) rotateZ(-65deg); width: 10px;
+  border-radius: 0 0 3rem 3rem;} 
+
+
+
+
+.oix-navi {
+  width: 10rem; /* Fixed width */
+  position:fixed; /* Makes it stick when scrolling */
+display: inline-block;
+  padding: 0.5rem; 
+}
+
+
+.oix-navi-sectionHead {
+    padding-top: 0.5rem;
+    font-family: var(--font-family-accent);
+    font-size: 1.3rem !important;
+    color: var(--oix-navi-sectionHead-color);
+    margin-right: -0.8rem;
+    text-shadow: 0.05rem 0.05rem 0rem var(--iox-navi-headerInsetColor);
+    margin-left: 0.5rem;
+}
+
+.oix-navi-sectionSubHead {
+    padding-top: 0.5rem;
+    font-family: var(--font-family-accent);
+    font-size: 1.0rem !important;
+    color: var(--oix-navi-sectionSubHead-color);
+    margin-right: -0.8rem;
+    text-shadow: 0.05rem 0.05rem 0rem var(--iox-navi-headerInsetColor);
+    margin-left: 0.5rem;
+}
+
+.oix-navi-sectionPlacement {
+    position: absolute;
+    margin-left: 0.5rem;
+}
+
+.oix-navi ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; 
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.oix-navi li {
+    margin-bottom: 0.3rem;
+    background: var(--oix-navi-btnBackground);
+    font-weight: 900;
+    font-size: 0.7rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.05rem;
+    border: var(--oix-navi-btnBorderStyle) 1px var(--oix-navi-btnBorderColor);
+    box-shadow: 0.05rem 0.05rem 0.06rem var(--oix-navi-btnShadowColor);
+}
+
+.oix-navi li a {
+    color: var(--oix-navi-btnLabelColor);
+    display: block;
+
+}
+
+.oix-navi li a:hover {
+    color: var(--oix-navi-btnTextColorHover);
+}
+
+.oix-navi li:hover {
+    background-color: var(--my-fav-colorInvis);
+    box-shadow: 0.05rem 0.05rem 0rem var(--oix-navi-btnShadowColorHover);
+    border: 0.05rem var(--oix-navi-btnBorderStyleHover) var(--oix-navi-btnBorderColorHover);
+}
+
+.oix-navi .icon svg {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-top: .3rem;
+    stroke-width: 1 !important;
+    opacity: 0.5;
+}
+
+
+
+
+.iox_coreContainer {
+    position: relative;
+  display: flex; /* Aligns sidebar and content side-by-side */
+  min-height: 90vh; /* Ensures container takes full viewport height */
+  border-top: solid 0.1rem var(--iox-core-ContainerBorderColor);
+}
+
+.iox_coreContents {
+    position: relative;
+  flex: 1; /* Takes up remaining space */
+  padding: 1.4rem;
+  margin:0;
+  margin-left: 9vw;
+  background-image: 
+    linear-gradient(to top, var(--my-dark-color) 1px, transparent 1px); /* Vertical lines */
+  background-repeat: round; 
+  background-size: .2rem .2rem;   
+  width: 80vw;  
+
+}
+
+h1 { margin-top: -0.5rem;}
