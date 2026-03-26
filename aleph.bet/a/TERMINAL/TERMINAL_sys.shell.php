@@ -1,7 +1,10 @@
 
 <?php 
-$pageTitle = "Welcome Home!";
+ if (!empty($logicSlug) && file_exists($logicSlug)) {
+    include $logicSlug; 
+}
 
+$location = b_root . '/' . $sys . '/' . $dom . '/';
 ?>
     <!DOCTYPE html>
     <html><head>
@@ -23,23 +26,21 @@ $pageTitle = "Welcome Home!";
 <div class="screen-content">
 <!-- BEGIN NOW THE 'BODY OF THE DIVINE PAGE' -->
 <div class="iox_coreContainer">
-<aside class="oix-navi">
-  <nav>
-  <ul>
-  <li><a href="#">IMPORTS</a></li>
-  <li>EMAIL</li>
-  <li>FILES</li>
-  <li>LOGOUT</li>
-  </ul>
-  </nav>
-  </aside>
+
+
+  <?php include __DIR__ . "/../../a/$dom/{$dom}_dom.nav.php"; ?>
+ 
+
 <main class="iox_coreContents">
-<h1>HOME</h1>
-<p>Welcome back, SDK-808. You managed to log-in.</p>
+
+<?php if (!empty($pageSlug) && file_exists($pageSlug)) {
+    include $pageSlug; 
+} ?>
         </main>
+   
 
-    </div></div></div>
 
+    </div></div></div
 
 <!-- END NOW THE 'BODY OF THE DIVINE PAGE' -->
 </div>

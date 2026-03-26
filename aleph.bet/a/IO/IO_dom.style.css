@@ -3,7 +3,51 @@
     --my-dark-color: #002b00;
     --my-fav-colorInvis: #33ff3313;
 }
-
+body {
+}
 .monitor-container::before {
     content: "IOX";
+}
+
+h1 {
+    font-family: "Sixtyfour";
+    font-size:0.8rem;
+    font-weight: 200;
+}
+
+a {
+    color: var(--my-fav-color);
+}
+
+html {
+  scrollbar-color: var(--my-fav-color) var(--my-dark-color); /* Red thumb, Green track */
+  scrollbar-width: thin; /* Optional: makes the scrollbar thinner in Firefox, auto or thin */
+}
+
+.nav {
+  position:fixed; /* Makes it stick when scrolling */
+display: inline-block;
+}
+
+li {
+    list-style:  none;}
+
+li a {
+    display: block;
+    border: 1px solid var(--my-dark-color);
+    width: 15vh;
+    padding: 1vh;
+    margin: 5px;
+    font-family: "Sixtyfour";
+    font-size: .6rem;
+}
+
+ul {
+    padding: 0;
+}
+
+li a:hover {
+    display: block;
+    border: 1px solid var(--my-fav-color);
+    background-color: var(--my-dark-color);
 }
