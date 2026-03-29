@@ -1,13 +1,49 @@
 
-<h1>POST A NEW LOG MESSAGE</h1>
-<p>Your message will be dated and logged into the system. You may view your messages, but only the sys-admin can remove them. </p>
+<!-- TEXT ADJUSTORS FOR "blog.basic" =========
+=============DO NOT EDIT BELOW THIS SECTION-->
+<?php 
+    $blogBasic_placeholderTitle = "SUBJECT OF CONTRIBUTION"; 
+    $blogBasic_placeholderBody = $sys . "." . $dom . " CONTRIBUTION CONTENTS";
+    $blogBasic_Title = "Submit your contributions";
+    $blogBasic_SectionText = "Your contribution will be dated and logged into source. 
+    You may view your contribs, but only the  $sys.$dom can remove them.";
+    $blogBasic_confirmMsg = "Thank you. Contribution added to forrest.source.";
+?>
+
+<div class="blogBasic_container">
+<h1>
+    <?= $blogBasic_Title; ?>
+</h1>
+<p class="blogBasic_content">
+    <?= $blogBasic_SectionText ?>
+</p>
+
+
 <form method="POST" action="">
-  <input style="width: 50vh; height: 30px; font-family: 'VT323'; background-color: black; border: 1px solid var(--my-fav-color); color: var(--my-fav-color);" name="title" placeholder="Title" required><br>
-  <textarea style="width: 50vh; height: 20vh; font-family: 'VT323'; background-color: black; border: 1px solid var(--my-fav-color); color: var(--my-fav-color);" name="body" placeholder="Body" required></textarea><br>
+  <span class="blogBasic_formEl">
+    <input name="title" 
+        placeholder="<?= $blogBasic_placeholderTitle ?>" 
+        required>
+  </span>
+    <br>
+  <span class="blogBasic_formEl">
+    <textarea name="body" 
+    placeholder="<?= $blogBasic_placeholderBody ?>" 
+    required></textarea>
+  </span>
+    <br>
   <input type='hidden' name='mod' value='<?php echo "$mod";?>'/> 
   <input type='hidden' name='dom' value='<?php echo "$dom";?>'/> 
-  <button type="submit"style="width: 20vh; height: 30px; font-family: 'VT323'; background-color: black; border: 1px solid var(--my-fav-color); color: var(--my-fav-color);">Submit</button>
-</form>
+
+  <button type="submit">Submit</button> 
+
+<span class="blogBasic_postMsg">
 
 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  echo '<span class="blog_postSavedMsg">Post saved.</span>'; } ?>
+  echo $blogBasic_confirmMsg;
+ } 
+ ?>
+
+</span>
+</form>
+<!-- END INSERT CONTRIBUTOR 'blog.basic' -->

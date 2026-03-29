@@ -13,7 +13,7 @@ $mod = "SDK-808";  // define display site within the $sys/$dom....
 
 $pageLogic = $traceback . 'k/tools/blog.basic/view_posts.php';
 
-$pageTitle = "View Posts";
+$pageTitle = "$mod.Post.List";
 $pageSlug = "pages/viewallposts.php";
 
 require resolveShell($sys);

@@ -1,3 +1,6 @@
+<div class="blogBasic_container">
+<h1>Viewing all Contributions</h1>
+<p class="blogBasic_content">Contributions logged for <?= $mod ?> in <?= $sys ?>.<?= $dom ?></p>
 <?php 
 $posts = array_reverse($posts);
 

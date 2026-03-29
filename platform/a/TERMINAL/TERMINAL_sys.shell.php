@@ -32,7 +32,7 @@ $location = b_root . '/' . $sys . '/' . $dom . '/';
  
 
 <main class="iox_coreContents">
-
+<h1 class="pageTitle"><?= $pageTitle ?></h1>
 <?php if (!empty($pageSlug) && file_exists($pageSlug)) {
     include $pageSlug; 
 } ?>

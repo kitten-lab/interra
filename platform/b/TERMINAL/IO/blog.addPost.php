@@ -13,7 +13,7 @@ $mod = "SDK-808";  // define display site within the $sys/$dom....
 
 $pageLogic = $traceback . 'k/tools/blog.basic/add_post.php';
 
-$pageTitle = "Post a Blog";
+$pageTitle = "$mod.POST";
 $pageSlug = "pages/addpost.php";
 
 require resolveShell($sys);

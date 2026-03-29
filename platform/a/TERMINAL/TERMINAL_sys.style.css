@@ -2,21 +2,25 @@
     --my-fav-color: #ffffff;
     --my-dark-color: #242424;
     --my-dark-colors: #444444;
-    --my-fav-colorInvis: #31313113;
+    --my-mid-color: #8d8d8d66;
+    --my-fav-colorInvis: #3131317e;
+    --color-black: #00000066;
 }
 
 .dom_header { color: red; }
 
 body {
     background-color: var(--my-dark-color);
-    height: 100dvh;
-  background-size: 10px 33px; /* Controls the size of the grid cells */
+    height: 98vh;
+  background-size: 1.8vh 1.4vh; /* Controls the size of the grid cells */
   background-image: 
-    linear-gradient(to right, var(--my-dark-colors) 0.15rem, transparent 0.15rem), /* Vertical lines */
-    linear-gradient(to bottom, var(--my-dark-colors) 0.15rem, transparent 0.15rem); /* Horizontal lines */
+    linear-gradient(to right, var(--my-fav-colorInvis) 0.15rem, transparent 0.15rem), /* Vertical lines */
+    linear-gradient(to bottom, var(--my-fav-colorInvis) 0.15rem, transparent 0.15rem); /* Horizontal lines */
     font-family: VT323;
-    font-size: 1rem;
+    font-size: 2vh;
+    box-shadow: inset 0 0 30vh black;
     overflow: hidden;
+    padding-top: 1vh;
 }
 
 /* ============= > BLOG BASIC cssSLUGs < =================== */
@@ -26,7 +30,7 @@ body {
 
 p.blogBasic_content {
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.15vh;
 }
 
 h1 {
@@ -43,8 +47,8 @@ h1.pageTitle {
 }
 
 input, textarea, select {
-    padding: .4rem;
-    width: 55dwh;
+    padding: .8vh;
+    width: 40vh;
 }
 
 input {
@@ -52,18 +56,24 @@ input {
     border: none;
     color: var(--my-fav-color);
     font-family: VT323;
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: 2vh;
+    margin-left: 1.2vh;
 }
 
 textarea {
     background: none;
     border: none;
     font-family: 'VT323';
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: 2vh;
+    margin-left: 1.2vh;
     color: var(--my-fav-color);
-    height: 17vh;
+    height: 20vh;
+    width: 40vh;
+}
+
+.blogBasic_postMsg {
+    position: fixed;
+    margin-top: 1vh;
 }
 
 .blogBasic_formEl {
@@ -81,22 +91,21 @@ textarea {
 
 button {
     width: 13vh; 
-    height: 2rem; 
+    height: 4vh; 
     font-family: 'VT323'; 
     background: none; 
-    border: 0.15rem none var(--my-fav-color); 
+    border: none;
+    border-right: 0.15rem none var(--my-fav-color); 
     color: var(--my-fav-color);
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 3vh;
 }
-button::after {
+
+button:hover::after {
     content: " >| ";
     margin-right: -10px;
 }
 
-button:hover {
-    border: 0.15rem solid var(--my-fav-color);
-}
 
 input:focus {
     stroke: 0.15rem solid var(--my-fav-color);
@@ -110,61 +119,77 @@ input:focus, textarea:focus, select:focus {
 /* MAKE A concept of connection ======================================================= */
 .monitor-container {
     position: relative;
-  height: 60dvh;
+  height: 60vh;
   aspect-ratio: 12 / 7;  
   background-color: var(--my-fav-colorInvis); /* Bezel color */
-  border: 0.4vh solid var(--my-fav-color); /* Outer bezel */
-  border-radius: 4vh;
+  border: 0.3vh solid var(--my-fav-color); /* Outer bezel */
+  border-radius: 2.5vh;
   margin: auto;
   margin-top:2dvh;
-  padding: 40px 20px; /* Space between bezel and content */
+  padding: 4vh 3vh; /* Space between bezel and content */
   padding-bottom: 80px;
-  box-shadow: inset 0 0 13px var(--my-fav-color), 0 0 100px var(--my-fav-color);
+  backdrop-filter: blur(2px);
+  box-shadow: 
+    inset 0 .5vh 0 var(--my-mid-color), 
+    inset 0 -.5vh 0 var(--my-mid-color), 
+    inset 0 0 13px var(--my-fav-color), 
+    0 0 100px var(--my-fav-color);
   overflow: hidden; /* Keeps screen content inside */
 }
 
 .monitor-container::before {
-    content: "KRAS";
+    content: ">|TERMINAL";
     color: var(--my-fav-color);
-    font-family: 'Sixtyfour';
-    font-size: 1.2rem;
+    font-family: 'Press Start 2P';
+    font-size: 1.6dvh;
     margin: auto;
-    align-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 1dvh;
+  position: fixed;
+  align-content: center;
+  margin-top: -2.4vh;
+  margin-left: 0vh;
 }
 
 .monitor-interior {
-  width: 90%;
-  height: 88%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
   background-color: var(--my-fav-colorInvis); /* Bezel color */
-  border: 0.1vh solid var(--my-fav-color); /* Outer bezel */
-  border-radius: 2vh;
-  margin: auto;
-  padding: 20px; /* Space between bezel and content */
-  box-shadow: inset 0 2px 5px var(--my-dark-color), inset 0 0 5px var(--my-fav-color), 0 0 20px var(--my-fav-color);
-  padding-bottom: 50px;
+  border: 0.3vh solid var(--my-fav-color); /* Outer bezel */
+  border-radius: 1vh;
+  margin: 4vh 3vh 6vh;
+  padding: 1vh; /* Space between bezel and content */
+  box-shadow: 
+  inset 0 2px 5px var(--my-dark-color), 
+  inset 0 0 5px var(--my-fav-color), 
+  0 .5vh --color-black,
+  0 0 2vh var(--my-fav-color);
+  padding-bottom: 3.5rem;
   overflow: hidden; /* Keeps screen content inside */
 }
 
 .screen-content {
-  width: 97%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.897); /* Page color */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Page color */
   color: var(--my-fav-color);
   border-radius: 1vh;
-  padding: 10px;
-  border: 0.2rem solid var(--my-fav-color);
-  box-shadow: inset 0 -4px 3px var(--my-dark-color), inset 0 2px 5px var(--my-dark-color), inset 0 0 13px var(--my-fav-color), inset 0 0 80px var(--my-dark-color), inset 0 0 5px var(--my-fav-color), 0 0 20px var(--my-fav-color);
-  overflow-y: scroll; /* Scrollable content inside monitor */
+  padding: 1.5vh;backdrop-filter: blur(10px);
+  border: 0.2vh solid var(--my-fav-color);
+  margin: 5vh 4vh 8vh;
+  box-shadow: 
+    0 0 20px var(--my-fav-color);
+  overflow: hidden; /* Scrollable content inside monitor */
     font-family: "VT323";
 }
 
 .computer_scene {
-  width: 88dvh;
-  height: 34dvh;
+  width: 88vh;
+  height: 34vh;
   margin:auto;
   perspective: 3000px; /* Establishes the 3D viewing distance */
 }
@@ -220,23 +245,32 @@ input:focus, textarea:focus, select:focus {
 
 .iox_coreContainer {
     position: relative;
-  display: flex; /* Aligns sidebar and content side-by-side */
-  min-height: 52.5dvh; /* Ensures container takes full viewport height */
-  border-top: solid 0.1rem var(--iox-core-ContainerBorderColor);
+    top: 0;
+    bottom: 0;/* Aligns sidebar and content side-by-side */
+ border-top: solid 0.1rem var(--iox-core-ContainerBorderColor);
 }
 
 .iox_coreContents {
-    position: relative;
+    position: fixed;
+  top: 2vh;
+  bottom: 2vh;
+  left:0;
+  right: 2vh;
   flex: 1; /* Takes up remaining space */
   padding: 1.4rem;
   margin:0;
-  margin-left: 9vw;
+  margin-left: 23vh;
   background-image: 
-    linear-gradient(to top, var(--my-dark-color) 1px, transparent 1px); /* Vertical lines */
+    linear-gradient(to top, var(--my-dark-color) 
+    0.15rem, transparent 0px);
   background-repeat: round; 
-  background-size: .4rem .5rem;   
-  width: 80vw;  
-
+  background-size: 1rem  .2rem;   
+  box-shadow: 
+      0px 2px 0 var(--my-fav-colorInvis),
+      0px -2px 0 var(--my-fav-colorInvis),
+      inset 0 0 10px black;
+  border-radius: .4vh;
+  overflow: scroll;
 }
 
-h1 { margin-top: -0.5rem;}
+p { padding: 0.5rem;}
