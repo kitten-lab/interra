@@ -5,5 +5,5 @@
 }
 
 .monitor-container::before {
-    content: "ABX";
+    content: ">|AB";
 }
