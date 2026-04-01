@@ -20,11 +20,12 @@ if (!is_dir($dir)) {
 
   // Create new post
   $newPost = [
-    "ID" => bin2hex(random_bytes(3)),
-    "ts" => time(), 
-    "chronoAddress" => 'EPO7 GAIA.' . date('\RY \E\Dm:\E\Tw:\E\Nd'),
-    "chronoTime" => date('\Dg:\Ti:\Ns'),
-    "betAddress" => 'b:||' . $_POST['sys'] . '|' . $_POST['from_dom'] . '^mod:' . $_POST['from_mod'],
+    "ch.IMP_OIC" => bin2hex(random_bytes(3)),
+    "gaia.UNIX" => time(), 
+    "ch.IMP_EPC" => $_POST['ch.IMP_EPC'],
+    "ch.IMP_LIC" => date('\RY \E\Dm:\E\Tw:\E\Nd'),
+    "ch.IMP_TP" => date('\Dg:\Ti:\Ns'),
+    "bet.LOC" => 'b:||' . $_POST['bet.sys'] . '|' . $_POST['bet.dom'] . '^mod:' . $_POST['bet.mod'],
     "to_dom" => $_POST['to_dom'],
     "to_mod" => $_POST['to_mod'],
     "from_dom" => $_POST['from_dom'],
