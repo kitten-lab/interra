@@ -60,6 +60,7 @@ if (!is_dir($recordKeeper)) {
     }
     
 
+    
     $newReport = [
     "time" => date('h:i:s A'),
     "pv" => $_GET['pv'] ?? 'WATCHER',
