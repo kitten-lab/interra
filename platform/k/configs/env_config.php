@@ -1,8 +1,6 @@
 <?php
-
 $ENV = 'local';
-
-date_default_timezone_set("America/New York");
+date_default_timezone_set("America/NewYork");
 
 if ($ENV === 'local') {
     define('a_root', 'http://localhost:9808/a');
@@ -12,7 +10,7 @@ if ($ENV === 'local') {
 } else {
     define('a_root', 'http://a.imported.to');
     define('d_root', 'http://d.imported.to');
-    define('b_root', 'http://b.imported.to');
+    define('b_root', '');
     define('k_root', 'http://k.imported.to');
 }
 

@@ -1,11 +1,13 @@
 <?php
+
+$dom = "IO";  // locate domain within the primary module.....
+$mod = $_GET['mod'] ?? "NOT-NE1";
+$pv = $_GET['pv'] ?? "WATCHER";
+
 $loversMark = "jk"; // UNUSED IMPERITIVE. Do not forget me.
 require_once '../_configs/config.php'; // SYS config
 
-$dom = "IO";  // locate domain within the primary module.....
-$mod = "SDK-808";  // define display site within the $sys/$dom....
-
-$location = b_root . '/' . $sys . '/' . $dom . '/';
+$location = '';
 $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php';
 
 // =========================================================== //

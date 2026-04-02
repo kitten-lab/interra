@@ -3,8 +3,10 @@ $loversMark = "jk"; // UNUSED IMPERITIVE. Do not forget me.
 require_once '../_configs/config.php'; // SYS config
 
 $dom = "AB";  // locate domain within the primary module.....
-$mod = $_GET['mod'] ?? "null";
-$location = b_root . '/' . $sys . '/' . $dom . '/';
+$mod = $_GET['mod'] ?? "NOT-NE1";
+$pv = $_GET['pv'] ?? "WATCHER";
+
+$location = '';
 
 
 $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php';
