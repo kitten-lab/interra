@@ -1,4 +1,6 @@
 <?php
+
+require __DIR__ . '/../../incl/inits/nameSelf.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // CHANGE PER TOOL //
@@ -66,7 +68,7 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
   $entries = json_decode($json, true);
 
   if (!$entries) {
-    $entries[] = [];
+    $entries = [];
   }
 
   $entries[$chestUID] = [
@@ -76,14 +78,14 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
     "log.leafText" => $_POST['plog_leafText'],
 
     "meta.DATA" => [
-    "chest.UNIX" => $unix,
-    "gaia.DATE" => date('Y/m/d'),
-    "gaia.TIME" => $localtime,
-    "gaia.TZONE" => $timezone,
-    "acting.SYSTEM" => $_POST['betSys'],
-    "acting.CTRLS" => $_POST['betDom'],
-    "acting.DOLLY" => $_POST['betMod'],
-    "acting.VIEWPORT" => $_GET['pv'] ?? '__UNDISCLOSED__',
+        "chest.UNIX" => $unix,
+        "gaia.DATE" => date('Y/m/d'),
+        "gaia.TIME" => $localtime,
+        "gaia.TZONE" => $timezone,
+        "acting.SYSTEM" => $_POST['betSys'],
+        "acting.CTRLS" => $_POST['betDom'],
+        "acting.DOLLY" => $_POST['betMod'],
+        "acting.VIEWPORT" => $_GET['pv'] ?? '__UNDISCLOSED__',
     ]
   ];
 
@@ -99,18 +101,19 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
 
   $file = $dir . date('Y-m-d') . '_dailyechos.json';
   $json = file_get_contents($file);
-  $entries = json_decode($json, true);
+  $echos = json_decode($json, true);
 
-  if (!$entries) {
-    $entries = [];
+  if (!$echos) {
+    $echos = [];
   }
 
-  $entries[$localtime . ' ' . $timezone . ': ' . $chestNOTE] = [
+  $echos[$localtime . ': ' . $chestNOTE] = [
     "chest.REF" => $chestUID, 
     "tps.REF" => $tpsUID, 
     "chest.NOTE" => $chestNOTE,
     "gaia.DATE" => date('Y-m-d'),
     "gaia.TIME" => $localtime,
+    "gaia.TZONE" => $timezone,
     "meta.DATA" => [
     "echo.idCHAIN" => $idCHAIN,
     "acting.VIEWPORT" => $_GET['pv'] ?? '__UNDISCLOSED__',
@@ -120,7 +123,7 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
     ]
   ];
 
-  file_put_contents($file, json_encode($entries, JSON_PRETTY_PRINT));
+  file_put_contents($file, json_encode($echos, JSON_PRETTY_PRINT));
 
 
 // YAAAAAAY DONE AGAIN!
@@ -137,7 +140,7 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
   $tpss = json_decode($json, true);
 
     if (!$tpss) {
-        $tpss = [];
+        $tpss[] = [];
     }
 
     if (isset($tpss[$tpsUID])) {

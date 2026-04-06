@@ -5,7 +5,9 @@ nameSelf("THE_ARCHIVIST");
 echo $mod;
 bigHeading("Hello World!");
 leaf("There is more here now.");
-getTool('plog.basic', 'Add');
+getTool('plogBasic', 'Add');
+getTool('plogBasic', 'List');
+
 closeSky();
 require resolveShell($sys);
 ?>
