@@ -1,6 +1,7 @@
 <?php 
 
 $GLOBALS['c'][$sys] = 'c/' . $sys . '/';
+$GLOBALS['a'][$sys] = 'a/' . $sys . '/';
 
 // Resolve the Root Shell (routes to correct shell for the $dom)
 function resolveShell($sys) {

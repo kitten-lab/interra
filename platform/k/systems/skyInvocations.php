@@ -28,6 +28,19 @@ if (empty($_GET)) {
 }
 }
 
+function SKY_AUTO_FAILURE(){
+    skylite(openSky("You are LOST"));
+    skylite(medHeading("There is a room but no key. You can't see any of them."));
+    skylite(leaf("Are you forgetting something?"));
+}
+
+function getSkyAUTH($SYSTEM_PATH, $c, $sonar, $sys) {
+    
+    if (!is_dir($SYSTEM_PATH)) {
+    SKY_AUTO_FAILURE();
+    require resolveShell($sys);
+    exit;
+} }
 
 function lockAndKey($sonar,$site,$m,$sys,$navcall){  
 
@@ -104,7 +117,7 @@ function getA_Style($css, $folder, $function) {
     $path = "/" . $folder . "/" . $function . "/" . $css . ".css";
     $full = $GLOBALS['sonar'] . "a" . $path;
     if (is_file($full)) {
-         echo '<link rel="stylesheet" type="text/css" href="' . a_root . $path . '">';
+         echo '<link rel="stylesheet"  type="text/css" href="' . a_root . $path . '">';
          } else {
             echo "<div class='loadFail'>PATH NOT FOUND</div>";
             echo "$path";

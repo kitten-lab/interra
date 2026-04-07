@@ -1,1 +1,7 @@
-You seem.... lost. If I am being honest. 
+
+    <!DOCTYPE html>
+    <html><head>
+    <title><?= $GLOBALS['pageTitle'] ?></title>
+<?php foreach ($GLOBALS['GETS']['set'] as $fn) {
+    echo $fn();
+} ?>

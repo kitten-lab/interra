@@ -17,4 +17,5 @@ function aRoomWithNoKey(){
     skylite(leaf("Are you forgetting something?"));
 }
 
+
 ?>
