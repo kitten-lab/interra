@@ -1,15 +1,10 @@
 <?php 
-// IMPORT-TERMINAL BASE ꓘra *|*>>> "Alice through the looking glass" //
-require_once __DIR__ . '/../../k/configs/env_config.php';
-require __DIR__ . '/../../k/incl/inits/resolvers.php';
+require_once '_configs/clrRoutes.php';
+$GLOBALS['keyMaker'] = $_GET['ROOT'];
+if ($_GET['ROOT'] === null){
+    $GLOBALS['keyMaker'] = 'ROOT';
+}
 
-$loversMark = "JHCxMER"; // UNUSED IMPERITIVE. Do not forget me.
-
-$sys = "TERMINAL";  // routing to the primary module.....
-$dom = "";  // locate domain within the primary module.....
-$mod = "";  // define display site within the $sys/$dom....
-
-$pageTitle = "Welcome Home!";
-
+require __DIR__ . '/ROOT/' . $GLOBALS['keyMaker'] . '.php';
 require resolveShell($sys);
 ?>

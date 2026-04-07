@@ -1,20 +1,16 @@
 
-<?php 
- if (!empty($pageLogic) && file_exists($pageLogic)) {
-    include $pageLogic; 
-}
-
-?>
+<?php foreach ($GLOBALS['GETS']['actor'] as $fn) {
+    echo $fn();
+} ?>
     <!DOCTYPE html>
     <html><head>
     <title><?= $pageTitle ?></title>
     <!-- THE CALLING OF THE STYLESHEET PROCESSION -->
-    <?php
-        // Echo the HTML link tag to include the external CSS file
-        echo '<link rel="stylesheet" type="text/css" href="' . k_root . '/incl/fonts.css?v1">';
-        echo '<link rel="stylesheet" type="text/css" href="' . a_root . '/' . $sys . '/asSys/style.css?v1">';
-        echo '<link rel="stylesheet" type="text/css" href="' . a_root . '/' . $dom . '/asDom/style.css">';
-    ?>
+   <?php 
+foreach ($GLOBALS['GETS']['dressing'] as $fn) {
+    echo $fn();
+} ?>
+<?php getMy_Styles(); ?>
     <style>
     </style>
     </head>
@@ -33,17 +29,9 @@
 <div class="broken_header">
 <h1 class="pageTitle"><?= $pageTitle ?></h1>
 </div>
-<?php 
-    if (!empty($pageSlug) && file_exists($pageSlug)) {
-        if ($ext !== true) {
-            include $pageSlug;
-    }else {
-    $markdown = file_get_contents($pageSlug);
-    $Parsedown = new Parsedown();
-    echo $Parsedown->text($markdown); 
-    }
-    } 
-    ?>
+<?php foreach ($GLOBALS['GETS']['set'] as $fn) {
+    echo $fn();
+} ?>
 
 
 
@@ -61,9 +49,6 @@
   </div>
 </div>
 
-<?php if (!empty($pageScript) && file_exists($pageScript)) {
-    include $pageScript; 
-} ?>
 </body>
 </html>
 <!-- AMEN -->

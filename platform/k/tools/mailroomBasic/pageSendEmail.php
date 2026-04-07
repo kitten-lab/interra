@@ -1,5 +1,8 @@
 
-<?php $config = $emailBasic ?? []; ?>
+<?php 
+require __DIR__ . '/../../incl/inits/nameSelf.php';
+$config = $GLOBALS['mailroomBasic'] ?? []; 
+ ?>
 
 <div class="blogBasic_container">
 <h1>
@@ -47,13 +50,13 @@
   </span>
     <br>
 
-  <input type='hidden' name='chIMP_EPC' value='EPO7 GAIA'/> 
   <input type='hidden' name='betSys' value='<?php echo "$sys";?>'/> 
   <input type='hidden' name='betDom' value='<?php echo "$dom";?>'/> 
   <input type='hidden' name='betMod' value='<?php echo "$mod";?>'/> 
   <input type='hidden' name='from_betSys' value='<?php echo "$sys";?>'/> 
   <input type='hidden' name='from_betDom' value='<?php echo "$dom";?>'/> 
   <input type='hidden' name='from_betMod' value='<?php echo "$mod";?>'/> 
+  <input type="hidden" name="betTZone" id="tz-input">
 
   <button type="submit">Submit</button> 
 
@@ -66,3 +69,7 @@
 
 </span>
 </form>
+
+<script>
+  document.getElementById('tz-input').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+</script>

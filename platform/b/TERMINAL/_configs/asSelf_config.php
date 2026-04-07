@@ -2,7 +2,6 @@
 ==================== C O N F I G . f i l e  ==================== 
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; /*
->| Do not remove me. */ require_once '../_configs/asSys_config.php'; /*
 ----------------------------------------------------------------
 
 Welcome to the configuration file for TERMINAL SYSTEMS.
@@ -16,15 +15,16 @@ CHEERS -chester >|
 ~             CONFIG BYTS "TERMINAL" REQUIREMENTS             ~
 ----------------------------------------------------------------
 
-    [1] **/ $dom = "IO"; /**
-    [2] **/ $mod = $_GET['mod'] ?? "PUBLIC_USER"; /**
-    [3] **/ $navCall = $GLOBALS['sonar'] . 'a/' . $dom . '/asDom/nav.php'; /**
-    [4] CONFIG CALLS: **/ require_once 'usables.php'; /**
+    [1] **/ $GLOBALS['sys'] = "TERMINAL"; /**
+    [1] **/ $GLOBALS['dom'] = "TERMINAL"; /**
+    [2] **/ $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; /**
+    [3] **/ $navCall = $GLOBALS['sonar'] . 'a/' . $sys . '/asSys/nav.php'; /**
+    [4] CONFIG CALLS: **/ require_once 'getFigs.php'; /**
     
 
 -------------
 footnotes: 
-    [1] Preset by the CHEST'.
+    [1] Preset by the CHEST'
     [2] Grabs MOD. keep as DOM or KNOWN BASE MOD for DEFAULT.
     [3] getCall to your NAV. DOTH NOT change unless you are removing 
         your capacity for navigating your TERMINAL. I suppose you
@@ -32,4 +32,5 @@ footnotes:
     [4] Insert each config file for your site here. It's easy as long
         as they are in the SAME FOLDER AS THIS ONE! 
 
-*/ ?>
+*/ 
+?>
