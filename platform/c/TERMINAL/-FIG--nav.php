@@ -9,6 +9,7 @@ Listen, you are going to need to TRUST THE [] colors. They
 don't lie. But sometimes, you will be confused by this nest.
 That's okay. Each time it WILL GET EASIER.  -abl 
 --------------------------------------------------------------*/
+$GLOBALS[$site]['navCall'] = $GLOBALS['sonar'] . 'a/' . $sys . '/asSys/nav.php'; 
 $nav = [ "navSec" => 
 
     [ "name" => "COMM-U-CANS", "items" => [
