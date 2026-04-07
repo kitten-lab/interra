@@ -1,5 +1,6 @@
 
 <?php
+
 function keyMaker($YouAreHere,$sys,$site) {
 if (empty($_GET)) {
     $uri = trim($_SERVER['REQUEST_URI'], '/');
