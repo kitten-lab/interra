@@ -16,7 +16,7 @@ $config = $nav['navSec'] ?? []; ?>
 <?php foreach ($section['items'] as $item): ?>
 
 <li>
-<a href="<?= '?' . $item['door'] . '=' . $item['key']  ?>"><?= $item['label']; ?></a>
+<a href="<?= '/b/' . $sys . '/' . $item['door'] . '/' . $item['key'] ?>"><?= $item['label']; ?></a>
 </li>
 <?php foreach ($item['subSec'] as $subItem): ?>
 <li> 
