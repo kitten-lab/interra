@@ -1,5 +1,7 @@
 
-<?php foreach ($GLOBALS['GETS']['actor'] as $fn) {
+<?php 
+
+foreach ($GLOBALS['GETS']['actor'] as $fn) {
     echo $fn();
 } ?>
     <!DOCTYPE html>

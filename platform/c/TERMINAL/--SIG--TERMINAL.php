@@ -3,10 +3,7 @@
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
-$GLOBALS['sys'] = "TERMINAL"; 
-$GLOBALS['dom'] = $_GET['dom'] ?? "ROOT"; 
-$GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; 
-$GLOBALS['site'] = "TERMINAL"; 
+$GLOBALS['SITE_SLUG'] = "TERMINAL"; 
 
 $GLOBALS[$site]['room'] = [
                     ["name" => "IO"],

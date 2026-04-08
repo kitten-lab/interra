@@ -7,23 +7,22 @@ $GLOBALS['sys'] = "TERMINAL";
 $GLOBALS['dom'] = "IO"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "SDK-808"; 
 $GLOBALS['site'] = $dom; 
+$GLOBALS['SITE_SLUG'] = "IO"; 
 
 $GLOBALS[$site]['room'] = [
-                    ["name" => "IO"],
-                    ["name" => "communications"],
-                    ["name" => "null"]]; 
+                    ["name" => "COMMS"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
-    
-    include "-FIG--nav.php";
-    include "-FIG--plogBasic.php"; 
-    include "-FIG--mailroomBasic.php"; 
-    include "-FIG--routeErrors.php"; 
+    include __DIR__ . '/-FIG--nav.php';
+    include __DIR__ . "/-FIG--plogBasic.php"; 
+    include __DIR__ . "/-FIG--mailroomBasic.php"; 
+    include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){
         getA_Style("style",$GLOBALS['sys'],"asSys");
         getA_Style("sky",$GLOBALS['sys'],"asSys");
         getA_Style("fonts",$GLOBALS['sys'],"asSys");
+        getA_Style("style",$GLOBALS['dom'],"asDom");
 
     }
 ?>

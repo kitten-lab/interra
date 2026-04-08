@@ -5,8 +5,8 @@ function keyMaker($YouAreHere,$sys,$site) {
 if (empty($_GET)) {
     $uri = trim($_SERVER['REQUEST_URI'], '/');
     $uri = strtok($uri, '?');
-    if (str_starts_with($uri, $YouAreHere)) {
-        $uri = substr($uri, strlen($YouAreHere));
+    if (str_starts_with($uri, $GLOBALS['YouAreHere'])) {
+        $uri = substr($uri, strlen($GLOBALS['YouAreHere']));
     }
     $uri = trim($uri, '/');
 
@@ -21,7 +21,7 @@ if (empty($_GET)) {
         foreach ($doors as $door){
             if ($segments[0] == $door['name']) {
                 aRoomWithNoKey();
-                require resolveShell($sys);
+                require resolveShell($GLOBALS['sys'] ?? "TERMINAL");
                 exit;
             }
         }
@@ -54,10 +54,10 @@ foreach ($_GET as $room => $key) {
     foreach ($doors as $door){
         if ($room == $door['name']) {
             $foundRoom = true;
-            $path = $sonar . $m['rooms'] . $site . '/' . $door['name'] .'/' . $key . '.php';
+            $path = $GLOBALS['sonar'] . $m['rooms'] . $GLOBALS['site'] . '/' . $door['name'] .'/' . $key . '.php';
             if (empty($key)) {
                 aRoomWithNoKey();
-                require resolveShell($sys);
+                require resolveShell($GLOBALS['sys']);
                 exit;
             }
                 if (file_exists($path)) {
@@ -76,7 +76,7 @@ foreach ($_GET as $room => $key) {
         noKeyFound();
     }
 
-require resolveShell($sys);
+require resolveShell($GLOBALS['sys']);
 }
 
 

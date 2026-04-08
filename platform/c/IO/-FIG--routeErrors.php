@@ -6,9 +6,10 @@ function noKeyFound(){
     skylite(leaf("Have you considered not guessing?"));
 }
 function notARoom(){
-        skylite(openSky("LOST"));
+        skylite(openSky("AMS... ARE YOU AKAY?"));
         skylite(bigHeading("That isn't a room in this house."));
         skylite(leaf("Have you considered not guessing?"));
+    echo __FILE__;
 }
 
 function aRoomWithNoKey(){

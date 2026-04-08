@@ -1,6 +1,5 @@
 <?php
 openSky("TERMINAL.ROOT");
-declareSelf($sys,"IO","SDK-808");
 section($right,'color:gray','');
 
 bigHeading("MAILROOM INBOX");
