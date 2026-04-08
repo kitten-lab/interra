@@ -4,19 +4,18 @@
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
 $GLOBALS['sys'] = "TERMINAL"; 
-$GLOBALS['dom'] = "ROOT"; 
-$GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; 
-$GLOBALS['site'] = $sys; 
+$GLOBALS['dom'] = "IO"; 
+$GLOBALS['mod'] = $_GET['mod'] ?? "SDK-808"; 
+$GLOBALS['site'] = $dom; 
 
 $GLOBALS[$site]['room'] = [
                     ["name" => "IO"],
-                    ["name" => "root"],
                     ["name" => "communications"],
                     ["name" => "null"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
     
-    include '-FIG--nav.php';
+    include "-FIG--nav.php";
     include "-FIG--plogBasic.php"; 
     include "-FIG--mailroomBasic.php"; 
     include "-FIG--routeErrors.php"; 
