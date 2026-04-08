@@ -33,14 +33,13 @@ box-shadow:
     -.1vh -.1vh 0 #00000066;
 border: .15vh solid blue;
 padding: 1vh 1vh;
-text-transform: uppercase;
 
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: 700;
 }
 
 .wwwExplorer_windowTitleBar::before {
-    content: "<|> ";
+    content: ">|NTERA - ";
 }
 .wwwExplorer_windowToolBar {
 position: fixed;
@@ -67,7 +66,7 @@ overflow: hidden; /* Keeps screen content inside */
     margin-left: 1vh;
     margin-right: 1vh;
     color: black;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-weight: 700;
 box-shadow: 
 
@@ -95,7 +94,8 @@ top: 13vh;
 left: 1vh;
 right: 1vh;
 bottom: 4vh;
-font-size: 5vh;
+font-size: 3vh;
+padding:.6vh;
 background: black;
 overflow-x: scroll; /* Keeps screen content inside */
 scrollbar-width: 5vw;

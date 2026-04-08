@@ -6,7 +6,7 @@
 $GLOBALS['SITE_SLUG'] = "WWW"; 
 
 $GLOBALS[$site]['room'] = [
-                    ["name" => "ARCS"],
+                    ["name" => "archived"],
                     ];
 $GLOBALS[$site]['key'] = "home"; 
 
@@ -22,5 +22,10 @@ $GLOBALS[$site]['key'] = "home";
         getA_Style("fonts",$GLOBALS['sys'],"asSys");
         getA_Style("style",$GLOBALS['dom'],"asDom");
 
+
+    }
+
+    function getMy_WWW($www){
+        $GLOBALS['WWW']['bar'] = $www;
     }
 ?>
