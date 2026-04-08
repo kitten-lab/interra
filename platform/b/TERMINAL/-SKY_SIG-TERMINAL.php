@@ -1,5 +1,5 @@
 <?php 
 $GLOBALS['sys'] = "TERMINAL";
-$GLOBALS['dom'] = "SELF";
+$GLOBALS['dom'] = "ROOT";
 $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT";
-$GLOBALS['site'] = $sys;
+$GLOBALS['site'] = "TERMINAL";

@@ -6,7 +6,7 @@
 $GLOBALS['sys'] = "TERMINAL"; 
 $GLOBALS['dom'] = $_GET['dom'] ?? "ROOT"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; 
-$GLOBALS['site'] = $sys; 
+$GLOBALS['site'] = "TERMINAL"; 
 
 $GLOBALS[$site]['room'] = [
                     ["name" => "IO"],
@@ -16,10 +16,10 @@ $GLOBALS[$site]['room'] = [
 $GLOBALS[$site]['key'] = "home"; 
 
     
-    include '-FIG--nav.php';
-    include "-FIG--plogBasic.php"; 
-    include "-FIG--mailroomBasic.php"; 
-    include "-FIG--routeErrors.php"; 
+    include __DIR__ . '/-FIG--nav.php';
+    include __DIR__ . "/-FIG--plogBasic.php"; 
+    include __DIR__ . "/-FIG--mailroomBasic.php"; 
+    include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){
         getA_Style("style",$GLOBALS['sys'],"asSys");

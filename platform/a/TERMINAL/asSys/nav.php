@@ -21,17 +21,11 @@ $config = $GLOBALS['nav']['navSec'] ?? []; ?>
 <?php foreach ($section['items'] as $item): ?>
 
 <li>
-<a href="<?= $item['key'] ?>">
+<a href="<?= b_root . '/' . $site . '/' . $item['door'] . '/' . $item['key'] ?>">
 
 
 <?= $item['label']; ?></a>
 </li>
-<?php foreach ($item['subSec'] as $subItem): ?>
-<li> 
-<a href="<?= $subItem['path']  ?>" class="navSubSec">REFACTOR<?= $subItem['label']; ?></a>
-</li>
-
-<?php endforeach; ?>
 <?php endforeach; ?>
 <?php endforeach; ?>
 </ul>
