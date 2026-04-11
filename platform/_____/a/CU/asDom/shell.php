@@ -17,23 +17,17 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <!-- END OPENING PRAYERS -->
 <body>
 
-<div class="OUTER_CONTAINER">
-    <div class="INNER_CONTAINER">
 <?php include 'header.php'; ?>
 
-<?php 
-if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
-    require $GLOBALS[$site]['navCall']; 
-    } 
-    ?>
 <main>
+
 <?php foreach ($GLOBALS['GETS']['set'] as $fn) {
     echo $fn();
 } ?>
 </main>
+
 <?php include 'footer.php'; ?>
-</div>
-    </div>
+
 </body>
 </html>
 <!-- AMEN -->

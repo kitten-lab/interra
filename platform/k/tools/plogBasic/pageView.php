@@ -10,19 +10,21 @@ $ROUTE__LINE = ROUTE('d');
     $TOOL_LOC = "plogBasic";
     $TOOL_NAME = "actorAdd";
 
-$ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $TOOL_LOC . '/' . $sys . '/' . $dom . '/';
-$CHEST = $ROUTE . '/' . $mod . '_data.json';
+$TIUD = $_GET['TUID'];
+$GET__MOD = $_GET['MOD'];
 
-$logs = json_decode(file_get_contents($CHEST), true);
+$ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $TOOL_LOC . '/' . $sys . '/' . $dom . '/';
+$CHEST = $ROUTE . '/' . $GET__MOD . '_data.json';
+
+$CHEST__CONTENTS = json_decode(file_get_contents($CHEST), true);
 
 $Parsedown = new Parsedown();
 
-$go = $_GET['go'];
 
-foreach ($logs as $log) {
-  if ($go == $log['META_DATA']['UNIX']) {
-    echo "<h1>" . $log['LOG__LEAF_TOPIC'] . "</h1>";
-    echo $Parsedown->text($log['LOG__LEAF_TEXT']);
+foreach ($CHEST__CONTENTS as $TIMBER) {
+  if ($TIUD == $TIMBER['TUID__REF']) {
+    echo "<h1>" . $TIMBER['LOG__LEAF_TOPIC'] . "</h1>";
+    echo $Parsedown->text($TIMBER['LOG__LEAF_TEXT']);
   }
 }
 

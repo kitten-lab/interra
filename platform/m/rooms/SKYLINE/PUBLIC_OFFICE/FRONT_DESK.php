@@ -1,14 +1,12 @@
 <?php
-openSky("This is the Title of Your Page!");
-nameSelf("PUBLIC_USER");
+openSky("SKYLINE FRONT DESK");
+nameSelf("CLERK");
 bigHeading("Welcome to SKYLINE On INTERA.");
+medHeading("THANK YOU FOR CHECKING IN.");
 
-leaf("Thank you for entering our sight. We see you. 
-$BR We feel you. We know you.");
+leaf("Thank you for entering our SIGHT. We CUKRA.");
 
-medHeading("Consider submitting a vision report.
-We see what you see. Let us know.");
-
+leaf("Consider submitting a vision report. We see what you see. Let us know.");
 getTool('plogBasic', 'Add');
 
 section($left,"width: 50%;","");

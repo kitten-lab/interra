@@ -1,6 +1,6 @@
 <?php
 openSky("VIEWING PUBLIC_USER REPORTS");
-nameSelf("REPORTER");
+nameSelf("PUBLIC_REPORTER");
 getTool("plogBasic","List");
 closeSky();
 ?>

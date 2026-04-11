@@ -9,18 +9,12 @@ Listen, you are going to need to TRUST THE [] colors. They
 don't lie. But sometimes, you will be confused by this nest.
 That's okay. Each time it WILL GET EASIER.  -abl 
 --------------------------------------------------------------*/
-$GLOBALS["SKYLINE"]['navCall'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/nav.php'; 
+$GLOBALS['CU']['navCall'] = $GLOBALS['sonar'] . 'a/' . $sys . '/asSys/nav.php'; 
 $nav = [ "navSec" => 
 
-    [ "name" => "PUBLIC OFFICES", "items" => [
+    [ "name" => "WATCHING", "items" => [
 
-        [ "label" => "FRONT DESK", "key" => "FRONT_DESK", "door" => "PUBLIC_OFFICE"  ],
-        [ "label" => "SKY DESK REPORTS", "key" => "REPORT_RECORDS", "door" => "PUBLIC_OFFICE"  ],
-    /* SECTION GROUP -------------------------------- */
-    ]],[ "name" => "RECORDS", "items" => [
-
-        [ "label" => "OMENS", "key" => "OMENS", "door" => "RECORDS"  ],
-        [ "label" => "SECRETS", "key" => "SECRETS_KEPT", "door" => "RECORDS"  ],
+        [ "label" => "TRACKER KEEPER", "key" => "traceback", "door" => "ECHO"  ],
     /* SECTION GROUP -------------------------------- */
     ]],
     ];

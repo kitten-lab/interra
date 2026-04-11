@@ -20,14 +20,12 @@ if (!$logs) {
 $config = $GLOBALS['plogBasicList'] ?? []; 
 
 foreach ($logs as $log) {
-  echo "<span><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&go=' . $log['META_DATA']['UNIX'] . "'>";
+    $cUID = $log[0];
+  echo "<span><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&TUID=' . $log['TUID__REF'] . "&MOD=" . $mod . "'>";
   echo $log['LOG__LEAF_TOPIC'] . "</a> ";
-  echo "<span class='plogBasic_metaData'>";
-  echo "</span>";
     echo "<span class='plogBasic_metaData'>";
     echo $log['META_DATA']['GAIA_DATE'];
     echo "</span>";
   echo "</span>";
 }
 ?>
-</div>

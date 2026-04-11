@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../systems/rehydrateSelf.php';
 require_once __DIR__ . '/functions.php';
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $VARIANT = "BASIC";
 
     ## TOOL SIG FILE
-    $TOOL_FUNC = "GEN__WORLD";
+    $TOOL_FUNC = "GENERATE A WORLD";
     $TOOL_LOC = "skyGenesis";
     $TOOL_NAME = "actorCreateWorld";
         ## SET YOUR KDE FOR THIS TOOL ##
@@ -229,19 +229,20 @@ $dir = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . 'ECHO/' . date('
     $echos = [];
   }
 
-  $echos[$localtime . ': ' . $CHEST__HEADER] = [
+  $echos[$localtime . ': ' . $unix] = [
     "CUID__REF" => $cUID, 
-    "TUID__REF" => $tUID
+    "TUID__REF" => $tUID,
+    "ECHO__CHAIN" => $KDE__ECHO_CHAIN,
+    "CHEST__HEADER" => $CHEST__HEADER,
     "CHEST__CONTEXT" => $CHEST__CONTEXT,
-    "GAIA__DATE" => $simpledate,
-    "GAIA__TIME" => $localtime,
-    "GAIA__TZONE" => $timezone,
     "META__DATA" => [
-        "ECHO__CHAIN" => $KDE__ECHO_CHAIN,
         "EVENT__ACTION" => $TOOL_FUNC,
         "EVENT__ACTOR" => $TOOL_LOC,
         "EVENT__TOOL" => $TOOL_NAME,
         "POST__PV" => $POST__PV,
+        "GAIA__DATE" => $simpledate,
+        "GAIA__TIME" => $localtime,
+        "GAIA__TZONE" => $timezone,
         "ECHO__VERSION" => 2,
     ]
   ];

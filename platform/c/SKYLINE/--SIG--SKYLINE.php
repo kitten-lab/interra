@@ -12,11 +12,11 @@ $GLOBALS['SITE_SLUG'] = "SKYLINE";
 $GLOBALS[$site]['room'] = [
                     ["name" => "PUBLIC_OFFICE"],
                     ["name" => "REGISTRAR"],
-                    ["name" => "COMMS"],
+                    ["name" => "RECORDS"],
                     ["name" => "window"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
-    #include __DIR__ . '/-FIG--nav.php';
+    include __DIR__ . '/-FIG--nav.php';
     include __DIR__ . "/-FIG--plogBasic.php"; 
     include __DIR__ . "/-FIG--mailroomBasic.php"; 
     include __DIR__ . "/-FIG--routeErrors.php"; 

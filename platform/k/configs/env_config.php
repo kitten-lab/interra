@@ -1,9 +1,9 @@
 <?php
 require_once 'auth_check.php';
-$ENV = 'local';
+$ENV = 'ROSEWOOD8';
 date_default_timezone_set("America/New_York");
 
-if ($ENV === 'local') {
+if ($ENV === 'ROSEWOOD8') {
     define('a_root', 'http://localhost:9808/a');
     define('b_root', 'http://localhost:9808/b');
     define('d_root', 'http://localhost:9808/d');

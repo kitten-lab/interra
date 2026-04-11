@@ -37,7 +37,7 @@ $config = $GLOBALS['plogBasicAdd'] ?? [];
     } 
     ?>
 
-    </span></div>
+    </span>
     </form>
 
 <script>

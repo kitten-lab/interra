@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $GEN__KEY_SKYBODY =      $_POST['GEN__KEY_SKYBODY'];
 
     ## TOOL SIG FILE
-    $TOOL_FUNC = "GEN__KEY";
+    $TOOL_FUNC = "GENERATE A KEY";
     $TOOL_LOC = "keyMaker";
     $TOOL_NAME = "actorMakeKey";
         ## SET YOUR KDE FOR THIS TOOL ##
@@ -153,19 +153,20 @@ $dir = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . 'ECHO/' . date('
     $echos = [];
   }
 
-  $echos[$localtime . ': ' . $CHEST__HEADER] = [
+  $echos[$localtime . ': ' . $unix] = [
     "CUID__REF" => $cUID, 
     "TUID__REF" => $tUID,
+    "ECHO__CHAIN" => $KDE__ECHO_CHAIN,
+    "CHEST__HEADER" => $CHEST__HEADER,
     "CHEST__CONTEXT" => $CHEST__CONTEXT,
-    "GAIA__DATE" => $simpledate,
-    "GAIA__TIME" => $localtime,
-    "GAIA__TZONE" => $timezone,
     "META__DATA" => [
-        "ECHO__CHAIN" => $KDE__ECHO_CHAIN,
         "EVENT__ACTION" => $TOOL_FUNC,
         "EVENT__ACTOR" => $TOOL_LOC,
         "EVENT__TOOL" => $TOOL_NAME,
         "POST__PV" => $POST__PV,
+        "GAIA__DATE" => $simpledate,
+        "GAIA__TIME" => $localtime,
+        "GAIA__TZONE" => $timezone,
         "ECHO__VERSION" => 2,
     ]
   ];

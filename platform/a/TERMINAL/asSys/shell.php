@@ -24,8 +24,11 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <div class="screen-content">
 <div class="iox_coreContainer">
 
-<?php if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
-    include $GLOBALS[$site]['navCall']; } ?>
+<?php 
+if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
+    require $GLOBALS[$site]['navCall']; 
+    } 
+    ?>
 
 <main class="iox_coreContents">
 <div class="broken_header">

@@ -31,10 +31,10 @@ $GLOBALS['plogBasicAdd'] = [
 $GLOBALS['plogBasicList'] = [
 
     "Page_Link" => /**
-    DISPLAY: **/ "REPORT_WINDOW",
+    DISPLAY: **/ "PULL",
 
     "Page_Key" => /**
-    DISPLAY: **/ "PUBLIC_OFFICE"
+    DISPLAY: **/ "RECORDS"
 ]
 
 ?>
