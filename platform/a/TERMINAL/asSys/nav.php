@@ -3,7 +3,7 @@ $nav = $GLOBALS['nav'];
 $config = $GLOBALS['nav']['navSec'] ?? []; ?>
 
 <h1 class="pageTitle flicker">
-<?= $GLOBALS['mod'] ?></h1>
+<?= $GLOBALS[$site]['MOD_DISPLAY'] ?></h1>
 <h3 style="padding-bottom:0px;">
 [<a href="<?= 'index.php?mod=' . $mod . '&pv=' . $pv ?>"> Home </a>] 
 [<a href="<?= 'index.php?mod=' . $mod . '&pv=' . $pv ?>"> Login </a>]

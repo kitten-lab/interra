@@ -8,7 +8,6 @@
     --accentColor-light: rgb(191, 208, 184);
     --skyFont-family: Zen Dots;
 }
-
 body {
     background: var(--backgroundColor);
     margin: 0;

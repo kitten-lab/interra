@@ -199,6 +199,18 @@ function getA_Style($css, $folder, $function) {
          }
 }
 
+
+function invokeStyle($css, $function) {
+    $path = "/" . $folder . "/" . $css . ".css";
+    $full = $GLOBALS['sonar'] . "a" . $path;
+    if (is_file($full)) {
+         echo '<link rel="stylesheet"  type="text/css" href="' . a_root . $path . '">';
+         } else {
+            error_log("PATH NOT FOUND" . $path);
+
+         }
+}
+
 function loadTool($tool, $type, $function) {
 
     $result = $GLOBALS['sonar'] . $GLOBALS['ktool'] . $tool . '/' . $type . $function . '.php';

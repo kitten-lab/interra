@@ -9,8 +9,20 @@ $SKY_AUTH = $GLOBALS[$site]; ?>
 
 
 <ul>
-<?= $SKY_AUTH['DOM_DISPLAY'] ?><br>
 
+
+<div class="ROOM_ID">
+
+<?= $SKY_AUTH['SYS_DISPLAY'] . ' ' . $SKY_AUTH['DOM_DISPLAY'] ?>
+</div>
+<?php img($SKY_AUTH['MOD_SLUG'] . ".png", $sys, "LOGO","","room-logo"); ?>
+<div class="ROOM_ID">
+LOCATION: <?= $SKY_AUTH['ROOM_DISPLAY'] ?><br>
+</div>
+<div class="ROOM_ID">
+
+OTHER KNOWN LOCATIONS IN<BR><?= $SKY_AUTH['DOM_DISPLAY']; ?>
+</div>
 <?php foreach ($nav as $section): ?>
 <?php 
 
@@ -22,14 +34,6 @@ echo $item['ROOM'] . "</a></li>";
  }
 }
 endforeach; ?>
-
-<div class="ROOM_ID">
-<?php img($SKY_AUTH['MOD_SLUG'] . ".png", $sys, "LOGO","","room-logo"); ?>
-
-Attending: <?php echo $SKY_AUTH['MOD_DISPLAY']; ?><br>
-<?= $SKY_AUTH['ROOM_DISPLAY'] ?><br>
-</div>
-<div class="SKY_ATTENDANT"></div>
 
 
 

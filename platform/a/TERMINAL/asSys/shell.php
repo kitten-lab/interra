@@ -32,7 +32,6 @@ if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall']
 
 <main class="iox_coreContents">
 <div class="broken_header">
-<h1 class="pageTitle"><?= $GLOBALS['pageTitle'] ?></h1>
 </div>
 <?php foreach ($GLOBALS['GETS']['set'] as $fn) {
     echo $fn();
