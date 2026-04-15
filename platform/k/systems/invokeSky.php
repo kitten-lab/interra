@@ -7,16 +7,6 @@ $AND = "<br>";
 include $sonar . 'k/systems/skyInvocations.php';
 
 
-function nameSelf($text) { 
-    $GLOBALS['mod'] = $text;
-}
-
-
-function nameRoomKey($text, $key) { 
-    $GLOBALS['roomkey'] = $key;
-    $GLOBALS['roomname'] = $text;
-}
-
 function SKY__AUTH($MOD_SLUG, $MOD_DISPLAY, $DOM_SLUG, $DOM_DISPLAY, $ROOM_SLUG, $ROOM_DISPLAY,$ROOM_FLAVOR) {
     $SITE = $GLOBALS['SITE'];
     $GLOBALS[$SITE]['MOD_SLUG'] = $MOD_SLUG;
@@ -29,16 +19,10 @@ function SKY__AUTH($MOD_SLUG, $MOD_DISPLAY, $DOM_SLUG, $DOM_DISPLAY, $ROOM_SLUG,
 }
 
 function SKY__ROUTE($TO__SYS, $TO__DOM, $TO__MOD, $TO__ROOM){
-    $TO__SYS = $GLOBALS['TO']['SYS_SLUG'] = $TO__SYS;
+    $GLOBALS['TO']['SYS_SLUG'] = $TO__SYS;
     $GLOBALS['TO']['DOM_SLUG'] = $TO__DOM;
     $GLOBALS['TO']['MOD_SLUG'] = $TO__MOD;
     $GLOBALS['TO']['ROOM_SLUG'] = $TO__ROOM;
-}
-
-function declareSelf($sys,$dom,$mod) { 
-    $GLOBALS['sys'] = $sys;
-    $GLOBALS['dom'] = $dom;
-    $GLOBALS['mod'] = $mod;
 }
 
 function openSky($title){

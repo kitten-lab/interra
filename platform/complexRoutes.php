@@ -6,16 +6,18 @@ $GLOBALS['c'][$dom] = 'c/' . $dom . '/';
 $GLOBALS['b'][$site] = 'b/' . $site . '/';
 
 // Resolve the Root Shell (routes to correct shell for the $dom)
-function resolveShell($sys) {
-    $prime = $GLOBALS['sonar'] . "a/$sys/asSys/shell.php";
-    $kroot = $GLOBALS['sonar'] . "a/_/__sys.shell.php";
+function resolveShell() {
+    $SITE = $GLOBALS['SITE'];
+    $SYS = $GLOBALS[$SITE]['SYS_SLUG'];
+    $prime = $GLOBALS['SONAR'] . "a/" . $SYS . "/asSys/shell.php";
+    $kroot = $GLOBALS['SONAR'] . "a/_/__sys.shell.php";
 
     return file_exists($prime) ? $prime : $kroot;
     }
 // ----------------------------------------------------------------
 
 //BETTER ROUTING
-
+$SONAR = $GLOBALS['SONAR'];
 $SYS = $GLOBALS[$SITE]['SYS'];
 $SITE = $GLOBALS[$SITE]['URI'];
 

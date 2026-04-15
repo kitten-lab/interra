@@ -89,12 +89,12 @@ require __DIR__ . '/-SIG-' . $TOOL . '.php';
 
 // ROUTER FUNCTIONS
 function ROUTE($LETTER, $SHADOW_PROD_TOGGLE){
-    return $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $LETTER . '/'; 
+    return $GLOBALS['SONAR'] . $SHADOW_PROD_TOGGLE . $LETTER . '/'; 
     }
 
 
 function ROUTE_LETTER($LETTER){
-    return $GLOBALS['sonar'] . $LETTER . '/'; 
+    return $GLOBALS['SONAR'] . $LETTER . '/'; 
     }
     
 
@@ -105,10 +105,10 @@ function SKY_AUTO_FAILURE(){
 }
 
 function getSkyAUTH($SYSTEM_PATH) {
-    
+    $SITE = $GLOBALS['SITE'];
     if (!is_dir($SYSTEM_PATH)) {
     SKY_AUTO_FAILURE();
-    require resolveShell($GLOBALS['SITE']['SYS']);
+    require resolveShell($GLOBALS[$SITE]['SYS']);
     exit;
 } }
 
@@ -124,7 +124,7 @@ function skylite($result) {
 
 function getImg($img, $alt = '',$class = '') {
     $path = "/" . $GLOBALS['sys'] . '/' . $GLOBALS['dom'] . "/" . $img;
-    $result = $GLOBALS['sonar'] . "/i/" . $path;
+    $result = $GLOBALS['SONAR'] . "/i/" . $path;
     if (is_file($result)) {
         $hasClass = $class ? " class='$class'" : "";
         $hasAlt = $alt ? " alt='$alt'" : "";
@@ -138,7 +138,7 @@ function getImg($img, $alt = '',$class = '') {
 
 function img($img, $folder, $prefix, $alt = '',$class = '') {
     $path = "/" . $folder . "/" . $prefix . "_" . $img;
-    $result = $GLOBALS['sonar'] . "/i/" . $path;
+    $result = $GLOBALS['SONAR'] . "/i/" . $path;
     if (is_file($result)) {
         $hasClass = $class ? " class='$class'" : "";
         $hasAlt = $alt ? " alt='$alt'" : "";
@@ -151,7 +151,7 @@ function img($img, $folder, $prefix, $alt = '',$class = '') {
 
 function getA_Style($css, $folder, $function) {
     $path = "/" . $folder . "/" . $function . "/" . $css . ".css";
-    $full = $GLOBALS['sonar'] . "a" . $path;
+    $full = $GLOBALS['SONAR'] . "a" . $path;
     if (is_file($full)) {
          echo '<link rel="stylesheet"  type="text/css" href="' . a_root . $path . '">';
          } else {
@@ -163,7 +163,7 @@ function getA_Style($css, $folder, $function) {
 
 function invokeStyle($css, $function) {
     $path = "/" . $folder . "/" . $css . ".css";
-    $full = $GLOBALS['sonar'] . "a" . $path;
+    $full = $GLOBALS['SONAR'] . "a" . $path;
     if (is_file($full)) {
          echo '<link rel="stylesheet"  type="text/css" href="' . a_root . $path . '">';
          } else {
@@ -174,7 +174,7 @@ function invokeStyle($css, $function) {
 
 function loadTool($tool, $type, $function) {
 
-    $result = $GLOBALS['sonar'] . $GLOBALS['ktool'] . $tool . '/' . $type . $function . '.php';
+    $result = $GLOBALS['SONAR'] . $GLOBALS['ktool'] . $tool . '/' . $type . $function . '.php';
     if (is_file($result)) {
         include $result;
     } else {
@@ -184,7 +184,7 @@ function loadTool($tool, $type, $function) {
 
 function loadTool_Style($tool) {
     $path = "/tools/" . $tool . '/' . $tool . ".css";
-    $full = $GLOBALS['sonar'] . "k" . $path;
+    $full = $GLOBALS['SONAR'] . "k" . $path;
     if (is_file($full)) {
          echo '<link rel="stylesheet" type="text/css" href="' . k_root . $path . '">';
          } else {
@@ -234,13 +234,13 @@ function youAreHere(){
 function getTool($tool, $function) {
     
     $GLOBALS['GETS']['set'][] = function() use ($tool, $function) { 
-        $file = $GLOBALS['sonar'] . "k/tools/" . $tool . "/page" . $function . ".php";
+        $file = $GLOBALS['SONAR'] . "k/tools/" . $tool . "/page" . $function . ".php";
         if (is_file($file)) {
         loadTool($tool, "page", $function);
         }
     };
     $GLOBALS['GETS']['actor'][] = function() use ($tool, $function) {
-        $file = $GLOBALS['sonar'] . "k/tools/" . $tool . "/actor" . $function . ".php";
+        $file = $GLOBALS['SONAR'] . "k/tools/" . $tool . "/actor" . $function . ".php";
         if (is_file($file)) {
         loadTool($tool, "actor", $function);
         }
