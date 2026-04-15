@@ -6,7 +6,7 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHA
 require_once __DIR__ . '/-SIG-reportBASIC.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-reportBASIC.php'; //GET SHADOW PROD TOGGLE
 
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     

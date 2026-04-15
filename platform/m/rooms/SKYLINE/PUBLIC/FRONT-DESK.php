@@ -1,17 +1,16 @@
 <?php
 openSky("SKYLINE FRONT DESK");
 SKY__AUTH(
-    $site,
-    $sys,
-    $site,
-    "SKYLINE-AGENT", // storage slug of #MOD
-    "SKYLINE PUBLIC OFFICIAL", // display name of MOD
-    "PUBLIC", // building slug #DOM
-    "PUBLIC OFFICE", // building display name
-    "FRONT-DESK", // room slug #ROOM
-    "WELCOME DESK",// room display name
+    /*MOD_SLUG*/     "SKYLINE-AGENT",
+    /*MOD_DISPLAY*/  "SKYLINE PUBLIC OFFICIAL", 
+    
+    /*DOM_SLUG*/     "PUBLIC", 
+    /*DOM_DISPLAY*/  "PUBLIC OFFICE",
 
-    "skyline-standard",
+    /*ROOM_SLUG*/    "FRONT-DESK", 
+    /*MOD_DISPLAY*/  "WELCOME DESK",
+
+    /*ROOM_FLAVOR*/  "skyline-standard"
 );
 
 
@@ -25,9 +24,6 @@ summonTool('reportBASIC', 'IntakeReport');
 medHeading("Check-ins");
 summonTool('reportBASIC', 'CheckInList');
 
-section($left,"width: 50%;","");
-
-close_section();
 
 closeSky();
 ?>

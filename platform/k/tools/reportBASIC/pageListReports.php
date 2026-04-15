@@ -18,7 +18,7 @@ $CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
 
 
 foreach ($CHEST_THINGS as $TIMBER) {
-  $content = $TIMBER['content']['timber'];
+  $content = $TIMBER['payload']['timber'];
   $unix = $TIMBER['TPS']['event_unix'];
     $tpsDT = new DateTime("@$unix");
             $tpsDT->setTimezone(new DateTimeZone("America/New_York"));

@@ -5,5 +5,6 @@ $dom = $GLOBALS['dom'];
 $mod = $GLOBALS['mod'];
 $site = $GLOBALS['site'];
 
+$SITE = $GLOBALS['SITE'];
 
 ?>

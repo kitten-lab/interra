@@ -1298,5 +1298,31 @@
             "TPS__second": 29,
             "TPS__ms": 54
         }
+    },
+    "tUID-2026-04-15.B44B15": {
+        "TUID": "tUID-2026-04-15.B44B15",
+        "CUID": "cUID-C123FCC4913B0EAD",
+        "tps_schema": 3,
+        "TPS__REPORT": {
+            "import_unix": 1776289064,
+            "event_unix": 1776289064,
+            "POST__TZONE": "America\/New_York",
+            "TPS__TZONE": "UTC",
+            "TPS__netLoop": 942,
+            "TPS__millennium": 2,
+            "TPS__century": 20,
+            "TPS__decade": 202,
+            "TPS__year": 2026,
+            "TPS__leap": 0,
+            "TPS__month": 4,
+            "TPS__week": 16,
+            "TPS__dayOfYear": 104,
+            "TPS__dayOfMonth": 15,
+            "TPS__dayOfWeek": 3,
+            "TPS__hour": 21,
+            "TPS__minute": 37,
+            "TPS__second": 44,
+            "TPS__ms": 744
+        }
     }
 }

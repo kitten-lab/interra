@@ -1,37 +1,33 @@
-
 <?php 
-require __DIR__ . '/-SIG-reportBASIC.php';
-$SITE = $GLOBALS['SITE'];
 
-$THEME = $GLOBALS[$SITE]["ROOM_FLAVOR"];
-$SIGFIG = $GLOBALS['TOOL']['SIGFIG'][$THEME]['IntakeReport'] ?? []; 
+$FIG = getFIG("reportBASIC", "IntakeReport"); 
+
 ?>
 
 <form method="POST" action="">
 <span class="">
-    <label for="POST__REPORTER"><?= $SIGFIG['Reporter']; ?></label>
+    <label for="POST__REPORTER"><?= $FIG['Reporter']; ?></label>
     <input 
         name="POST__REPORTER" 
-        value="<?= $SIGFIG['Reporter_default']; ?>"
-        placeholder="<?= $SIGFIG['Reporter_plhldr']; ?>" 
-        required>
+        value="<?= $FIG['Reporter_default']; ?>"
+        placeholder="<?= $FIG['Reporter_plhldr']; ?>" >
     <br>
 </span>
 <span class="">
-    <label for="POST__TIMBER_TOPIC"><?= $SIGFIG['Topic']; ?></label>
+    <label for="POST__TIMBER_TOPIC"><?= $FIG['Topic']; ?></label>
     <input 
         name="POST__TIMBER_TOPIC" 
-        placeholder="<?= $SIGFIG['Topic_plhldr']; ?>" 
+        placeholder="<?= $FIG['Topic_plhldr']; ?>" 
         required>
     <br>
     <br>
 </span>
 <span class="">
-    <label for="POST__TIMBER_LEAF"><?= $SIGFIG['Text']; ?></label><br>
+    <label for="POST__TIMBER_LEAF"><?= $FIG['Text']; ?></label><br>
     <textarea 
     rows="10" cols="60"
     name="POST__TIMBER_LEAF" 
-    placeholder="<?= $SIGFIG['Text_plhldr']; ?>" 
+    placeholder="<?= $FIG['Text_plhldr']; ?>" 
     required></textarea>
     <br>
 </span>
@@ -40,26 +36,24 @@ $SIGFIG = $GLOBALS['TOOL']['SIGFIG'][$THEME]['IntakeReport'] ?? [];
         placeholder="Tags">
     <br>
 <span class="">
-    <label for="POST__EVENT_UNIX"><?= $SIGFIG['UNIX']; ?></label><br>
+    <label for="POST__EVENT_UNIX"><?= $FIG['UNIX']; ?></label><br>
     <input 
         name="POST__EVENT_UNIX" 
-        placeholder="<?= $SIGFIG['UNIX_plhldr']; ?>"
+        placeholder="<?= $FIG['UNIX_plhldr']; ?>"
         type="number">
     <br>
 </span>
 
-  <input type='hidden' name='POST__SYS' value='<?= $sys; ?>''/> 
   <input type="hidden" name="POST__TZ" id="tz-input">
 
-  <button 
-    type="submit">
-    <?= $SIGFIG['Submit_Button'] ?? 'Submit'; ?>
+  <button type="submit">
+    <?= $FIG['Submit_Button'] ?? 'Submit'; ?>
   </button> 
 
   <span>
 
     <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo $SIGFIG['Confirmation_Msg'];
+    echo $FIG['Confirmation_Msg'];
     } 
     ?>
 

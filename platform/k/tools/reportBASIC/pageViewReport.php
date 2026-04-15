@@ -1,20 +1,16 @@
-
-<?php 
-include __DIR__ . '/../parsedown/Parsedown.php';
-require __DIR__ . '/../../systems/rehydrateSelf.php';
-require_once __DIR__ . '/../skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
-$ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-    $TOOL_FUNC = "LOG__POST";
-    $TOOL_LOC = "reportBASIC";
-    $TOOL_NAME = "actorAdd";
+<?php $SITE = $GLOBALS['SITE']; 
+require_once __DIR__ . '/-SIG-reportBASIC.php'; //GET SHADOW PROD TOGGLE
+require_once $GLOBALS['INTERA']['TOOLS'] . 'parsedown/Parsedown.php'; //GET SHADOW PROD TOGGLE
+require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
 
 $id = $_GET['id'];
 $room = $_GET['w'];
-$ROUTE = $ROUTE__LINE . $TOOL_LOC . '/' . $GLOBALS[$site]['SYS_SLUG'] . '/' . $GLOBALS[$site]['DOM_SLUG'] . '/';
-    
-  $CHEST = $ROUTE . $room . '.data.json';
+
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+$ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+$ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/' . $GLOBALS[$SITE]['SYS_SLUG'] . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . '/';
+  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.data.json';
   
 
 $CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
@@ -22,7 +18,7 @@ $CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
 $Parsedown = new Parsedown();
 
 foreach ($CHEST_THINGS as $TIMBER) {
-    $content = $TIMBER['content']['timber'];
+    $content = $TIMBER['payload']['timber'];
   if ($id == $TIMBER['CUID']) {
     echo "<h2>" . $content['topic'] . "</h2>";
     echo $Parsedown->text($content['leaf']);
