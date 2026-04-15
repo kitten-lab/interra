@@ -2,12 +2,10 @@
 
 ## main common nests
 
-- [[CUID]]
-
+1. [[CUID]]
 Chester's UNIQUE ID. The unique ID for the payload chests of all content recorded in the [[Dues Ex Pocket Online]]
 
-- [[chester_crate schema (json data)]]
-
+2. [[chester_crate schema (json data)]]
 The current versioning number of the crate style, presently `3`
 
 - [[content (json payload)]]
