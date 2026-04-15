@@ -29,6 +29,13 @@ function SKY__AUTH($site, $SYS_SLUG, $SYS_DISPLAY, $MOD_SLUG, $MOD_DISPLAY, $DOM
     $GLOBALS[$site]['ROOM_FLAVOR'] = $ROOM_FLAVOR;
 }
 
+function SKY__ROUTE($TO__SYS, $TO__DOM, $TO__MOD, $TO__ROOM){
+    $TO__SYS = $GLOBALS['TO']['SYS_SLUG'] = $TO__SYS;
+    $GLOBALS['TO']['DOM_SLUG'] = $TO__DOM;
+    $GLOBALS['TO']['MOD_SLUG'] = $TO__MOD;
+    $GLOBALS['TO']['ROOM_SLUG'] = $TO__ROOM;
+}
+
 function declareSelf($sys,$dom,$mod) { 
     $GLOBALS['sys'] = $sys;
     $GLOBALS['dom'] = $dom;
@@ -57,7 +64,7 @@ function stop_colorize() {
 }
 
 function leaf($text) {
-    skylite(nl2br($text));
+    skylite("<p>" . nl2br($text) . "</p>");
 }
 
 function wordsx($text, $c="") {

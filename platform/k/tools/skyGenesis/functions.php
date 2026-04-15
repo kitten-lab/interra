@@ -35,9 +35,9 @@ function KDE($ERROR_TYPE, $SOURCE, $ECHO_CHAIN, $ERROR) {
 
 
 // create a WORLD AUTH file //
-function CREATE_SKY_AUTH($WORLD_NAME, $VARIANT) {
-    $template = file_get_contents(TEMPLATE('/SKY_AUTH.php', $VARIANT)); 
-    return str_replace('{{WORLD_NAME}}', $WORLD_NAME, $template);
+function CREATE_SKY_AUTH() {
+    $template = file_get_contents(TEMPLATE('/SKY_AUTH.php', $GLOBALS['VARIANT'])); 
+    return str_replace('{{WORLD_NAME}}', $GLOBALS['WORLD_NAME'], $template);
 }
 
 // create a WORLD SIG file //

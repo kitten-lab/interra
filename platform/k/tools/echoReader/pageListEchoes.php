@@ -7,20 +7,30 @@ $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
 $ROUTE = $ROUTE__LINE . 'trackerKEEPER/' . date('Y') . '/';
-$CHEST = $ROUTE . date('Y-m-d') . '.echo.json';
+$CHEST = $ROUTE . '*.json';
 
-$CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
 
-if (!$CHEST_THINGS) {
-  $CHEST_THINGS = [];
+$ECHO_SUPER_CHEST = glob($CHEST);
+
+$FOREST = [];
+
+foreach ($ECHO_SUPER_CHEST as $LOGS) {
+    $ECHO_LOGS = file_get_contents($LOGS);
+    $CHEST_THINGS = json_decode($ECHO_LOGS, true); // true converts to associative array
+    
+    // Process your data 
+    $FOREST = array_merge($FOREST, $CHEST_THINGS);
 }
 
-
-usort($CHEST_THINGS, function($a, $b) {
-    return $b['TPS']['event_unix'] <=> $a['TPS']['event_unix'];
+usort($FOREST, function($a, $b) {
+    return $a['TPS']['event_time'] <=> $b['TPS']['event_time'];
 });
 
-foreach ($CHEST_THINGS as $TIMBER) {
+$ECHO_FOREST = array_reverse($FOREST);
+
+foreach ($ECHO_FOREST as $TIMBER) {
+
+
 $TIMBER_ENV = $TIMBER['environment'];
 $unix = $TIMBER['TPS']['event_unix'];
     $tpsDT = new DateTime("@$unix");
@@ -50,6 +60,9 @@ echo $TIMBER['CUID'] . "<br>" . $TIMBER_ENV['sys']['display'] . " / " . $TIMBER_
 
 echo "</pre>";
 echo "<hr>";
+
 }
+
+
 ?>
 </div>

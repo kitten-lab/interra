@@ -260,6 +260,14 @@ function summonTool($tool, $function) {
 }
 
 
+
+
+
+
+
+
+
+
 function getTool($tool, $function) {
     
     $GLOBALS['GETS']['set'][] = function() use ($tool, $function) { 

@@ -18,4 +18,13 @@ if ($ENV === 'ROSEWOOD8') {
 }
 
 
+
+$GLOBALS['MATERIAL']['TYPE'] = "Obsidian Vault";
+$GLOBALS['MATERIAL']['SOURCE']['NAME'] = "Terminal IO";
+$GLOBALS['MATERIAL']['SOURCE']['ID'] = "_Chesters Imports/Terminal IO";
+$GLOBALS['MATERIAL']['SOURCE']['CREATED'] = 1757980800;
+$GLOBALS['MATERIAL']['SOURCE']['LAST_MODIFIED'] = 1734134400;
+$GLOBALS['MATERIAL']['REFS'] = ["mod:sdk-808", "green", "terminal", "vault-material"];
+$GLOBALS['MATERIAL']['DETAILS'] = "This SAM inherited the IMPORT SHOP, but can't remember Chester.";
+
 ?>

@@ -9,7 +9,7 @@ $GLOBALS[$site]['room'] = [
                     ["name" => "root"],
                     ["name" => "IO"],
                     ["name" => "communications"],
-                    ["name" => "null"]]; 
+                    ["name" => "w"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
     

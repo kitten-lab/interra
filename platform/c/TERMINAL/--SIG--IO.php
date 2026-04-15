@@ -13,7 +13,7 @@ $GLOBALS['SITE_SLUG'] = "TERMINAL/IO";
 $GLOBALS[$site]['room'] = [
                     ["name" => "IO"],
                     ["name" => "COMMS"],
-                    ["name" => "window"]]; 
+                    ["name" => "w"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
     include __DIR__ . '/IO/-FIG--nav.php';
