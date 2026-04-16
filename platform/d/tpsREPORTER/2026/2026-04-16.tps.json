@@ -1,0 +1,28 @@
+{
+    "tUID-2026-04-16.A95816": {
+        "TUID": "tUID-2026-04-16.A95816",
+        "CUID": "cUID-E4FFEDE1A7FA95B0",
+        "tps_schema": 3,
+        "TPS__REPORT": {
+            "import_unix": 1776299572,
+            "event_unix": 1776299572,
+            "POST__TZONE": "America\/New_York",
+            "TPS__TZONE": "UTC",
+            "TPS__netLoop": 64,
+            "TPS__millennium": 2,
+            "TPS__century": 20,
+            "TPS__decade": 202,
+            "TPS__year": 2026,
+            "TPS__leap": 0,
+            "TPS__month": 4,
+            "TPS__week": 16,
+            "TPS__dayOfYear": 105,
+            "TPS__dayOfMonth": 16,
+            "TPS__dayOfWeek": 4,
+            "TPS__hour": 0,
+            "TPS__minute": 32,
+            "TPS__second": 52,
+            "TPS__ms": 892
+        }
+    }
+}

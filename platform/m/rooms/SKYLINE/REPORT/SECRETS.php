@@ -14,8 +14,6 @@ SKY__AUTH(
 );
 
 bigHeading("DO YOU HAVE A SECRET?");
-nameRoomKey("THE SECRET ROOM","SECRETS");
-declareSelf("SKYLINE", "REPORT DEPARTMENT", "THE CU");
 medHeading("You are hidden here.");
 getTool("reportBASIC","IntakeReport");
 bigHeading("Secrets posted");

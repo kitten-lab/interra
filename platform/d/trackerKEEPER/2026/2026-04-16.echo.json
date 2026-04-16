@@ -1,0 +1,78 @@
+{
+    "cUID-E4FFEDE1A7FA95B0": {
+        "CUID": "cUID-E4FFEDE1A7FA95B0",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "mario attacked me :(",
+                "leaf": "so basically- to be continued!"
+            }
+        },
+        "route": {
+            "from": {
+                "mod": "EXE-708"
+            },
+            "to": {
+                "mod": "THE-CU",
+                "room": "SECRETS",
+                "dom": "REPORT",
+                "sys": "SKYLINE"
+            }
+        },
+        "tags": [
+            "mario",
+            "708-knowledge"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "SKYLINE",
+                "display": "SKYLINE ON INTERA"
+            },
+            "dom": {
+                "slug": "REPORT",
+                "display": "REPORTING DEPARTMENT"
+            },
+            "room": {
+                "slug": "SECRETS",
+                "display": "THE SECRET ROOM"
+            },
+            "mod": {
+                "slug": "THE-CU",
+                "display": "THE CU"
+            }
+        },
+        "tool": {
+            "name": "reportBASIC",
+            "type": "post",
+            "function": "IntakeReport",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "reference": {
+                    "ref": [
+                        "mod:sdk-808",
+                        "green",
+                        "terminal",
+                        "vault-material"
+                    ]
+                },
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776299572,
+            "event_unix": 1776299572,
+            "TUID": "tUID-2026-04-16.A95816",
+            "timezone": "America\/New_York"
+        }
+    }
+}
