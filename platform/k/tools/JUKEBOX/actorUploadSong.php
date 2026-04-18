@@ -2,20 +2,17 @@
 require_once $GLOBALS['INTERA']['SYSTEM'] . 'rehydrateSelf.php';
 require_once $GLOBALS['INTERA']['SYSTEM'] . 'chestersCrates.php'; //GET SHADOW PROD TOGGLE
 require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
-
-    $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
-
 require_once __DIR__ . '/-SIG-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 ####
 ####
 
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-
-    // DO NOT TOUCHY // THE TPS MACHINE 
+    
+        // DO NOT TOUCHY // THE TPS MACHINE 
 
         $event_time = (int)filter_var($_POST['POST__EVENT_UNIX'], FILTER_SANITIZE_NUMBER_INT);
 
@@ -46,15 +43,16 @@ $tUID = 'tUID-' . $event_time . '.' . strtoupper(bin2hex(random_bytes(3)));
 ## GET TAGS & FILL CATALOGS (__-SONG-CATALOG-__)
 $GLOBALS['JUKEID'] = getJUKED($_POST['artist']) . '_' . getJUKED($_POST['song_title']) . '.juke';
 $w = $GLOBALS[$SITE];
-$tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 $link = $_POST['link'] ?? '';
 $artist = $_POST['artist'] ?? '';
 $song = $_POST['song_title'] ?? '';
 
-crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time,$tagpath);
-crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song,$cUID,$tagpath);
-unixCataloger($event_time,$cUID,$SHADOW_PROD_TOGGLE);
+$tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
+catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $event_time, $tagpath);
+catalogUNIX($event_time, $cUID, $SHADOW_PROD_TOGGLE);
+
+catalogJUKEBOX($RAW_TAGS, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID, $tagpath);
 
 
 // ============================================================================
@@ -84,9 +82,11 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
   if (!$ECHO_CHEST_THINGS) {
     $ECHO_CHEST_THINGS = [];
   }
+  
+  $BUILD_CHEST = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
 
-  $CHEST_THINGS[$cUID] = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
-  $ECHO_CHEST_THINGS[$cUID] = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
+    $CHEST_THINGS[$cUID] = $BUILD_CHEST;
+    $ECHO_CHEST_THINGS[$cUID] = $BUILD_CHEST;
   
 
   file_put_contents($CHEST, json_encode($CHEST_THINGS, JSON_PRETTY_PRINT));

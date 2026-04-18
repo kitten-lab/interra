@@ -7,13 +7,10 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHA
 require_once __DIR__ . '/-SIG-reportBASIC.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-reportBASIC.php'; //GET SHADOW PROD TOGGLE
  
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-
-$RAW_TAGS = $_POST['POST__TAGS'] ?? '';
-    crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE);
 
 
     // DO NOT TOUCHY // THE TPS MACHINE 
@@ -45,6 +42,10 @@ $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
     $cUID = 'cUID-' . strtoupper(bin2hex(random_bytes(8)));
     $tUID = 'tUID-' . $simpledate . '.' . strtoupper(bin2hex(random_bytes(3)));
   
+$RAW_TAGS = $_POST['POST__TAGS'] ?? '';
+$tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
+catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $event_time, $tagpath);
+catalogUNIX($event_time, $cUID, $SHADOW_PROD_TOGGLE);
 
 // ============================================================================
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 
@@ -74,8 +75,11 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
     $ECHO_CHEST_THINGS = [];
   }
 
-  $CHEST_THINGS[$cUID] = buildCHEST($cUID, $unix, $event_time, $tUID, $timezone);
-  $ECHO_CHEST_THINGS[$cUID] = buildCHEST($cUID, $unix, $event_time, $tUID, $timezone);
+  
+  $BUILD_CHEST = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
+
+    $CHEST_THINGS[$cUID] = $BUILD_CHEST;
+    $ECHO_CHEST_THINGS[$cUID] = $BUILD_CHEST;
   
 
   file_put_contents($CHEST, json_encode($CHEST_THINGS, JSON_PRETTY_PRINT));

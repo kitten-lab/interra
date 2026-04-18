@@ -2,10 +2,10 @@
 
 function json_payload(){
     return [
-    "song" => [
+    "jukebox" => [
         "JUKEID" => $GLOBALS['JUKEID'],
         "artist" => $_POST['artist'],
-        "song_title" => $_POST['song_title'],
+        "song" => $_POST['song_title'],
         "spotify_link" => $_POST['link'],
     ]];
 }
@@ -13,6 +13,6 @@ function json_payload(){
 function json_route(){
 $SITE = $GLOBALS['SITE'];
     return [
-        "heard_by" => $_POST['UPLOADER']
+        "listener" => $_POST['UPLOADER']
     ];
 }
