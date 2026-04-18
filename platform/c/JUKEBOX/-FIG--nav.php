@@ -22,11 +22,14 @@ $nav = [ "navSec" =>
 
     [ 
         "DOOR" => "songs", 
-        "BUILDING" => "song_server", //DOM?
+        "BUILDING" => "song_server", 
         "KEY" => "list", 
         "ROOMS" => [
 
             [ 
+                "ROOM" => "upload_song", 
+                "KEY" => "upload", 
+            ],[ 
                 "ROOM" => "song_list", 
                 "KEY" => "list", 
             ],

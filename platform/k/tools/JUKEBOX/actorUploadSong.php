@@ -43,12 +43,14 @@ $cUID = 'cUID-' . strtoupper(bin2hex(random_bytes(8)));
 $tUID = 'tUID-' . $event_time . '.' . strtoupper(bin2hex(random_bytes(3)));
 
 ## GET TAGS
+$w = $GLOBALS[$SITE];
+$tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 $link = $_POST['link'] ?? '';
 $artist = $_POST['artist'] ?? '';
 $song = $_POST['song_title'] ?? '';
-crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time);
-crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song,$cUID);
+crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time,$tagpath);
+crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song,$cUID,$tagpath);
 unixCataloger($event_time,$cUID,$SHADOW_PROD_TOGGLE);
 
 

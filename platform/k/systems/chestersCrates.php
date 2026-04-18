@@ -101,11 +101,21 @@ $TOOL = $GLOBALS['TOOL'];
 }
 
 
-function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX){
+function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
     $SITE = $GLOBALS['SITE'];
     $GLOBALS['TAGS'] = array_filter(array_map(function($q){
         return strtolower(trim($q));
     }, explode(';', $RAW_TAGS)));
+
+$ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE = $ROUTE__LINE . '/catalog/';
+        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
+
+        $TAG_CHEST = $ROUTE . 'tags.catalog.json';
+        $json = file_get_contents($TAG_CHEST);
+        $TAGS = json_decode($json, true);
+
 
     foreach ($GLOBALS['TAGS'] as $TAG){
 
@@ -129,16 +139,7 @@ function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX){
         }
 
 
-    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-        $ROUTE = $ROUTE__LINE . '/catalog/';
-        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
-
-        $TAG_CHEST = $ROUTE . 'tags.catalog.json';
-        $json = file_get_contents($TAG_CHEST);
-        $TAGS = json_decode($json, true);
-
-
+    
     if (!$TAGS) {
         $TAGS = [];
     }
@@ -153,26 +154,31 @@ foreach ($values as $v){
 #    } 
 
     if (!is_array($TAGS[$v])) {
-        $TAGS[$v] = ["label" => $v];
+        $TAGS[$v] = ["label" => $v, 'total' => 0];
 
     }
 
 if (!is_array($TAGS[$v]['used_as'][$type])) {
-    $TAGS[$v]['used_as'][$type] = [];
+    $TAGS[$v]['used_as'][$type] = ['count' => 0, 'used_by' => [
+        $ACTOR => ['paths' => []]
+    ] ];
 }
 
 
-if (!in_array($cUID, $TAGS[$v]['used_as'][$type])) {
-    $TAGS[$v]['used_as'][$type][] = $cUID;
-} else { continue; }
+
+if (!is_array($TAGS[$v]['used_as'][$type]['used_by'][$ACTOR]['paths'][$cUID])) {
+    $TAGS[$v]['used_as'][$type]['used_by'][$ACTOR]['paths'][$cUID] = $tagpath;
+    $TAGS[$v]['total']++;
+    $TAGS[$v]['used_as'][$type]['count']++;
+} 
     
+}
 
 }
     
          
 
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
-}
 }
 
 function unixCataloger($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
@@ -204,14 +210,25 @@ function unixCataloger($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
 
 
 
-function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID){
+function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID,$tagpath){
     $GLOBALS['FORMATTED_INPUT'] = array_filter(array_map(function($q){
         return strtolower(trim($q));
     }, explode(';', $RAW_ENTRY)));
 
 
+    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE = $ROUTE__LINE . '/catalog/';
+        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
+
+        $TAG_CHEST = $ROUTE . 'songs.catalog.json';
+        $json = file_get_contents($TAG_CHEST);
+        $TAGS = json_decode($json, true);
+
+
     foreach ($GLOBALS['FORMATTED_INPUT'] as $TAG){
 
+   
     $TAG = strtolower(trim($TAG));
 
         if (strpos($TAG, ':') !== false) {    
@@ -228,19 +245,9 @@ function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUI
         if (strpos($value, ',') !== false) {
             $values = explode(',', $value);
         } else {
-            $values = $value;
+            $values = [$value];
         }
     
-
-    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-        $ROUTE = $ROUTE__LINE . '/catalog/';
-        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
-
-        $TAG_CHEST = $ROUTE . 'songs.catalog.json';
-        $json = file_get_contents($TAG_CHEST);
-        $TAGS = json_decode($json, true);
-
 
     if (!is_array($TAGS)) {
         $TAGS= [];
@@ -249,54 +256,43 @@ function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUI
 $id = $GLOBALS['JUKEID']; 
 $ACTOR = $GLOBALS['TOOL']['ACTOR'];
 
+if (!isset($TAGS[$artist][$id])){
+    $TAGS[$artist][$id] = [
+        "total_plays" => 0,
+        "artist" => $artist,
+        "song_title" => $song,
+        "link" => $link,
+        "tagged_as" => [],
+        "heard_by" => []
+    ];
+}
 
-    if (!is_array($TAGS[$artist])) {
-        $TAGS[$artist] = [ "artist" => $artist ];
+if (!is_array($TAGS[$artist][$id]['tagged_as'][$type])){
+    $TAGS[$artist][$id]['tagged_as'][$type] = [];
+}
+
+foreach ($values as $v) {
+    if (!in_array($v, $TAGS[$artist][$id]['tagged_as'][$type])){
+        $TAGS[$artist][$id]['tagged_as'][$type][] = $v;
     }
-    
-
-    if (!is_array($TAGS[$artist][$id])) {
-        $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
-    } 
+}
 
 
-
-if (!in_array($song, $TAGS[$artist][$id])) {
-    $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
-} 
-
-
-
-        if (!is_array($TAGS[$artist][$id]['tagged_as'][$type])) {
-            $TAGS[$artist][$id]['tagged_as'][$type] = [];
-        }
-
-    if (!in_array($values, $TAGS[$artist][$id]['tagged_as'][$type])) {
-        $TAGS[$artist][$id]['tagged_as'][$type] = $values;
-    } 
+if (!is_array($TAGS[$artist][$id]['heard_by'][$ACTOR])){
+    $TAGS[$artist][$id]['heard_by'][$ACTOR] = [
+        'count' => 0,
+        'played_in' => []
+    ];
+}
+}
 
 
-
-        if (!isset($TAGS[$artist][$id]['played_by'])) {
-            $TAGS[$artist][$id]['played_by'] = [];
-        }
-        
-        
-        $uploader = $_POST['UPLOADER'];
-
-        if (!in_array($uploader, $TAGS[$artist][$id]['played_by'])){
-            $TAGS[$artist][$id]['played_by'][$uploader] = [];
-        }
-
-
-        if (!isset($TAGS[$artist][$id]['played_by'][$uploader])) {
-            $TAGS[$artist][$id]['played_by'][$uploader]['played_in'] = [];
-        }
-
-        if (!in_array($cUID, $TAGS[$artist][$id]['played_by'][$uploader])){
-            $TAGS[$artist][$id]['played_by'][$uploader]['played_in'] = $cUID;
-        }
+if (!in_array($cUID, $TAGS[$artist][$id]['heard_by'][$ACTOR]['played_in'])){
+    $TAGS[$artist][$id]['heard_by'][$ACTOR]['played_in'][$cUID] = $tagpath;
+    $TAGS[$artist][$id]['total_plays']++;
+    $TAGS[$artist][$id]['heard_by'][$ACTOR]['count']++;
+}
     
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
-}
+
 }
