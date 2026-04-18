@@ -61,13 +61,13 @@ catalogJUKEBOX($RAW_TAGS, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID, $ta
 
 $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
- $ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/';
+ $ROUTE = $ROUTE__LINE . $GLOBALS[$SITE]['SYS_SLUG'] . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
  $ECHO_ROUTE = $ROUTE__LINE . 'trackerKEEPER/' . $simpleyear . '/';
     if (!is_dir($ECHO_ROUTE)) { mkdir($ECHO_ROUTE, 0775, true); }   
  
-  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.jukebox.json';
+  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . '-' . $GLOBALS[$SITE]['ROOM_SLUG'] .'.jukebox.json';
     $json = file_get_contents($CHEST);
     $CHEST_THINGS = json_decode($json, true);
 
@@ -107,19 +107,45 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
     if (!$tpss) {
         $tpss = [];
     }
-
-    if (isset($tpss[$tUID])) {
-        die("Already exists in this Location.");
-    }
+    if (!isset($tpss[$tUID])){
 
     $tpss[$tUID] = [
-        "TUID" => $tUID,
-        "CUID" => $cUID,
-        "tps_schema" => 3,
-        "TPS__REPORT" => $tpsDATA,
+        "tps_version" => 3,
+        "cUID" => [$cUID],
+        "event_slug" => [],
+        "import_unix" => [time()],
+        "time_certainty" => [
+                "value" => $_POST['CERTAINTY_AMOUNT'],
+                "measurement" => $_POST['CERTAINTY'],
+            ],
+        "event_timezone" => $tzone,
+        "tps_timzezone" => "UTC",
+        "tps_unix" => $event_time,
+        "tps_report" => $tpsDATA
     ];
+    
+    } else {
+
+    if (!isset($tpss[$tUID]['cUID'])){
+        $tpss[$tUID]['cUID'] = [];
+    }
+
+    if (!in_array($cUID, $tpss[$tUID]['cUID'])){
+        $tpss[$tUID]['cUID'][] = $cUID;
+    }
+
+
+
+    if (!isset($tpss[$tUID]['import_unix'])){
+        $tpss[$tUID]['import_unix'] = [];
+    }
+
+    if (!in_array($cUID, $tpss[$tUID])){
+        $tpss[$tUID]['import_unix'][] = time();
+    }
+    
+    }
+
 
   file_put_contents($tpsReport, json_encode($tpss, JSON_PRETTY_PRINT));
-
-
 }

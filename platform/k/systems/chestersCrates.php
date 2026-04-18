@@ -51,22 +51,14 @@ function json_environment(){
 
     $SITE = $GLOBALS['SITE'];
     return [
-        "sys" => [ 
-            "slug" => $GLOBALS[$SITE]['SYS_SLUG'], 
-            "display" => $GLOBALS[$SITE]['SYS_DISPLAY'], 
-            ],
-        "dom" => [ 
-            "slug" => $GLOBALS[$SITE]['DOM_SLUG'], 
-            "display" => $GLOBALS[$SITE]['DOM_DISPLAY'], 
-            ],
-        "room" => [ 
-            "slug" => $GLOBALS[$SITE]['ROOM_SLUG'], 
-            "display" => $GLOBALS[$SITE]['ROOM_DISPLAY'], 
-            ],
-        "mod" => [ 
-            "slug" => $GLOBALS[$SITE]['MOD_SLUG'], 
-            "display" => $GLOBALS[$SITE]['MOD_DISPLAY'], 
-        ]
+            "sys_slug" => $GLOBALS[$SITE]['SYS_SLUG'], 
+            "sys_display" => $GLOBALS[$SITE]['SYS_DISPLAY'], 
+            "dom_slug" => $GLOBALS[$SITE]['DOM_SLUG'], 
+            "dom_display" => $GLOBALS[$SITE]['DOM_DISPLAY'], 
+            "room_slug" => $GLOBALS[$SITE]['ROOM_SLUG'], 
+            "room_display" => $GLOBALS[$SITE]['ROOM_DISPLAY'], 
+            "mod_slug" => $GLOBALS[$SITE]['MOD_SLUG'], 
+            "mod_display" => $GLOBALS[$SITE]['MOD_DISPLAY'], 
     ];
 }
 
@@ -99,16 +91,21 @@ $SITE = $GLOBALS['SITE'];
 $TAGS = tagSPLICER($RAW_TAGS);
 
     return [
-        "c_version" => 3.5,
+        "c_version" => 4,
         "viewport" => $GLOBALS['PV'] ?? "::the.woman.on.K.st::",
         "assistant" => json_tool(),
         "payload" => json_payload(),
         "route" => json_route(),
         "tags" => $TAGS,
+        "notes" => [],
         "import_env" => json_environment(),
         "ref_material" => json_origin(),
         "tps" => [
             "tUID" => $tUID, 
+            "time_certainty" => [
+                "value" => $_POST['CERTAINTY_AMOUNT'],
+                "measurement" => $_POST['CERTAINTY'],
+                ],
             "ingest_unix" => $unix,
             "event_unix" => $event_time,
             "timezone" => $timezone,
@@ -183,7 +180,7 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
         foreach ($add as $k => $values){
             foreach ($values as $v){
                 if (!is_array($TAGS[$v])) {
-                    $TAGS[$v] = ["label" => $v, 'total' => 0];
+                    $TAGS[$v]['total'] = 0;
                 }
 
                 if (!is_array($TAGS[$v]['used_as'][$k])) {

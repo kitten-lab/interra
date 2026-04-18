@@ -34,6 +34,19 @@ $FIG = getFIG("postBASIC", "MakePost");
         placeholder="<?= $FIG['UNIX_plhldr']; ?>"
         type="number">
     <br>
+
+    <input 
+        name="CERTAINTY_AMOUNT" 
+        placeholder="CERTAINTY_AMOUNT"
+        type="number">
+    <label for="CERTAINTY"><?= $FIG['CERTAINTY'] ?? "Certainty"; ?></label><br>
+<select name="CERTAINTY" id="CERTAINTY">
+    <option value="d">d</option>
+    <option value="h">h</option>
+    <option value="m">m</option>
+    <option value="s">s</option>
+</select>
+
 </span>
 
   <input type="hidden" name="POST__TZ" id="tz-input">

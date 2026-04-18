@@ -42,6 +42,7 @@ $cUID = SKY_GET_cUID($event_time);
 $tUID = SKY_GET_tUID($event_time);
 
 $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
+$w = $GLOBALS[$SITE];
 $tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $event_time, $tagpath);
 catalogUNIX($event_time, $cUID, $SHADOW_PROD_TOGGLE);
@@ -52,13 +53,13 @@ catalogUNIX($event_time, $cUID, $SHADOW_PROD_TOGGLE);
 
 $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
- $ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/' . $GLOBALS[$SITE]['SYS_SLUG']  . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . '/';
+ $ROUTE = $ROUTE__LINE . $GLOBALS[$SITE]['SYS_SLUG']  . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
  $ECHO_ROUTE = $ROUTE__LINE . 'trackerKEEPER/' . $simpleyear . '/';
     if (!is_dir($ECHO_ROUTE)) { mkdir($ECHO_ROUTE, 0775, true); }   
  
-  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.data.json';
+  $CHEST = $ROUTE . '/'  . $GLOBALS[$SITE]['DOM_SLUG'] . '-'. $GLOBALS[$SITE]['ROOM_SLUG'] . '.post.json';
     $json = file_get_contents($CHEST);
     $CHEST_THINGS = json_decode($json, true);
 
@@ -100,10 +101,14 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
     if (!isset($tpss[$tUID])){
 
     $tpss[$tUID] = [
+        "tps_version" => 3,
         "cUID" => [$cUID],
         "event_slug" => [],
-        "tps_schema" => 3,
         "import_unix" => [time()],
+        "time_certainty" => [
+                "value" => $_POST['CERTAINTY_AMOUNT'],
+                "measurement" => $_POST['CERTAINTY'],
+            ],
         "event_timezone" => $tzone,
         "tps_timzezone" => "UTC",
         "tps_unix" => $event_time,
