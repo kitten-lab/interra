@@ -168,6 +168,9 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
         $json = file_get_contents($TAG_CHEST);
         $TAGS = json_decode($json, true);
 
+    
+
+
   //--## tag parser settings ------- ##
 
      $add = tagSPLICER($RAW_TAGS);
@@ -177,34 +180,72 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
             $TAGS = [];
         }
 
-
-        foreach ($add as $k => $values){
-            foreach ($values as $v)
-            {
+    foreach ($add as $k => $values){
+        foreach ($values as $v){
 
 
+            if (!isset($TAGS[$v])){
+                $TAGS[$v] = [
+                    'total_count' => 0,
+                    'context' => []
+                ];
+            }
 
-        if (!isset($TAGS[$v])){
-            $TAGS[$v] = [
-                'usage_count' => 0,
-                'context' => []
-            ];
-        }
+            if (!isset($TAGS[$v]['context'])){
+                $TAGS[$v]['context'] = [];
 
-        if (!isset($TAGS[$v]['context'])){
-            $TAGS[$v]['context'] = [];
+            }
+            if (!isset($TAGS[$v]['context'][$k])){
+                $TAGS[$v]['context'][$k] = 0;
 
-        }
-        if (!isset($TAGS[$v]['context'][$k])){
-            $TAGS[$v]['context'][$k] = 0;
+            } 
 
-        } 
-
-            $TAGS[$v]['context'][$k]++;
-            $TAGS[$v]['usage_count']++;
+                $TAGS[$v]['context'][$k]++;
+                $TAGS[$v]['total_count']++;
 
         
-        }
+
+
+        $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+            $SECOND_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_tag/';
+            if (!is_dir($SECOND_ROUTE)) { mkdir($SECOND_ROUTE, 0775, true); }   
+
+            $COLLECTION = $SECOND_ROUTE . $v . '.tag.json';
+            $json = file_get_contents($COLLECTION);
+            $C = json_decode($json, true);
+
+            if (!isset($C)){
+                $C = [
+                    'slug' => $v,
+                    'aliases' => [],
+                    'total_count' => 0,
+                    'context' => []
+                ];
+            }
+
+            if (!isset($C['context'][$k])){
+                $C['context'][$k] = [
+                    'count' => 0,
+                    'used_by' => []
+                ];
+            }
+
+            if (!isset($C['context'][$k]['used_by'][$ACTOR])){
+                $C['context'][$k]['used_by'][$ACTOR] = [
+                    'count' => 0,
+                    'cUID' => []
+                ];
+            }
+
+            $C['context'][$k]['used_by'][$ACTOR]['cUID'][$cUID] = $tagpath;
+            $C['total_count']++;
+            $C['context'][$k]['count']++;
+            $C['context'][$k]['used_by'][$ACTOR]['count']++;
+            
+
+    file_put_contents($COLLECTION, json_encode($C, JSON_PRETTY_PRINT));
+            }
         }
   //--## fill that crate! ------- ##
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
