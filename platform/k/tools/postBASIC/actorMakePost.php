@@ -18,14 +18,14 @@ $tUID    = SKY_GET_tUID($event_time);
 // SET UP AND DELIVER CATALOG INSERTS
 //=============================================================================
 
-catalogTAGS($sha_env, $cUID, $event_time);
-catalogUNIX($event_time, $cUID, $sha_env);
+#catalogTAGS($sha_env, $cUID, $event_time);
+#catalogUNIX($event_time, $cUID, $sha_env);
 
 // ============================================================================
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 
 //=============================================================================
-  
 chestersCRATES($sha_env, $a, $cUID, $unix, $event_time, $tUID, $timezone);
+charliesTHREADS($sha_env);
 
 //=============================================================================
 // OH $@%! -- DON'T FORGET YOUR TPS REPORT
@@ -33,7 +33,7 @@ chestersCRATES($sha_env, $a, $cUID, $unix, $event_time, $tUID, $timezone);
 
 $tpsDATA = buildTPS($tpstime, $ms, $tzone, $event_time);
 
-$TRACKER_KEEPER = $route . 'trackerKEEPER/tps_reports/' . $syear . '/';
+$TRACKER_KEEPER = $router_1 . 'trackerKEEPER/tps_reports/' . $syear . '/';
     aleph($TRACKER_KEEPER);
   
   $tpsReport = $TRACKER_KEEPER . '/' . $sdate . '.tps.json';

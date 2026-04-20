@@ -147,6 +147,7 @@ $TAGS = tagSPLICER($RAW_TAGS);
         "payload" => json_payload(),
         "route" => json_route(),
         "tags" => $TAGS,
+        "raw_tags" => $RAW_TAGS,
         "notes" => [],
         "import_env" => json_environment(),
         "ref_material" => json_origin(),
@@ -160,6 +161,7 @@ $TAGS = tagSPLICER($RAW_TAGS);
 }
 //----------------------------------------------------------------------------------------------------
 function chestersCRATES($sha_env, $a, $cUID, $unix, $event_time, $tUID, $timezone){
+    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 
 $route = ROUTE('d', $sha_env);
     $BUILD_CHEST = buildCHEST($RAW_TAGS, $cUID, $unix, $event_time, $tUID, $timezone);
@@ -238,240 +240,135 @@ function catalogUNIX($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
 }
 
 //==============================================================================================
-function catalogTAGS($SHADOW_PROD_TOGGLE, $cUID, $UNIX){
+function charlieINDEX($sha_env, $group, $add, $level){
 
-  //--## special inserts ------- ##
-    $ACTOR = $GLOBALS['TOOL']['ACTOR'];
-    $SITE = $GLOBALS['SITE'];
-    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
+    $router_1 = ROUTE('d', $sha_env);
+        $catalog_rt = $router_1 . 'catalog/';
+          aleph($catalog_rt);
+          $obj_catalog = $catalog_rt . $group. '.catalog.json';
+          $oc = json_decode(file_get_contents($obj_catalog), true);
 
-    $w = $GLOBALS[$SITE];
-    $tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
+        foreach ($add as $entity => $objs){
+        foreach ($objs as $objects => $tags){
+        foreach ($tags as $tag){
 
-  //--## tag parser settings ------- ##
-     $add = tagSPLICER($RAW_TAGS);
-
-
-    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-        $MT_ROUTE = $ROUTE__LINE . '/trackerKEEPER/catalog/';
-        $MTAG_CHEST = $MT_ROUTE . 'master.tag.catalog.json';
-        $json1 = file_get_contents($MTAG_CHEST);
-        $MASTER_TAG = json_decode($json1, true);
-
-        $MT_ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/catalog/';
-        $MCONTEXT_CHEST = $MT_ROUTE2 . 'master.context.catalog.json';
-        $json2 = file_get_contents($MCONTEXT_CHEST);
-        $MASTER_CONTEXT = json_decode($json2, true);
-
-    
-
-    foreach ($add as $k => $values){
-        foreach ($values as $v => $child){
-        foreach ($child as $c){
-
-        $route_1 = $ROUTE__LINE . '/trackerKEEPER/catalog/by_tag/';
-        $ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
-        $TAG_CHEST = $route_1 . $v . '.tag.catalog.json';
-        $CONTEXT_CHEST = $ROUTE2 . $k . '.context.catalog.json';
-
-
-        $SECOND_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_tag/';
-        $THIRD_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
-
-        $COLLECTION = $SECOND_ROUTE . $v . '.tag.json';
-        $COLLECTION2 = $THIRD_ROUTE . $k . '.context.json';
-
-
-        $json3 = file_get_contents($TAG_CHEST);
-        $TAGS = json_decode($json3, true);
-
-
-        $json4 = file_get_contents($CONTEXT_CHEST);
-        $CONTEXTS = json_decode($json4, true);
-
-        $json5 = file_get_contents($COLLECTION);
-        $C = json_decode($json5, true);
-
-        $json6 = file_get_contents($COLLECTION2);
-        $C2 = json_decode($json6, true);
-    
-  //--## router settings ------- ##
-
-    if (!$MASTER_TAG) {
-        $MASTER_TAG = [];
-    }
-
-    if (!isset($MASTER_TAG[$v])){
-        $MASTER_TAG[$v] = [
-            'total_count' => 0,
-            'context' => []
-        ];
-    }
-    if (!isset($MASTER_TAG[$v]['context'])){
-        $MASTER_TAG[$v]['context'] = [];
-
-    }
-    if (!isset($MASTER_TAG[$v]['context'][$k])){
-        $MASTER_TAG[$v]['context'][$k] = 0;
-
-    } 
-
-    $MASTER_TAG[$v]['context'][$k]++;
-    $MASTER_TAG[$v]['total_count']++;
-
-
-         if (!$TAGS) {
-                $TAGS = [];
-            }
-
-            if (!isset($TAGS[$v])){
-                $TAGS[$v] = [
-                    'total_count' => 0,
-                    'context' => []
-                ];
-            }
-            if (!isset($TAGS[$v]['context'])){
-                $TAGS[$v]['context'] = [];
-
-            }
-            if (!isset($TAGS[$v]['context'][$k])){
-                $TAGS[$v]['context'][$k] = 0;
-
-            } 
-
-            $TAGS[$v]['context'][$k]++;
-            $TAGS[$v]['total_count']++;
-
-            if (!$CONTEXTS) {
-                $CONTEXTS = [];
-            }
-
-            if (!isset($CONTEXTS[$k])){
-                $CONTEXTS[$k] = [
-                    'total_count' => 0,
-                    'context' => []
-                ];
-            }
-
-            if (!isset($CONTEXTS[$k]['context'])){
-                $CONTEXTS[$k]['context'] = [];
-
-            }
-            if (!isset($CONTEXTS[$k]['context'][$v])){
-                $CONTEXTS[$k]['context'][$v] = 0;
-
-            } 
-
-            $CONTEXTS[$k]['context'][$v]++;
-            $CONTEXTS[$k]['total_count']++;
-
-
-
-                    if (!$MASTER_CONTEXT) {
-                        $MASTER_CONTEXT = [];
-                    }
-
-                    if (!isset($MASTER_CONTEXT[$k])){
-                        $MASTER_CONTEXT[$k] = [
-                            'total_count' => 0,
-                            'context' => []
-                        ];
-                    }
-
-                    if (!isset($MASTER_CONTEXT[$k]['context'])){
-                        $MASTER_CONTEXT[$k]['context'] = [];
-
-                    }
-                    if (!isset($MASTER_CONTEXT[$k]['context'][$v])){
-                        $MASTER_CONTEXT[$k]['context'][$v] = 0;
-
-                    } 
-
-                        $MASTER_CONTEXT[$k]['context'][$v]++;
-                        $MASTER_CONTEXT[$k]['total_count']++;
-
-
-
-
-
-            if (!isset($C)){
-                $C = [
-                    'slug' => $v,
-                    'aliases' => [],
-                    'type' => [],
-                    'notes' => [],
-                    'total_count' => 0,
-                    'context' => []
-                ];
-            }
-
-            if (!isset($C['context'][$k])){
-                $C['context'][$k] = [
-                    'count' => 0,
-                    'used_by' => []
-                ];
-            }
-
-            if (!isset($C['context'][$k]['used_by'][$ACTOR])){
-                $C['context'][$k]['used_by'][$ACTOR] = [
-                    'count' => 0,
-                    'cUID' => []
-                ];
-            }
-
-            $C['context'][$k]['used_by'][$ACTOR]['cUID'][$cUID] = $tagpath;
-            $C['total_count']++;
-            $C['context'][$k]['count']++;
-            $C['context'][$k]['used_by'][$ACTOR]['count']++;
-
-
-
-
-            if (!isset($C2)){
-                $C2 = [
-                    'slug' => $k,
-                    'aliases' => [],
-                    'type' => [],
-                    'notes' => [],
-                    'total_count' => 0,
-                    'tag' => []
-                ];
-            }
-
-            if (!isset($C2['tag'][$v])){
-                $C2['tag'][$v] = [
-                    'count' => 0,
-                    'used_by' => []
-                ];
-            }
-
-            if (!isset($C2['tag'][$v]['used_by'][$ACTOR])){
-                $C2['tag'][$v]['used_by'][$ACTOR] = [
-                    'count' => 0,
-                    'cUID' => []
-                ];
-            }
-
-            $C2['tag'][$v]['used_by'][$ACTOR]['cUID'][$cUID] = $tagpath;
-            $C2['total_count']++;
-            $C2['tag'][$v]['count']++;
-            $C2['tag'][$v]['used_by'][$ACTOR]['count']++;
-            
-
-            file_put_contents($COLLECTION, json_encode($C, JSON_PRETTY_PRINT));
-            file_put_contents($COLLECTION2, json_encode($C2, JSON_PRETTY_PRINT));
-            file_put_contents($CONTEXT_CHEST, json_encode($CONTEXTS, JSON_PRETTY_PRINT));
-            file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
-            }
+        if (!$oc) {
+            $oc['count'] = 0;
+        }
+            $oc[$group][$$level]++;
+            $oc['count']++;
         }
         }
+        }
+    
+    file_put_contents($obj_catalog, json_encode($oc, JSON_PRETTY_PRINT));
 
-            file_put_contents($MCONTEXT_CHEST, json_encode($MASTER_CONTEXT, JSON_PRETTY_PRINT));
-            file_put_contents($MTAG_CHEST, json_encode($MASTER_TAG, JSON_PRETTY_PRINT));
-
-  //--## fill that crate! ------- ##
 }
+//--------------------------------------------------------------------------------
+function charliesTHREADS($sha_env){
+    
+    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
+    $router_1 = ROUTE('d', $sha_env);
+    $add = tagSPLICER($RAW_TAGS);
+
+    charlieINDEX($sha_env, 'a-node', $add, 'entities');
+    charlieINDEX($sha_env, 'b-node', $add, 'objects');
+    charlieINDEX($sha_env, 'c-node', $add, 'tag');
+
+    foreach ($add as $entity => $objs){
+
+        $catalog_rt = $router_1 . 'catalog/by_aspect/';
+            aleph($catalog_rt);
+            $MTAG_CHEST = $catalog_rt . $entity . '.aspect.json';
+            $json1 = file_get_contents($MTAG_CHEST);
+            $tc = json_decode($json1, true);
+
+        if (!$tc) {
+            $tc[$entity] = [
+                'count' => 0
+            ];
+        }
+
+        foreach ($objs as $object => $tags){
+            if (!isset($tc[$entity]['has'][$object])){
+                $tc[$entity]['has'][$object] = [
+                    'weight' => 0
+                ];
+            }
+
+            foreach ($tags as $tag){
+                $tc[$entity]['count']++;
+                $tc[$entity]['has'][$object]['weight']++;
+                $tc[$entity]['has'][$object]['aspects'][$tag]++;
+            }
+        }
+    }
+
+    file_put_contents($MTAG_CHEST, json_encode($tc, JSON_PRETTY_PRINT));
+
+
+    foreach ($add as $entity => $objs){
+        foreach ($objs as $object => $tags){
+            foreach ($tags as $tag){
+
+
+    $catalog_rt = $router_1 . 'catalog/by_impact/';
+            aleph($catalog_rt);
+            $impact_catalog = $catalog_rt . $tag . '.impact.json';
+            $json5 = file_get_contents($impact_catalog);
+            $impact = json_decode($json5, true);
+
+    if (!$impact) {
+        $impact[$tag]['count'] = 0;
+        
+    }
+
+            if (!isset($impact[$tag]['impacted_by'][$object])){
+                $impact[$tag]['impacted_by'][$object] = [];
+            }
+                $impact[$tag]['count']++;
+
+
+                $impact[$tag]['impacted_by'][$object]['weight']++;
+                $impact[$tag]['impacted_by'][$object]['of'][$entity]++;
+
+        file_put_contents($impact_catalog, json_encode($impact, JSON_PRETTY_PRINT));
+
+            }
+        }
+    }
+
+    foreach ($add as $entity => $objs){
+        foreach ($objs as $object => $tags){
+            foreach ($tags as $tag){
+
+
+    $catalog_rt = $router_1 . 'catalog/by_insect/';
+            aleph($catalog_rt);
+            $impact2_catalog = $catalog_rt . $object . '.insect.json';
+            $json5 = file_get_contents($impact2_catalog);
+            $impac2 = json_decode($json5, true);
+
+    if (!$impac2) {
+        $impac2[$object]['count'] = 0;
+        
+    }
+
+            if (!isset($impac2[$object]['in'][$entity])){
+                $impac2[$object]['in'][$entity] = [];
+            }
+                $impac2[$object]['count']++;
+
+
+                $impac2[$object]['in'][$entity]['weight']++;
+                $impac2[$object]['in'][$entity]['are'][$tag]++;
+
+        file_put_contents($impact2_catalog, json_encode($impac2, JSON_PRETTY_PRINT));
+
+            }
+        }
+    }
+    }
 
 //==============================================================================================
 function catalogJUKEBOX($RAW_TAGS, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID,$tagpath){
@@ -542,13 +439,12 @@ function tagSPLICER($RAW_TAGS){
 
         $TAG = strtolower(trim($TAG));
 
-        if (strpos($TAG, ':') !== false) {    
-            [$type, $value] = explode(':', $TAG, 2);
+        if (strpos($TAG, '*') !== false) {    
+            [$type, $value] = explode('*', $TAG, 2);
             $type = trim($type);
             $value = trim($value);
         } else {
-            $type = "root_tag";
-            $value = trim($TAG);
+            $type = "";
         }
 
         if (strpos($value, ',') !== false) {
@@ -556,11 +452,11 @@ function tagSPLICER($RAW_TAGS){
         } else {
             $values = [trim($value)];
         }
-
+        
         foreach ($values as $tag){
         
-            if (strpos($tag, '*') !== false) {
-                [$parent, $child] = explode('*', $tag, 2);
+            if (strpos($tag, '>') !== false) {
+                [$parent, $child] = explode('>', $tag, 2);
                 $parent = [trim($parent)];
                 $child = [trim($child)];
             } else {
@@ -570,20 +466,30 @@ function tagSPLICER($RAW_TAGS){
             }
 
             foreach ($parent as $v){
-                    if (!is_array($add[$type]['_'])){
-                        $add[$type]['_'][] = $v;
-                    }
-                    if (!in_array($v, $add[$type]['_'])){
-                        $add[$type]['_'][] = $v;
-                    }
+                
+                if (!is_array($add[$type])){
+                    $add[$type][$v] = [];
+                }
+                if (!in_array($v, $add[$type])){
+                    $add[$type][$v] = [];
+                }
+
                 foreach ($child as $c){
+                    if (strpos($c, '+') !== false) {
+                        $kid = explode('+', trim($c));
+                    } else {
+                        $kid = [trim($c)];
+                    }
+
+                    foreach ($kid as $c){
+
                     if (!is_array($add[$type][$v])){
-                        $add[$type][$v][] = $c;
+                        $add[$type][$v][] = trim($c);
                     }
                     if (!in_array($c, $add[$type][$v])){
-                        $add[$type][$v][] = $c;
+                        $add[$type][$v][] = trim($c);
                     } 
-                    
+                    }
 
                 }
             }   
@@ -592,4 +498,84 @@ function tagSPLICER($RAW_TAGS){
     }
 
     return $add;
+
+
+}
+
+//
+
+
+function relationSPLICER($input){
+    $add = [];
+    
+    $input = array_filter(array_map(function($q){
+        return strtolower(trim($q));
+    }, 
+    explode(';', $input)));
+
+    foreach ($input as $string){
+
+        $string = strtolower(trim($string));
+
+        if (strpos($string, '*') !== false) {    
+            [$type, $value] = explode('*', $string, 2);
+            $type = trim($type);
+            $value = trim($value);
+        } else {
+            $type = "";
+        }
+
+        if (strpos($value, ',') !== false) {
+            $values = explode(',', $value);
+        } else {
+            $values = [trim($value)];
+        }
+        
+        foreach ($values as $tag){
+        
+            if (strpos($tag, '>') !== false) {
+                [$parent, $child] = explode('>', $tag, 2);
+                $parent = [trim($parent)];
+                $child = [trim($child)];
+            } else {
+                $parent = [trim($tag)];
+                $child = "";
+
+            }
+
+            foreach ($parent as $v){
+                
+                if (!is_array($add[$type])){
+                    $add[$type][$v] = [];
+                }
+                if (!in_array($v, $add[$type])){
+                    $add[$type][$v] = [];
+                }
+
+                foreach ($child as $c){
+                    if (strpos($c, '+') !== false) {
+                        $kid = explode('+', trim($c));
+                    } else {
+                        $kid = [trim($c)];
+                    }
+
+                    foreach ($kid as $c){
+
+                    if (!is_array($add[$type][$v])){
+                        $add[$type][$v][] = trim($c);
+                    }
+                    if (!in_array($c, $add[$type][$v])){
+                        $add[$type][$v][] = trim($c);
+                    } 
+                    }
+
+                }
+            }   
+        }
+
+    }
+
+    return $add;
+
+
 }
