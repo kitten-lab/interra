@@ -6,23 +6,22 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHA
 $id = $_GET['id'];
 $room = $_GET['w'];
 
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
-$ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$router_1 = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-$ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/' . $GLOBALS[$SITE]['SYS_SLUG'] . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . '/';
-  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.data.json';
+$route = $router_1 . $GLOBALS[$SITE]['SYS_SLUG'] . '/';
+    $CHEST = $route . $GLOBALS[$SITE]['DOM_SLUG'] . '-' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.post.json';    
   
 
 $CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
-
 $Parsedown = new Parsedown();
 
-foreach ($CHEST_THINGS as $TIMBER) {
-    $content = $TIMBER['payload']['timber'];
-  if ($id == $TIMBER['CUID']) {
-    echo "<h3>" . $GLOBALS[$SITE]['ROOM_SLUG'] . ' ' . $TIMBER['CUID'] . "</h3><hr>";
+foreach ($CHEST_THINGS as $TIMBER => $contents) {
+    $content = $contents['payload']['post'];
+  if ($id == $contents['tps']['ingest_unix']) {
+    echo "<h3>" . $GLOBALS[$SITE]['ROOM_SLUG'] . ' ' . $TIMBER . "</h3><hr>";
     echo "<h2>" . $content['topic'] . "</h2>";
-    echo $Parsedown->text($content['leaf']);
+    echo $Parsedown->text($content['content']);
   }
 }
 
