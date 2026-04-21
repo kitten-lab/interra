@@ -1,4 +1,4 @@
-# INTERRA Data Documentation v1.0
+# Data Documentation v1.0
 _CHESTER'S IMPORTS DATA FILE STRUCTURE_  
 
 This document covers the basic shapes of the data structure held in the json files used for Chester's Imports crating system.
