@@ -285,7 +285,7 @@ function charlieINDEX($sha_env, $group, $add, $level){
 
 function chesterLOOKUP($sha_env, $add, $level,$level2,$level3){
     
-
+$SITE = $GLOBALS['SITE'];
         foreach ($add as $entity => $objs){
         foreach ($objs as $objects => $tags){
         foreach ($tags as $tag){
@@ -300,7 +300,19 @@ function chesterLOOKUP($sha_env, $add, $level,$level2,$level3){
         if (!$oc) {
             $oc = [];
         }
-            $oc[$$level][$$level2][$$level3][] = $GLOBALS['cUID'];
+
+            
+            if (!isset($oc[$$level])){
+                $oc[$$level] = [];
+            }
+            if (!isset($oc[$$level][$$level2])){
+                $oc[$$level][$$level2] = [];
+            }
+            if (!isset($oc[$$level][$$level2][$$level3])){
+                $oc[$$level][$$level2][$$level3] = [];
+            }
+
+        $oc[$$level][$$level2][$$level3][$GLOBALS[$SITE]['MOD_SLUG']][] = $GLOBALS['cUID'];
 
     file_put_contents($obj_catalog, json_encode($oc, JSON_PRETTY_PRINT));
 
