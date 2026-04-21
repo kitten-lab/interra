@@ -1,5 +1,5 @@
 all tags are parsed into structured json and then projected into multiple lookup systems depending on context:
-### - by chestersCRATE system basic tag payload:
+### - by chestersCRATE payload:
 ```
         "tags": {
             "news": {
