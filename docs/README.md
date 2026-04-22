@@ -13,6 +13,7 @@ meaning you can explore how things evolve, connect, and resurface over a wide ar
 it runs on rapidly generated web interfaces with high customization, all powering the same underlying system.
 
 # charlieTHREADS
+named after charlie from always sunny in the episode where he finds himself working in the mailroom, charlieTHREADS is a structured tagging system derived from a light, loose form custom DSL. 
 - [overview](charlieTHREADS/overview.md)
 - [syntax](charlieTHREADS/syntax.md)
 - [views](charlieTHREADS/views.md)
