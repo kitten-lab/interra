@@ -11,3 +11,8 @@ instead of static notes, everything has a relationship and "narrative gravity"
 meaning you can explore how things evolve, connect, and resurface over a wide array of data.  
 
 it runs on rapidly generated web interfaces with high customization, all powering the same underlying system.
+
+# charlieTHREADS
+- [overview](.overview.md)
+- [syntax](.syntax.md)
+- [views](.views.md)
