@@ -1,0 +1,16 @@
+{
+    "name": "topic",
+    "gravity": 4,
+    "tps_metadata": [],
+    "topic": {
+        "omen": {
+            "weight": 4,
+            "bin": {
+                "hymn": 1,
+                "music": 1,
+                "father": 1,
+                "the-one": 1
+            }
+        }
+    }
+}

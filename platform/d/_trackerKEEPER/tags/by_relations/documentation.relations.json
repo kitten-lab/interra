@@ -1,14 +1,14 @@
 {
     "name": "documentation",
-    "gravity": 2,
+    "gravity": 3,
     "tps_metadata": {
         "added": {
             "cUID": "crate.629B6E37AA3E1170",
             "unix": 1776828085
         },
         "updated": {
-            "cUID": "crate.BF52F014828D3F84",
-            "unix": 1776861857
+            "cUID": "crate.C8E65B9780E1D75F",
+            "unix": 1776912549
         }
     },
     "contents": {
@@ -35,6 +35,34 @@
                         "updated": {
                             "cUID": "crate.BF52F014828D3F84",
                             "unix": 1776861857
+                        }
+                    }
+                }
+            }
+        },
+        "documentation": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.C8E65B9780E1D75F",
+                    "unix": 1776912549
+                },
+                "updated": {
+                    "cUID": "crate.C8E65B9780E1D75F",
+                    "unix": 1776912549
+                }
+            },
+            "bin": {
+                "adm": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.C8E65B9780E1D75F",
+                            "unix": 1776912549
+                        },
+                        "updated": {
+                            "cUID": "crate.C8E65B9780E1D75F",
+                            "unix": 1776912549
                         }
                     }
                 }

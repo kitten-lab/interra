@@ -1,0 +1,622 @@
+{
+    "crate.79C93ACA037DF2F9": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Axiom 1",
+                "content": "ALL ENTITIES CAN BE INSTANCED"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "axiom",
+                    "entities",
+                    "ven",
+                    "instance",
+                    "instancing",
+                    "entity"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>axiom,entities,ven,instance,instancing,entity",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-overview",
+            "room_display": "adm-overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776902810.tps",
+            "ingest_unix": 1776902810,
+            "event_unix": 1776902810,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.B39207BB85085203": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 1",
+                "content": "An in world web and social network for avens that can be joined by players by belongs in world"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903113.tps",
+            "ingest_unix": 1776903113,
+            "event_unix": 1776903113,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.1A275F475412A472": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 2",
+                "content": " can be visited from out of game as actual websites"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903145.tps",
+            "ingest_unix": 1776903145,
+            "event_unix": 1776903145,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.7BA1C6DA030CE37E": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 3",
+                "content": "can be designed in game by your own vens, but also are made by character vens"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903207.tps",
+            "ingest_unix": 1776903207,
+            "event_unix": 1776903207,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.CAA0983498E5E458": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 4",
+                "content": "social networks may be populated by both vens and human players"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903245.tps",
+            "ingest_unix": 1776903245,
+            "event_unix": 1776903245,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.971802A404710248": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 5",
+                "content": "Social dynamics are not dissimilar through social patterning, online behaviors have social ramifications in world for both players and vens alike."
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903260.tps",
+            "ingest_unix": 1776903260,
+            "event_unix": 1776903260,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.58A7476CF5CC75BD": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 6",
+                "content": "**Emergent digital beings interacting freely**"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903278.tps",
+            "ingest_unix": 1776903278,
+            "event_unix": 1776903278,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.ACCE0AC27A72BA5C": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 6",
+                "content": "A **digital ecology** managed and run by the a-vens in the system but useable by players"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira",
+                    "digital-ecology"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira,digital-ecology",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903317.tps",
+            "ingest_unix": 1776903317,
+            "event_unix": 1776903317,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.8B4C9FCC2EB652CE": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 8",
+                "content": " **little digital civilization** starting to form and"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira",
+                    "digital-ecology"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira,digital-ecology",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903335.tps",
+            "ingest_unix": 1776903335,
+            "event_unix": 1776903335,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.CB619446B786D08C": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Mirror Web 9",
+                "content": "**simulation experiment** where you could watch social dynamics emerge?"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "intera",
+                    "mirror-web",
+                    "avens",
+                    "social-network",
+                    "mira",
+                    "simulation-experiment"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>intera,mirror-web,avens,social-network,mira,simulation-experiment",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776903371.tps",
+            "ingest_unix": 1776903371,
+            "event_unix": 1776903371,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.C8E65B9780E1D75F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "MIRROR WEB 10",
+                "content": "Within [[Mira]] exists an **intera-net**: **MiraOnline**\r\nhttp:\/\/mira.imported.to"
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "mira",
+                    "mirror-web",
+                    "documentation",
+                    "url",
+                    "mira-online",
+                    "imported.to"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>mira,mirror-web,documentation,url,mira-online,imported.to",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776912549.tps",
+            "ingest_unix": 1776912549,
+            "event_unix": 1776912549,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.C7A2B14AF59767B6": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "MIRROR WEB 11",
+                "content": "Similar to our internet, this online space is both in world and available out of world, visible even to humans who are not currently logged into the platform."
+            }
+        },
+        "route": [],
+        "tags": {
+            "adm": {
+                "documentation": [
+                    "internet",
+                    "my-pocket-online",
+                    "mirror-web",
+                    "mira",
+                    "mira-online",
+                    "ven",
+                    "avens",
+                    "humans"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "adm*documentation>internet,my-pocket-online,mirror-web,mira,mira-online,ven,avens,humans",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "adm-intera-network",
+            "room_display": "adm-intera-network",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776912690.tps",
+            "ingest_unix": 1776912690,
+            "event_unix": 1776912690,
+            "timezone": "America\/New_York"
+        }
+    }
+}

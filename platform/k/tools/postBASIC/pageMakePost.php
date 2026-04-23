@@ -3,6 +3,11 @@
 $FIG = getFIG("postBASIC", "MakePost"); 
 
 ?>
+<!-- Load jQuery and jQuery UI -->
+<script src="https://jquery.com"></script>
+<script src="https://jquery.com"></script>
+<link rel="stylesheet" href="https://jquery.com">
+
 
 <form method="POST" action="">
 <span class="">
@@ -25,6 +30,7 @@ $FIG = getFIG("postBASIC", "MakePost");
 </span>
     <label for="POST__TAGS"><?= $FIG['Tags']; ?></label><br>
     <textarea 
+    id="tagTRACKER"
     rows="10" cols="60"
         name="POST__TAGS" 
         placeholder="Tags">
@@ -57,4 +63,18 @@ $FIG = getFIG("postBASIC", "MakePost");
 
 <script>
   document.getElementById('tz-input').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+</script>
+
+<script>
+$(function() {
+    $("#tagTRACKER").autocomplete({
+        source: "getTAGGED.php", // Path to your PHP script
+            dataType: "json",
+        minLength: 1,
+        select: function(event, ui) {
+            // Logic to append or replace text in textarea
+            console.log("Selected: " + ui.item.value);
+        }
+    });
+});
 </script>

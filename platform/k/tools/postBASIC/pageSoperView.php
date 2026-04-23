@@ -8,7 +8,7 @@ $FIG = getFIG("postBasic", "ViewList");
 
 
 
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 $router_1 = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
 $route = $router_1 . $GLOBALS[$SITE]['SYS_SLUG'] . '/';
@@ -26,8 +26,9 @@ if(file_exists($CHEST)) {
                 $tpsDT->setTimezone(new DateTimeZone("America/New_York"));
                 $date = $tpsDT->format('Y-m-d h:i:sa');
         echo "<div class='soper_frag'>";
-        echo "<h6>" . $contents['payload']['post']['topic'] . "</h6>";
-        echo $Parsedown->text($contents['payload']['post']['content']) . "</div>";  
+        echo "<div class='slug'>" . $contents['payload']['post']['topic'] . "</div>";
+        echo "<div class='content'>" . $Parsedown->text($contents['payload']['post']['content']) . "</div>"; 
+        echo "</div>"; 
     } 
 } else { 
     echo "No fragments found."; 

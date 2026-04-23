@@ -33,8 +33,8 @@ OTHER KNOWN LOCATIONS IN<BR><?= $SKY_AUTH['DOM_DISPLAY']; ?>
 
 if ($section['DOOR'] == $SKY_AUTH['DOM_SLUG']) {
  foreach ($section['ROOMS'] as $item) {
-echo "<li><a href='" . b_root . '/' . $SKY_AUTH['URI'] . '/' . $section['DOOR'] . '/' . $item['KEY'] . "'>";
-echo $item['ROOM'] . "</a></li>";
+echo "<li><a href='" . b_root . '/' . $SKY_AUTH['URI'] . '/' . $section['DOOR'] . '/' . $item['ROOM'] . "'>";
+echo $item['KEY'] . "</a></li>";
  }
 }
 endforeach; ?>

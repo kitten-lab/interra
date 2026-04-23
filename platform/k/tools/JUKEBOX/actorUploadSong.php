@@ -6,7 +6,7 @@ require_once __DIR__ . '/-SIG-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 ########
 
-    $sha_env = SHADOW_PROD_ENV(true);
+    $sha_env = SHADOW_PROD_ENV(false);
     $a = $GLOBALS[$SITE];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

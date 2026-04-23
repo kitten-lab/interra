@@ -15,8 +15,9 @@ openSky($GLOBALS[$SITE]['ROOM_DISPLAY']);
 
 section('', "section_container");
     section('', "headlines");
+
         bigHeading($GLOBALS[$SITE]['ROOM_DISPLAY']);
-        getTool("postBASIC", "ViewList");
+        getTool("postBASIC", "Headerlines");
     close_section();
     section('','content');
         leaf("HEY MOUSE. MAKE A POST. FILL'ER UP.");

@@ -44,6 +44,11 @@ $nav = [ "navSec" =>
                 "KEY" => "adm-overview", 
                 "ROOM" => "adm-overview", 
             ],
+
+            [ 
+                "KEY" => "adm-intera-network",  //nav label
+                "ROOM" => "adm-intera-network",  // key_name
+            ],
     /* SECTION GROUP -------------------------------- */
     ]],[ 
         "DOM" => "nim-ka", 

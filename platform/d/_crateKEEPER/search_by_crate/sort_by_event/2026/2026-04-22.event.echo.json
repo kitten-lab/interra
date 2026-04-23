@@ -473,5 +473,180 @@
             "event_unix": 1776868104,
             "timezone": "America\/New_York"
         }
+    },
+    "crate.8B2CA0362020521B": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "JUKEBOX",
+            "function": "UploadSong",
+            "type": "jukebox",
+            "version": 1
+        },
+        "payload": {
+            "jukebox": {
+                "JUKEID": "george-michael_father-figure.juke",
+                "artist": "GEORGE MICHAEL",
+                "song": "FATHER FIGURE",
+                "spotify_link": "https:\/\/genius.com\/George-michael-father-figure-lyrics"
+            }
+        },
+        "route": {
+            "listener": "KDE-333"
+        },
+        "tags": {
+            "omen": {
+                "google-notification": [
+                    "youtube-song-recommendation"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "omen*google-notification>youtube-song-recommendation",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "MUSIC",
+            "dom_display": "MYTHLEAK-MUSIC",
+            "room_slug": "SONGS",
+            "room_display": "MIX MASTER MC MOUSE MYTHLEAK",
+            "mod_slug": "MSC-000",
+            "mod_display": "MC-MOUSE"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776897777.tps",
+            "ingest_unix": 1776897777,
+            "event_unix": 1776897777,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.5DA0EAD46D85FD1B": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "reportBASIC",
+            "function": "IntakeReport",
+            "type": "report",
+            "version": 2
+        },
+        "payload": {
+            "post": {
+                "topic": "Google Notification - Song recommendation",
+                "content": "Phone popped a notification. A song recommendation from google\/youtube music. george michael, father figure...\r\n\r\ni miss hymn"
+            }
+        },
+        "route": {
+            "from": {
+                "mod": "KDE-333"
+            },
+            "to": {
+                "mod": "OM",
+                "room": "OMENS",
+                "dom": "REPORT",
+                "sys": "SKYLINE"
+            }
+        },
+        "tags": {
+            "omen": {
+                "type": [
+                    "song",
+                    "notification",
+                    "google-notification"
+                ],
+                "topic": [
+                    "hymn",
+                    "music",
+                    "father",
+                    "the-one"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "omen*type>song,notification,google-notification&topic>hymn,music,father,the-one",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SKYLINE",
+            "sys_display": "SKYLINE ON INTERA",
+            "dom_slug": "REPORT",
+            "dom_display": "REPORTING DEPARTMENT",
+            "room_slug": "OMENS",
+            "room_display": "OMAN'S OMENS",
+            "mod_slug": "OM",
+            "mod_display": "OMAN"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776897777.tps",
+            "ingest_unix": 1776897777,
+            "event_unix": 1776897777,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.E2B10F7EAC31D96E": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "reportBASIC",
+            "function": "IntakeReport",
+            "type": "report",
+            "version": 2
+        },
+        "payload": {
+            "post": {
+                "topic": "hymn in song(george-michael.juke)",
+                "content": "\"hat's all I wanted\r\nSomething special, someone sacred in your eyes\r\nFor just one moment\r\nTo be bold and naked at your side\""
+            }
+        },
+        "route": {
+            "from": {
+                "mod": "KDE-333"
+            },
+            "to": {
+                "mod": "JASMINE",
+                "room": "HYMN",
+                "dom": "REPORT",
+                "sys": "SKYLINE"
+            }
+        },
+        "tags": {
+            "hymn": {
+                "felt-in": [
+                    "song",
+                    "notification",
+                    "google-notification"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "hymn*felt-in>song,notification,google-notification",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SKYLINE",
+            "sys_display": "SKYLINE ON INTERA",
+            "dom_slug": "REPORT",
+            "dom_display": "REPORTING DEPARTMENT",
+            "room_slug": "HYMN",
+            "room_display": "SONG OF SONGS",
+            "mod_slug": "JASMINE",
+            "mod_display": "PRINCESS JASMINE"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776897777.tps",
+            "ingest_unix": 1776897777,
+            "event_unix": 1776897777,
+            "timezone": "America\/New_York"
+        }
     }
 }

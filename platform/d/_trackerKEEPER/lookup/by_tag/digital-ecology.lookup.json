@@ -1,0 +1,21 @@
+{
+    "digital-ecology": {
+        "gravity": 2,
+        "adm": {
+            "weight": 2,
+            "documentation": {
+                "weight": 2,
+                "reported_by": {
+                    "1-MIRA-1": {
+                        "1776903317": [
+                            "crate.ACCE0AC27A72BA5C"
+                        ],
+                        "1776903335": [
+                            "crate.8B4C9FCC2EB652CE"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

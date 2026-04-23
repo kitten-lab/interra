@@ -7,11 +7,11 @@ $FIG = getFIG("postBASIC", "MakePost");
 <form method="POST" action="">
 <span class="">
     <label for="POST__TIMBER_TOPIC"><?= $FIG['Topic']; ?></label><br>
-    <textarea 
+    <input 
     rows="1" cols="60"
     name="POST__TIMBER_TOPIC" 
     placeholder="<?= $FIG['Topic_plhldr']; ?>" 
-    required></textarea>
+    required>
     <br>
 </span>
 
@@ -26,18 +26,15 @@ $FIG = getFIG("postBASIC", "MakePost");
     required></textarea>
     <br>
 </span>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-<div class="editor">
-  <pre id="highlight"></pre>
+
     <label for="POST__TAGS"><?= $FIG['Tags']; ?></label><br>
     <textarea 
-    id="input" 
-    class="e"
-        name="POST__TAGS" 
-        placeholder="Tags">
-        </textarea>
-</div>
-    <br>
+    rows="10" cols="60"
+    name="POST__TAGS" id="tag-input" placeholder="type your thread..." /></textarea>
 
 
 
@@ -70,18 +67,4 @@ $FIG = getFIG("postBASIC", "MakePost");
 <script>
   document.getElementById('tz-input').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
 </script>
-
-<script>
-const input = document.getElementById('input');
-const highlight = document.getElementById('highlight');
-
-input.addEventListener('input', () => {
-  highlight.innerHTML = parse(input.value);
-});
-
-function parse(text) {
-  return text
-    .replace(/([*>,+;])/g, '<span class="operator">$1</span>')
-    .replace(/\b(news|media|mythleak)\b/g, '<span class="bucket">$1</span>');
-}
-</script>
+<script src="../../../k/tools/postBASIC/getTAGGED.js"></script>

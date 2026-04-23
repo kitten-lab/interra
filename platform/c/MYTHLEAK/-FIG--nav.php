@@ -14,6 +14,7 @@ $GLOBALS[$SITE]['GETS']['sideNav'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/
 
 $GLOBALS[$SITE]['tDOM'] = [
                     ["DOM" => "NEWS"],
+                    ["DOM" => "MUSIC"],
                     ["DOM" => "w"],
                     ];
 $GLOBALS[$SITE]['key'] = "home"; //FOR LATER USE
@@ -30,6 +31,17 @@ $nav = [ "navSec" =>
             [ 
                 "KEY" => "Latest Posts",  //nav label
                 "ROOM" => "HEADLINES",  // key_name
+            ],
+    /* SECTION GROUP -------------------------------- */
+    ]],[ 
+        "DOM" => "MUSIC", 
+        "BUILDING" => "MUSIC", //nav label
+        "PRIME_KEY" => "SONGS", 
+        "ROOMS" => [
+
+            [ 
+                "KEY" => "Share Your Music!",  //nav label
+                "ROOM" => "SONGS",  // key_name
             ],
     /* SECTION GROUP -------------------------------- */
     ]],

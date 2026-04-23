@@ -1,0 +1,44 @@
+{
+    "name": "imported.to",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.C8E65B9780E1D75F",
+            "unix": 1776912549
+        },
+        "updated": {
+            "cUID": "crate.C8E65B9780E1D75F",
+            "unix": 1776912549
+        }
+    },
+    "contents": {
+        "documentation": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.C8E65B9780E1D75F",
+                    "unix": 1776912549
+                },
+                "updated": {
+                    "cUID": "crate.C8E65B9780E1D75F",
+                    "unix": 1776912549
+                }
+            },
+            "bin": {
+                "adm": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.C8E65B9780E1D75F",
+                            "unix": 1776912549
+                        },
+                        "updated": {
+                            "cUID": "crate.C8E65B9780E1D75F",
+                            "unix": 1776912549
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

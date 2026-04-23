@@ -1,0 +1,48 @@
+{
+    "topic": {
+        "gravity": 4,
+        "omen": {
+            "weight": 4,
+            "hymn": {
+                "weight": 1,
+                "reported_by": {
+                    "OM": {
+                        "1776897777": [
+                            "crate.5DA0EAD46D85FD1B"
+                        ]
+                    }
+                }
+            },
+            "music": {
+                "weight": 1,
+                "reported_by": {
+                    "OM": {
+                        "1776897777": [
+                            "crate.5DA0EAD46D85FD1B"
+                        ]
+                    }
+                }
+            },
+            "father": {
+                "weight": 1,
+                "reported_by": {
+                    "OM": {
+                        "1776897777": [
+                            "crate.5DA0EAD46D85FD1B"
+                        ]
+                    }
+                }
+            },
+            "the-one": {
+                "weight": 1,
+                "reported_by": {
+                    "OM": {
+                        "1776897777": [
+                            "crate.5DA0EAD46D85FD1B"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

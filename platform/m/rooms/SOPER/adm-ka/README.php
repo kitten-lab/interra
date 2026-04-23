@@ -20,7 +20,7 @@ section('', "section_container");
     close_section();
     section('','inputs');
         leaf("Thank you for your presence.");
-        getTool("postBASIC", "MakePost");
+        getTool("postBASIC", "charliePOST");
     close_section();
 close_section();
 closeSky();

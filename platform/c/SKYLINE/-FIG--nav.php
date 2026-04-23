@@ -12,11 +12,11 @@ That's okay. Each time it WILL GET EASIER.  -abl
 $GLOBALS[$SITE]['GETS']['sideNav'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/nav.php'; 
 $GLOBALS[$SITE]['GETS']['topNav'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/top-nav.php'; 
 
-$GLOBALS[$SITE]['room'] = [
-                    ["name" => "PUBLIC"],
-                    ["name" => "REGISTRAR"],
-                    ["name" => "REPORT"],
-                    ["name" => "w"]
+$GLOBALS[$SITE]['tDOM'] = [
+                    ["DOM" => "PUBLIC"],
+                    ["DOM" => "REGISTRAR"],
+                    ["DOM" => "REPORT"],
+                    ["DOM" => "w"]
                     ]; 
 $GLOBALS[$SITE]['key'] = "home"; 
 
@@ -29,12 +29,12 @@ $nav = [ "navSec" =>
         "ROOMS" => [
 
             [ 
-                "ROOM" => "RECEPTION DESK", 
-                "KEY" => "FRONT-DESK", 
+                "KEY" => "RECEPTION DESK", 
+                "ROOM" => "FRONT-DESK", 
             ],
             [ 
-                "ROOM" => "SKY DESK REPORTS", 
-                "KEY" => "NEWS", 
+                "KEY" => "SKY DESK REPORTS", 
+                "ROOM" => "NEWS", 
             ],
     /* SECTION GROUP -------------------------------- */
     ]],[ 
@@ -44,16 +44,16 @@ $nav = [ "navSec" =>
         "ROOMS" => [
 
         [ 
-            "ROOM" => "REPORT AN OMEN", 
-            "KEY" => "OMENS", 
+            "KEY" => "REPORT AN OMEN", 
+            "ROOM" => "OMENS", 
             ],
         [ 
-            "ROOM" => "REPORT SENSE OF HYMN", 
-            "KEY" => "HYMN", 
+            "KEY" => "REPORT SENSE OF HYMN", 
+            "ROOM" => "HYMN", 
             ],
         [ 
-            "ROOM" => "REPORT A SECRET KNOWN", 
-            "KEY" => "SECRETS", 
+            "KEY" => "REPORT A SECRET KNOWN", 
+            "ROOM" => "SECRETS", 
             ],
     /* SECTION GROUP -------------------------------- */
     ]],[ 
@@ -63,12 +63,12 @@ $nav = [ "navSec" =>
         "ROOMS" => [
 
         [ 
-            "ROOM" => "REGISTER KEY", 
-            "KEY" => "REGISTER_KEY", 
+            "KEY" => "REGISTER KEY", 
+            "ROOM" => "REGISTER_KEY", 
             ],
         [ 
-            "ROOM" => "REGISTER WORLD", 
-            "KEY" => "REGISTER_WORLD", 
+            "KEY" => "REGISTER WORLD", 
+            "ROOM" => "REGISTER_WORLD", 
         ],
     /* SECTION GROUP -------------------------------- */
     ]]

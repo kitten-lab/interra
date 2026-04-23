@@ -1,0 +1,15 @@
+{
+    "name": "felt-in",
+    "gravity": 3,
+    "tps_metadata": [],
+    "felt-in": {
+        "hymn": {
+            "weight": 3,
+            "bin": {
+                "song": 1,
+                "notification": 1,
+                "google-notification": 1
+            }
+        }
+    }
+}
