@@ -1,0 +1,14 @@
+{
+    "name": "skyline",
+    "gravity": 5,
+    "tps_metadata": [],
+    "skyline": {
+        "checkin": {
+            "weight": 5,
+            "bin": {
+                "om": 4,
+                "kde-333": 1
+            }
+        }
+    }
+}

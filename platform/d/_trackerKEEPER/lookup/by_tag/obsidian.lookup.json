@@ -2,9 +2,9 @@
     "obsidian": {
         "gravity": 1,
         "mythleak": {
-            "weight": 1,
+            "gravity": 1,
             "headlines": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [

@@ -2,9 +2,9 @@
     "felt-in": {
         "gravity": 3,
         "hymn": {
-            "weight": 3,
+            "gravity": 3,
             "song": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [
@@ -14,7 +14,7 @@
                 }
             },
             "notification": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [
@@ -24,7 +24,7 @@
                 }
             },
             "google-notification": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [

@@ -2,9 +2,9 @@
     "social-network": {
         "gravity": 9,
         "adm": {
-            "weight": 9,
+            "gravity": 9,
             "documentation": {
-                "weight": 9,
+                "gravity": 9,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [

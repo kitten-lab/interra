@@ -2,9 +2,9 @@
     "hymn": {
         "gravity": 4,
         "omen": {
-            "weight": 1,
+            "gravity": 1,
             "topic": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -15,9 +15,9 @@
             }
         },
         "felt-in": {
-            "weight": 3,
+            "gravity": 3,
             "song": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [
@@ -27,7 +27,7 @@
                 }
             },
             "notification": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [
@@ -37,7 +37,7 @@
                 }
             },
             "google-notification": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [

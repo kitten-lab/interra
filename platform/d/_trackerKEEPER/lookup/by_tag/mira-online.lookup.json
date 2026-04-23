@@ -2,9 +2,9 @@
     "mira-online": {
         "gravity": 2,
         "adm": {
-            "weight": 2,
+            "gravity": 2,
             "documentation": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912549": [

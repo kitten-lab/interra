@@ -2,9 +2,9 @@
     "kde-333": {
         "gravity": 1,
         "checkin": {
-            "weight": 1,
+            "gravity": 1,
             "skyline": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776819635": [

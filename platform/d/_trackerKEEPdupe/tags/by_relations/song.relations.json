@@ -1,0 +1,72 @@
+{
+    "name": "song",
+    "gravity": 2,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.5DA0EAD46D85FD1B",
+            "unix": 1776898312
+        },
+        "updated": {
+            "cUID": "crate.E2B10F7EAC31D96E",
+            "unix": 1776899172
+        }
+    },
+    "contents": {
+        "type": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.5DA0EAD46D85FD1B",
+                    "unix": 1776898312
+                },
+                "updated": {
+                    "cUID": "crate.5DA0EAD46D85FD1B",
+                    "unix": 1776898312
+                }
+            },
+            "bin": {
+                "omen": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.5DA0EAD46D85FD1B",
+                            "unix": 1776898312
+                        },
+                        "updated": {
+                            "cUID": "crate.5DA0EAD46D85FD1B",
+                            "unix": 1776898312
+                        }
+                    }
+                }
+            }
+        },
+        "felt-in": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.E2B10F7EAC31D96E",
+                    "unix": 1776899172
+                },
+                "updated": {
+                    "cUID": "crate.E2B10F7EAC31D96E",
+                    "unix": 1776899172
+                }
+            },
+            "bin": {
+                "hymn": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.E2B10F7EAC31D96E",
+                            "unix": 1776899172
+                        },
+                        "updated": {
+                            "cUID": "crate.E2B10F7EAC31D96E",
+                            "unix": 1776899172
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

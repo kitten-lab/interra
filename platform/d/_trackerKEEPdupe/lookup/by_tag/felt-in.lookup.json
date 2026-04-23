@@ -1,0 +1,38 @@
+{
+    "felt-in": {
+        "gravity": 3,
+        "hymn": {
+            "weight": 3,
+            "song": {
+                "weight": 1,
+                "reported_by": {
+                    "JASMINE": {
+                        "1776897777": [
+                            "crate.E2B10F7EAC31D96E"
+                        ]
+                    }
+                }
+            },
+            "notification": {
+                "weight": 1,
+                "reported_by": {
+                    "JASMINE": {
+                        "1776897777": [
+                            "crate.E2B10F7EAC31D96E"
+                        ]
+                    }
+                }
+            },
+            "google-notification": {
+                "weight": 1,
+                "reported_by": {
+                    "JASMINE": {
+                        "1776897777": [
+                            "crate.E2B10F7EAC31D96E"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

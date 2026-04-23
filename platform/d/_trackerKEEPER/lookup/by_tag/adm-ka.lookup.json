@@ -2,9 +2,9 @@
     "adm-ka": {
         "gravity": 4,
         "soper": {
-            "weight": 4,
+            "gravity": 4,
             "documentation": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MIRA-010": {
                         "1776828085": [
@@ -19,7 +19,7 @@
                 }
             },
             "intentions": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MIRA-010": {
                         "1776828085": [

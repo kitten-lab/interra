@@ -2,9 +2,9 @@
     "topic": {
         "gravity": 4,
         "omen": {
-            "weight": 4,
+            "gravity": 4,
             "hymn": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -14,7 +14,7 @@
                 }
             },
             "music": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -24,7 +24,7 @@
                 }
             },
             "father": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -34,7 +34,7 @@
                 }
             },
             "the-one": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [

@@ -1,0 +1,41 @@
+{
+    "google-notification": {
+        "gravity": 3,
+        "omen": {
+            "weight": 2,
+            "youtube-song-recommendation": {
+                "weight": 1,
+                "reported_by": {
+                    "MSC-000": {
+                        "1776897777": [
+                            "crate.8B2CA0362020521B"
+                        ]
+                    }
+                }
+            },
+            "type": {
+                "weight": 1,
+                "reported_by": {
+                    "OM": {
+                        "1776897777": [
+                            "crate.5DA0EAD46D85FD1B"
+                        ]
+                    }
+                }
+            }
+        },
+        "hymn": {
+            "weight": 1,
+            "felt-in": {
+                "weight": 1,
+                "reported_by": {
+                    "JASMINE": {
+                        "1776897777": [
+                            "crate.E2B10F7EAC31D96E"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

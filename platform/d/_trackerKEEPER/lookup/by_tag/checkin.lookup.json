@@ -2,9 +2,9 @@
     "checkin": {
         "gravity": 5,
         "skyline": {
-            "weight": 5,
+            "gravity": 5,
             "om": {
-                "weight": 4,
+                "gravity": 4,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776818510": [
@@ -23,7 +23,7 @@
                 }
             },
             "kde-333": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776819635": [

@@ -2,9 +2,9 @@
     "om": {
         "gravity": 4,
         "checkin": {
-            "weight": 4,
+            "gravity": 4,
             "skyline": {
-                "weight": 4,
+                "gravity": 4,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776818510": [

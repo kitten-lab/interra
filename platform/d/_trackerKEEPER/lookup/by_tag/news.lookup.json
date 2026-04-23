@@ -2,9 +2,9 @@
     "news": {
         "gravity": 4,
         "media": {
-            "weight": 4,
+            "gravity": 4,
             "mythleak": {
-                "weight": 4,
+                "gravity": 4,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [

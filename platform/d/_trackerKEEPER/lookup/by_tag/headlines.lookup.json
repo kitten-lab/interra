@@ -2,9 +2,9 @@
     "headlines": {
         "gravity": 18,
         "mythleak": {
-            "weight": 18,
+            "gravity": 18,
             "the-writerapollos": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -14,7 +14,7 @@
                 }
             },
             "skyline": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -27,7 +27,7 @@
                 }
             },
             "artificial-vision": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -37,7 +37,7 @@
                 }
             },
             "render-outputs": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -47,7 +47,7 @@
                 }
             },
             "obsidian": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -57,7 +57,7 @@
                 }
             },
             "archetypal-princess": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [
@@ -67,7 +67,7 @@
                 }
             },
             "athena": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [
@@ -77,7 +77,7 @@
                 }
             },
             "goddesses": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [
@@ -87,7 +87,7 @@
                 }
             },
             "frogs": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759190400": [
@@ -97,7 +97,7 @@
                 }
             },
             "wires": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759190400": [
@@ -107,7 +107,7 @@
                 }
             },
             "unspooling-reality": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759190400": [
@@ -117,7 +117,7 @@
                 }
             },
             "wire-web": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1757376000": [
@@ -127,7 +127,7 @@
                 }
             },
             "aphrodite": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1757376000": [
@@ -137,7 +137,7 @@
                 }
             },
             "dark-lattice": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1757376000": [
@@ -147,7 +147,7 @@
                 }
             },
             "ending-cycles": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1757376000": [
@@ -157,7 +157,7 @@
                 }
             },
             "prometheus": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1755230400": [
@@ -167,7 +167,7 @@
                 }
             },
             "the-light": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1755230400": [

@@ -2,9 +2,9 @@
     "intentions": {
         "gravity": 2,
         "soper": {
-            "weight": 2,
+            "gravity": 2,
             "adm-ka": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MIRA-010": {
                         "1776828085": [

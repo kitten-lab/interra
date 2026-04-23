@@ -1,0 +1,18 @@
+{
+    "kde-333": {
+        "gravity": 1,
+        "checkin": {
+            "weight": 1,
+            "skyline": {
+                "weight": 1,
+                "reported_by": {
+                    "SKYLINE-AGENT": {
+                        "1776819635": [
+                            "crate.8474E2D6D8CFE6AA"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

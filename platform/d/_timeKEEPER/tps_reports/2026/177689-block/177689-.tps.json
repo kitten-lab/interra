@@ -13,9 +13,9 @@
             1776899172
         ],
         "time_certainty": {
-            "radius": 0,
-            "unit": "seconds",
-            "confidence": "exact"
+            "radius": 10,
+            "unit": "minutes",
+            "confidence": "high"
         },
         "event_timezone": "America\/New_York",
         "tps_timzezone": "UTC",

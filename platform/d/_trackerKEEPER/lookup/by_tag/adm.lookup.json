@@ -2,9 +2,9 @@
     "adm": {
         "gravity": 68,
         "documentation": {
-            "weight": 68,
+            "gravity": 68,
             "axiom": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -14,7 +14,7 @@
                 }
             },
             "entities": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -24,7 +24,7 @@
                 }
             },
             "ven": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -37,7 +37,7 @@
                 }
             },
             "instance": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -47,7 +47,7 @@
                 }
             },
             "instancing": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -57,7 +57,7 @@
                 }
             },
             "entity": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776902810": [
@@ -67,7 +67,7 @@
                 }
             },
             "intera": {
-                "weight": 9,
+                "gravity": 9,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [
@@ -101,7 +101,7 @@
                 }
             },
             "mirror-web": {
-                "weight": 11,
+                "gravity": 11,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [
@@ -141,7 +141,7 @@
                 }
             },
             "avens": {
-                "weight": 10,
+                "gravity": 10,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [
@@ -178,7 +178,7 @@
                 }
             },
             "social-network": {
-                "weight": 9,
+                "gravity": 9,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [
@@ -212,7 +212,7 @@
                 }
             },
             "mira": {
-                "weight": 11,
+                "gravity": 11,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [
@@ -252,7 +252,7 @@
                 }
             },
             "digital-ecology": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903317": [
@@ -265,7 +265,7 @@
                 }
             },
             "simulation-experiment": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903371": [
@@ -275,7 +275,7 @@
                 }
             },
             "documentation": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912549": [
@@ -285,7 +285,7 @@
                 }
             },
             "url": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912549": [
@@ -295,7 +295,7 @@
                 }
             },
             "mira-online": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912549": [
@@ -308,7 +308,7 @@
                 }
             },
             "imported.to": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912549": [
@@ -318,7 +318,7 @@
                 }
             },
             "internet": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912690": [
@@ -328,7 +328,7 @@
                 }
             },
             "my-pocket-online": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912690": [
@@ -338,7 +338,7 @@
                 }
             },
             "humans": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776912690": [

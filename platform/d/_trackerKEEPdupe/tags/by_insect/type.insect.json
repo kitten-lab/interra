@@ -1,0 +1,15 @@
+{
+    "name": "type",
+    "gravity": 3,
+    "tps_metadata": [],
+    "type": {
+        "omen": {
+            "weight": 3,
+            "bin": {
+                "song": 1,
+                "notification": 1,
+                "google-notification": 1
+            }
+        }
+    }
+}

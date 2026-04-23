@@ -313,11 +313,11 @@ $cUID = $GLOBALS['cUID'];
             if (!isset($oc[$$level]['gravity'])) $oc[$$level]['gravity'] ?? [];
             $oc[$$level]['gravity']++;
 
-            if (!isset($oc[$$level][$$level2]['weight'])) $oc[$$level][$$level2]['weight'] ?? [];
-            $oc[$$level][$$level2]['weight']++;
+            if (!isset($oc[$$level][$$level2]['gravity'])) $oc[$$level][$$level2]['gravity'] ?? [];
+            $oc[$$level][$$level2]['gravity']++;
 
-            if (!isset($oc[$$level][$$level2][$$level3]['weight'])) $oc[$$level][$$level2][$$level3]['weight'] ?? [];
-            $oc[$$level][$$level2][$$level3]['weight']++;
+            if (!isset($oc[$$level][$$level2][$$level3]['gravity'])) $oc[$$level][$$level2][$$level3]['gravity'] ?? [];
+            $oc[$$level][$$level2][$$level3]['gravity']++;
             
             if (!isset($oc[$$level][$$level2][$$level3]['reported_by'][$MOD][$tpstime][$cUID]))
              $oc[$$level][$$level2][$$level3]['reported_by'][$MOD][$tpstime][] = $cUID;
@@ -381,7 +381,7 @@ function charlieTHREAD2($sha_env, $tpstime){
             if (!isset($tc[$object]))
                 $tc[$object]= [
                     
-                'weight' => 0,
+                'gravity' => 0,
                 'date_added' => [
                     'unix' => time(),
                     'cUID' => $GLOBALS['cUID']],
@@ -408,7 +408,7 @@ function charlieTHREAD2($sha_env, $tpstime){
             if (!isset( $tc[$object]['bin'][$tag]))
                 $tc[$object]['bin'][$tag] = [
                     
-                'weight' => 0,
+                'gravity' => 0,
             
                 'date_added' => [
                     'unix' => time(),
@@ -433,9 +433,9 @@ function charlieTHREAD2($sha_env, $tpstime){
         if (!isset($tc['last_mention']['event_unix']))
         $tc['last_mention']['event_unix'] = time();
 
-                $tc[$object]['weight']++;
+                $tc[$object]['gravity']++;
                 $tc['gravity']++;
-                $tc[$object]['bin'][$tag]['weight']++;
+                $tc[$object]['bin'][$tag]['gravity']++;
                 
     file_put_contents($MTAG_CHEST, json_encode($tc, JSON_PRETTY_PRINT));
 
@@ -597,7 +597,7 @@ $cUID = $GLOBALS['cUID'];
                 $impac2['gravity']++;
 
 
-                $impac2[$object][$entity]['weight']++;
+                $impac2[$object][$entity]['gravity']++;
                 $impac2[$object][$entity]['bin'][$tag]++;
 
         file_put_contents($impact2_catalog, json_encode($impac2, JSON_PRETTY_PRINT));

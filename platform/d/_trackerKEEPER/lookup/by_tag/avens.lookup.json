@@ -2,9 +2,9 @@
     "avens": {
         "gravity": 10,
         "adm": {
-            "weight": 10,
+            "gravity": 10,
             "documentation": {
-                "weight": 10,
+                "gravity": 10,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [

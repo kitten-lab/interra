@@ -2,9 +2,9 @@
     "self-blame-rituals": {
         "gravity": 1,
         "mythleak": {
-            "weight": 1,
+            "gravity": 1,
             "mentions": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [

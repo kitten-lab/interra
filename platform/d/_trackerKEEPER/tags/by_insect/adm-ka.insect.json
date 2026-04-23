@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "adm-ka": {
         "soper": {
-            "weight": 4,
+            "gravity": 4,
             "bin": {
                 "documentation": 2,
                 "intentions": 2

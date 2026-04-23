@@ -1,0 +1,63 @@
+{
+    "skyline": {
+        "gravity": 8,
+        "checkin": {
+            "weight": 5,
+            "om": {
+                "weight": 4,
+                "reported_by": {
+                    "SKYLINE-AGENT": {
+                        "1776818510": [
+                            "crate.881F947EE5A937DC"
+                        ],
+                        "1776819164": [
+                            "crate.23AD7C8ABCEF9ADA"
+                        ],
+                        "1776819211": [
+                            "crate.0B593B6AFD8D63A2"
+                        ],
+                        "1776819228": [
+                            "crate.FCC033335AB633FF"
+                        ]
+                    }
+                }
+            },
+            "kde-333": {
+                "weight": 1,
+                "reported_by": {
+                    "SKYLINE-AGENT": {
+                        "1776819635": [
+                            "crate.8474E2D6D8CFE6AA"
+                        ]
+                    }
+                }
+            }
+        },
+        "mythleak": {
+            "weight": 3,
+            "headlines": {
+                "weight": 2,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ],
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "mentions": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

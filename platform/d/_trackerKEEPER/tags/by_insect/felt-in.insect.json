@@ -2,9 +2,9 @@
     "name": "felt-in",
     "gravity": 3,
     "tps_metadata": [],
-    "felt-in": {
+    "shelf": {
         "hymn": {
-            "weight": 3,
+            "gravity": 3,
             "bin": {
                 "song": 1,
                 "notification": 1,

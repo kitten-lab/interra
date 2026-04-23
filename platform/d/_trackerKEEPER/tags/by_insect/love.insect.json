@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "love": {
         "topics": {
-            "weight": 1,
+            "gravity": 1,
             "bin": {
                 "true-loves-kiss": 1
             }

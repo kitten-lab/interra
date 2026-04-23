@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "topic": {
         "omen": {
-            "weight": 4,
+            "gravity": 4,
             "bin": {
                 "hymn": 1,
                 "music": 1,

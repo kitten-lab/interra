@@ -2,9 +2,9 @@
     "song": {
         "gravity": 2,
         "omen": {
-            "weight": 1,
+            "gravity": 1,
             "type": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -15,9 +15,9 @@
             }
         },
         "hymn": {
-            "weight": 1,
+            "gravity": 1,
             "felt-in": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [

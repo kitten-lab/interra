@@ -1,0 +1,44 @@
+{
+    "name": "my-pocket-online",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.C7A2B14AF59767B6",
+            "unix": 1776912690
+        },
+        "updated": {
+            "cUID": "crate.C7A2B14AF59767B6",
+            "unix": 1776912690
+        }
+    },
+    "contents": {
+        "documentation": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.C7A2B14AF59767B6",
+                    "unix": 1776912690
+                },
+                "updated": {
+                    "cUID": "crate.C7A2B14AF59767B6",
+                    "unix": 1776912690
+                }
+            },
+            "bin": {
+                "adm": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.C7A2B14AF59767B6",
+                            "unix": 1776912690
+                        },
+                        "updated": {
+                            "cUID": "crate.C7A2B14AF59767B6",
+                            "unix": 1776912690
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

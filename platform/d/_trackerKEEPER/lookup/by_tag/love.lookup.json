@@ -2,9 +2,9 @@
     "love": {
         "gravity": 1,
         "topics": {
-            "weight": 1,
+            "gravity": 1,
             "true-loves-kiss": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [

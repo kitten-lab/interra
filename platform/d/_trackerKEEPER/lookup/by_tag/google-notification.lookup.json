@@ -2,9 +2,9 @@
     "google-notification": {
         "gravity": 3,
         "omen": {
-            "weight": 2,
+            "gravity": 2,
             "youtube-song-recommendation": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MSC-000": {
                         "1776897777": [
@@ -14,7 +14,7 @@
                 }
             },
             "type": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [
@@ -25,9 +25,9 @@
             }
         },
         "hymn": {
-            "weight": 1,
+            "gravity": 1,
             "felt-in": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "JASMINE": {
                         "1776897777": [

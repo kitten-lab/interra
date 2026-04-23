@@ -2,9 +2,9 @@
     "music": {
         "gravity": 1,
         "omen": {
-            "weight": 1,
+            "gravity": 1,
             "topic": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "OM": {
                         "1776897777": [

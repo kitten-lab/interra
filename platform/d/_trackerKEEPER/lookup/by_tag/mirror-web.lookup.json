@@ -2,9 +2,9 @@
     "mirror-web": {
         "gravity": 11,
         "adm": {
-            "weight": 11,
+            "gravity": 11,
             "documentation": {
-                "weight": 11,
+                "gravity": 11,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776903113": [

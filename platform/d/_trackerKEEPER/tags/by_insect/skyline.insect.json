@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "skyline": {
         "checkin": {
-            "weight": 5,
+            "gravity": 5,
             "bin": {
                 "om": 4,
                 "kde-333": 1

@@ -2,9 +2,9 @@
     "skyline": {
         "gravity": 8,
         "checkin": {
-            "weight": 5,
+            "gravity": 5,
             "om": {
-                "weight": 4,
+                "gravity": 4,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776818510": [
@@ -23,7 +23,7 @@
                 }
             },
             "kde-333": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "SKYLINE-AGENT": {
                         "1776819635": [
@@ -34,9 +34,9 @@
             }
         },
         "mythleak": {
-            "weight": 3,
+            "gravity": 3,
             "headlines": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MCS-000": {
                         "1759017600": [
@@ -49,7 +49,7 @@
                 }
             },
             "mentions": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1758844800": [

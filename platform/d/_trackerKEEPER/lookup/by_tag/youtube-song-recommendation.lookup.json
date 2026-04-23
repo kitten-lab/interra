@@ -2,9 +2,9 @@
     "youtube-song-recommendation": {
         "gravity": 1,
         "omen": {
-            "weight": 1,
+            "gravity": 1,
             "google-notification": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MSC-000": {
                         "1776897777": [

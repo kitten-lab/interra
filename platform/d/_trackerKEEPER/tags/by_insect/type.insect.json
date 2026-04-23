@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "type": {
         "omen": {
-            "weight": 3,
+            "gravity": 3,
             "bin": {
                 "song": 1,
                 "notification": 1,

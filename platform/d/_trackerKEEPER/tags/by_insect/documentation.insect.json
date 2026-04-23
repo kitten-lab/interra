@@ -4,7 +4,7 @@
     "tps_metadata": [],
     "documentation": {
         "adm": {
-            "weight": 68,
+            "gravity": 68,
             "bin": {
                 "axiom": 1,
                 "entities": 1,

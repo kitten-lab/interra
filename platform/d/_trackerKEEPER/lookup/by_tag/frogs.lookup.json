@@ -2,9 +2,9 @@
     "frogs": {
         "gravity": 2,
         "mythleak": {
-            "weight": 2,
+            "gravity": 2,
             "headlines": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759190400": [
@@ -14,7 +14,7 @@
                 }
             },
             "mentions": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "MCS-000": {
                         "1759190400": [

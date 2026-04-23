@@ -1,0 +1,37 @@
+{
+    "checkin": {
+        "gravity": 5,
+        "skyline": {
+            "weight": 5,
+            "om": {
+                "weight": 4,
+                "reported_by": {
+                    "SKYLINE-AGENT": {
+                        "1776818510": [
+                            "crate.881F947EE5A937DC"
+                        ],
+                        "1776819164": [
+                            "crate.23AD7C8ABCEF9ADA"
+                        ],
+                        "1776819211": [
+                            "crate.0B593B6AFD8D63A2"
+                        ],
+                        "1776819228": [
+                            "crate.FCC033335AB633FF"
+                        ]
+                    }
+                }
+            },
+            "kde-333": {
+                "weight": 1,
+                "reported_by": {
+                    "SKYLINE-AGENT": {
+                        "1776819635": [
+                            "crate.8474E2D6D8CFE6AA"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

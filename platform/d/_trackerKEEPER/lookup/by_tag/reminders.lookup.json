@@ -2,9 +2,9 @@
     "reminders": {
         "gravity": 1,
         "soper": {
-            "weight": 1,
+            "gravity": 1,
             "system": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "SOPER": {
                         "1776863031": [

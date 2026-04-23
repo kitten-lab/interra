@@ -2,9 +2,9 @@
     "soper": {
         "gravity": 6,
         "adm-ka": {
-            "weight": 4,
+            "gravity": 4,
             "documentation": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MIRA-010": {
                         "1776828085": [
@@ -19,7 +19,7 @@
                 }
             },
             "intentions": {
-                "weight": 2,
+                "gravity": 2,
                 "reported_by": {
                     "MIRA-010": {
                         "1776828085": [
@@ -35,9 +35,9 @@
             }
         },
         "system": {
-            "weight": 1,
+            "gravity": 1,
             "reminders": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "SOPER": {
                         "1776863031": [
@@ -48,9 +48,9 @@
             }
         },
         "nim-ka": {
-            "weight": 1,
+            "gravity": 1,
             "purpose": {
-                "weight": 1,
+                "gravity": 1,
                 "reported_by": {
                     "1-MIRA-1": {
                         "1776868104": [
