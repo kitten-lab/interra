@@ -1,0 +1,44 @@
+{
+    "name": "dog",
+    "gravity": 3,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.D642DCFCADC5E7CA",
+            "unix": 1776974028
+        },
+        "updated": {
+            "cUID": "crate.BE429F839281E2D0",
+            "unix": 1776974180
+        }
+    },
+    "contents": {
+        "is": {
+            "gravity": 3,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.D642DCFCADC5E7CA",
+                    "unix": 1776974028
+                },
+                "updated": {
+                    "cUID": "crate.BE429F839281E2D0",
+                    "unix": 1776974180
+                }
+            },
+            "bin": {
+                "cat": {
+                    "gravity": 3,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.D642DCFCADC5E7CA",
+                            "unix": 1776974028
+                        },
+                        "updated": {
+                            "cUID": "crate.BE429F839281E2D0",
+                            "unix": 1776974180
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

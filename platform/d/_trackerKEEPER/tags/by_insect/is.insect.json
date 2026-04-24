@@ -1,0 +1,13 @@
+{
+    "name": "is",
+    "gravity": 3,
+    "tps_metadata": [],
+    "is": {
+        "cat": {
+            "gravity": 3,
+            "bin": {
+                "dog": 3
+            }
+        }
+    }
+}

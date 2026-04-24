@@ -10,6 +10,9 @@ $SITE = $GLOBALS['SITE'];
 <html><head>
 
 <?php 
+if ($GLOBALS['shadowENVO'] == true) {
+        echo '<div>SHADOW MODE</div>';
+}
 foreach ($GLOBALS['GETS']['dressing'] as $fn) {
     echo $fn();
 } ?>

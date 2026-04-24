@@ -1,5 +1,5 @@
 {
-    "count": 126,
+    "count": 133,
     "a-node": {
         "checkin": 5,
         "soper": 6,
@@ -9,6 +9,8 @@
         "news": 1,
         "omen": 8,
         "hymn": 3,
-        "adm": 68
+        "adm": 68,
+        "cat": 3,
+        "some": 4
     }
 }

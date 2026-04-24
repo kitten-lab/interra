@@ -22,34 +22,21 @@ function SKY_GET_cUID($event_time){
 //==============================================================================================
 // FUNCTIONS FOR THE TPS MACHINE
 //==============================================================================================
-function buildTPS($unix, $ms, $event_time) {
-
-    $tpsDT = new DateTime("@$unix");
+function tpsREPORTS($sha_env, $tpstime, $ms, $event_time, $syear){
+   
+    $tpsDT = new DateTime("@$event_time");
     $tpsDT->setTimezone(new DateTimeZone("UTC"));
     $year = (int)$tpsDT->format('x');
 
-    return [
-        "netLoop" => (int)$tpsDT->format('B'),
-        "millennium" => intdiv($year, 1000),
-        "century" => intdiv($year, 100),
-        "decade" => intdiv($year, 10),
-        "year" => $year,
-        "leap" => (int)$tpsDT->format('L'),
-        "month" => (int)$tpsDT->format("n"),
-        "week" => (int)$tpsDT->format("W"),
-        "dayOfYear" => (int)$tpsDT->format("z"),
-        "dayOfMonth" => (int)$tpsDT->format("j"),
-        "dayOfWeek" => (int)$tpsDT->format("w"),
-        "hour" => (int)$tpsDT->format("G"),
-        "minute" => (int)$tpsDT->format("i"),
-        "second" => (int)$tpsDT->format("s"),
-        "ms" => $ms % 1000,
-    ];
-    }
 
-//----------------------------------------------------------------------------------------------------
-function fileTPS($event_time, $tpsDATA, $tpss){
-    //GET YOUR COMMONS! 
+    $router_1 = ROUTE('d', $sha_env);
+    $tpsFiles = $router_1 . '_DEWEY/tps_reports/' . $syear . '/' . substr($tpstime, 0, 6) . '-block/';
+        aleph($tpsFiles);
+    
+    $tpsReport = $tpsFiles . '/' . substr($tpstime, 0, 6) . '-.tps.json';
+    $tpsjson = file_get_contents($tpsReport);
+    $tpss = json_decode($tpsjson, true);
+
     $tUID = $GLOBALS['tUID'];
     $cUID = $GLOBALS['cUID'];
 
@@ -72,7 +59,23 @@ function fileTPS($event_time, $tpsDATA, $tpss){
         "event_timezone" => $_POST['POST__TZ'],
         "tps_timzezone" => "UTC",
         "tps_unix" => $event_time,
-        "tps_report" => $tpsDATA
+        "tps_report" => [
+        "netLoop" => (int)$tpsDT->format('B'),
+        "millennium" => intdiv($year, 1000),
+        "century" => intdiv($year, 100),
+        "decade" => intdiv($year, 10),
+        "year" => $year,
+        "leap" => (int)$tpsDT->format('L'),
+        "month" => (int)$tpsDT->format("n"),
+        "week" => (int)$tpsDT->format("W"),
+        "dayOfYear" => (int)$tpsDT->format("z"),
+        "dayOfMonth" => (int)$tpsDT->format("j"),
+        "dayOfWeek" => (int)$tpsDT->format("w"),
+        "hour" => (int)$tpsDT->format("G"),
+        "minute" => (int)$tpsDT->format("i"),
+        "second" => (int)$tpsDT->format("s"),
+        "ms" => $ms % 1000,
+    ]
     ];
     
     } else {
@@ -93,8 +96,12 @@ function fileTPS($event_time, $tpsDATA, $tpss){
             $tpss[$tUID]['import_unix'][] = time();
         }
     }
-    return $tpss;
-}
+
+
+
+    file_put_contents($tpsReport, json_encode($tpss, JSON_PRETTY_PRINT));
+    }
+
 
 //==============================================================================================
 function json_environment(){
@@ -145,7 +152,7 @@ function buildCHEST($unix, $event_time){
     
     $RAW_TAGS = str_replace(["\r","\n", "\t"], '', $RAW_TAGS);
     $RAW_TAGS = trim($RAW_TAGS);
-$TAGS = tagSPLICER($RAW_TAGS);
+        $TAGS = tagSPLICER($RAW_TAGS);
 
     return [
         "c_version" => 4,
@@ -171,29 +178,30 @@ $TAGS = tagSPLICER($RAW_TAGS);
     ];
 }
 //----------------------------------------------------------------------------------------------------
-function chestersCRATES($sha_env, $a, $unix, $event_time){
+function chestersCRATES($sha_env, $event_time, $unix){
     //GET YOUR COMMONS! 
     $tUID = $GLOBALS['tUID'];
     $cUID = $GLOBALS['cUID'];
     $SITE = $GLOBALS['SITE'];
+    $a = $GLOBALS[$SITE];
 
     $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 
-    $tpsDT = new DateTime("@$unix");
+    $tpsDT = new DateTime("@$event_time");
     $tpsDT->setTimezone(new DateTimeZone("UTC"));
     $year = (int)$tpsDT->format('x');
     $date = (int)$tpsDT->format('x-m-d');
 
     $route = ROUTE('d', $sha_env);
-    $BUILD_CHEST = buildCHEST($RAW_TAGS, $unix, $event_time);
+    $BUILD_CHEST = buildCHEST($unix, $event_time);
 
     $router_1 = $route . $a['SYS_SLUG'] . '/';
      aleph($router_1);
 
-    $router_2 = $route . '_crateKEEPER/search_by_crate/sort_by_event/' . $tpsDT->format('Y') . '/';
+    $router_2 = $route . '_CHESTER/search_by_crate/sort_by_event/' . $tpsDT->format('Y') . '/';
      aleph($router_2);
 
-    $router_3 = $route . '_crateKEEPER/search_by_crate/sort_by_ingest/' . date('Y') . '/';
+    $router_3 = $route . '_CHESTER/search_by_crate/sort_by_ingest/' . date('Y') . '/';
      aleph($router_3);
 
     $CHEST = $router_1 . $a['DOM_SLUG'] . '-' . $a['ROOM_SLUG'] . '.' . $GLOBALS['TOOL']['TYPE'] . '.json';    
@@ -235,7 +243,7 @@ $TOOL = $GLOBALS['TOOL'];
 }
 
 //==============================================================================================
-function catalogUNIX($UNIX, $sha_env){
+function catalogUNIX($sha_env, $tpstime){
 
     //GET YOUR COMMONS! 
     $tUID = $GLOBALS['tUID'];
@@ -243,7 +251,7 @@ function catalogUNIX($UNIX, $sha_env){
     $SITE = $GLOBALS['SITE'];
     $MOD = $GLOBALS[$SITE]['MOD_SLUG'];
 
-    $tpsDT = new DateTime("@$UNIX");
+    $tpsDT = new DateTime("@$tpstime");
     $tpsDT->setTimezone(new DateTimeZone("UTC"));
     $year = (int)$tpsDT->format('x');
     $date = (int)$tpsDT->format('x-m-d');
@@ -253,10 +261,10 @@ function catalogUNIX($UNIX, $sha_env){
     //--## router settings ------- ##
 
     $ROUTE__LINE = ROUTE('d', $sha_env);
-    $ROUTE = $ROUTE__LINE . '/_timeKEEPER/lookup/by_tps/' . $year . '/' . substr($UNIX, 0, 6)  . '-block/';
+    $ROUTE = $ROUTE__LINE . '/_DEWEY/lookup/by_tps/' . $year . '/' . substr($tpstime, 0, 6)  . '-block/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-    $UNIX_CHEST = $ROUTE . substr($UNIX, 0, 6) . '.lookup.json';
+    $UNIX_CHEST = $ROUTE . substr($tpstime, 0, 6) . '.lookup.json';
     $json = file_get_contents($UNIX_CHEST);
     $payload = json_decode($json, true);
 
@@ -265,7 +273,7 @@ function catalogUNIX($UNIX, $sha_env){
         $payload ?? [];
     }
 
-    if (!isset($payload[$UNIX][$MOD][$cUID])) $payload[$UNIX][$MOD][] = $cUID;
+    if (!isset($payload[$tpstime][$MOD][$cUID])) $payload[$tpstime][$MOD][] = $cUID;
     
 
   //--## fill that crate! ------- ##
@@ -276,9 +284,9 @@ function catalogUNIX($UNIX, $sha_env){
 function charlieINDEX($sha_env, $group, $add, $level){
 
     $router_1 = ROUTE('d', $sha_env);
-        $catalog_rt = $router_1 . '_charlieCATALOG/tag_catalogs/';
+        $catalog_rt = $router_1 . '_DEWEY/catalogs/';
           aleph($catalog_rt);
-          $obj_catalog = $catalog_rt . $group. '.catalog.json';
+          $obj_catalog = $catalog_rt . $group. '.tag.catalog.json';
           $oc = json_decode(file_get_contents($obj_catalog), true);
 
         foreach ($add as $entity => $objs){
@@ -312,7 +320,7 @@ function chesterLOOKUP($tpstime, $sha_env, $add, $level,$level2,$level3){
 
 
     $router_1 = ROUTE('d', $sha_env);
-        $catalog_rt = $router_1 . '_trackerKEEPER/lookup/by_tag/';
+        $catalog_rt = $router_1 . '_DEWEY/lookup/by_tag/';
           aleph($catalog_rt);
           $obj_catalog = $catalog_rt . $$level . '.lookup.json';
           $oc = json_decode(file_get_contents($obj_catalog), true);
@@ -370,7 +378,7 @@ function charliesTHREADS($sha_env, $tpstime){
         foreach ($objs as $object => $tags){
             foreach ($tags as $tag){
 
-        $catalog_rt = $router_1 . '_trackerKEEPER/tags/by_entity/';
+        $catalog_rt = $router_1 . '_CHARLIE/tags/by_entity/';
             aleph($catalog_rt);
             $MTAG_CHEST = $catalog_rt . $entity . '.entity.json';
             $json1 = file_get_contents($MTAG_CHEST);
@@ -428,7 +436,7 @@ function charliesTHREADS($sha_env, $tpstime){
             foreach ($tags as $tag){
 
 
-    $catalog_rt = $router_1 . '_trackerKEEPER/tags/by_relations/';
+    $catalog_rt = $router_1 . '_CHARLIE/tags/by_relations/';
             aleph($catalog_rt);
             $impact_catalog = $catalog_rt . $tag . '.relations.json';
             $json5 = file_get_contents($impact_catalog);
@@ -483,7 +491,7 @@ function charliesTHREADS($sha_env, $tpstime){
             foreach ($tags as $tag){
 
 
-    $catalog_rt = $router_1 . '_trackerKEEPER/tags/by_insect/';
+    $catalog_rt = $router_1 . '_CHARLIE/tags/by_insect/';
             aleph($catalog_rt);
             $impact2_catalog = $catalog_rt . $object . '.insect.json';
             $json5 = file_get_contents($impact2_catalog);
@@ -513,7 +521,7 @@ function charliesTHREADS($sha_env, $tpstime){
     }
 
 //==============================================================================================
-function catalogJUKEBOX($a, $sha_env, $link, $artist, $song){
+function catalogJUKEBOX($sha_env, $link, $artist, $song){
     //GET YOUR COMMONS! 
     $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
     $tUID = $GLOBALS['tUID'];
@@ -526,10 +534,10 @@ function catalogJUKEBOX($a, $sha_env, $link, $artist, $song){
   //--## router settings ------- ##
     $ROUTE__LINE = ROUTE('d', $sha_env);
 
-        $ROUTE = $ROUTE__LINE . '/_charlieCATALOG/song_catalog/';
+        $ROUTE = $ROUTE__LINE . '/_DEWEY/catalog/';
         if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-        $TAG_CHEST = $ROUTE . $a['SYS_SLUG'] . '-' . $a['DOM_SLUG'] . '-songs.catalog.json';
+        $TAG_CHEST = $ROUTE . $SITE['SYS_SLUG'] . '-' . $SITE['DOM_SLUG'] . '-songs.catalog.json';
         $json = file_get_contents($TAG_CHEST);
         $TAGS = json_decode($json, true);
 

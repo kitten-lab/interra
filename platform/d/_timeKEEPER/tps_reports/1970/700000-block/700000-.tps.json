@@ -1,0 +1,41 @@
+{
+    "700000.tps": {
+        "tps_version": 3,
+        "cUID": [
+            "crate.D642DCFCADC5E7CA",
+            "crate.1D5CE64A92CD6868",
+            "crate.BE429F839281E2D0"
+        ],
+        "event_slug": [],
+        "import_unix": [
+            1776974028,
+            1776974164,
+            1776974180
+        ],
+        "time_certainty": {
+            "radius": 0,
+            "unit": "seconds",
+            "confidence": "exact"
+        },
+        "event_timezone": "America\/New_York",
+        "tps_timzezone": "UTC",
+        "tps_unix": 700000,
+        "tps_report": {
+            "netLoop": 143,
+            "millennium": 1,
+            "century": 19,
+            "decade": 197,
+            "year": 1970,
+            "leap": 0,
+            "month": 1,
+            "week": 2,
+            "dayOfYear": 8,
+            "dayOfMonth": 9,
+            "dayOfWeek": 5,
+            "hour": 2,
+            "minute": 26,
+            "second": 40,
+            "ms": 551
+        }
+    }
+}
