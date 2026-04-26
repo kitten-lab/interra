@@ -8,6 +8,7 @@
 
 $GLOBALS['TOOL'] = [
 
+    "SHADOWENVO" => false,
     "NAME" => "reportBASIC",
     "FUNCTION" => "IntakeReport",
     "ACTOR" => $_POST['POST__REPORTER'],
@@ -18,6 +19,8 @@ $GLOBALS['TOOL'] = [
         "skyline-standard" => [
 
             "IntakeReport" => [
+                "user"              => $GLOBALS['MATERIAL']['USER'],
+                "assistant"         => $GLOBALS['MATERIAL']['ASSISTANT'],
                 "Reporter"          => "Report Maker",
                 "Reporter_plhldr"   => "Name Yourself",
                 "Reporter_default"  => "",
@@ -35,6 +38,8 @@ $GLOBALS['TOOL'] = [
         "tee-hee-secrets" => [
 
             "IntakeReport" => [
+                "user"              => $GLOBALS['MATERIAL']['USER'],
+                "assistant"         => $GLOBALS['MATERIAL']['ASSISTANT'],
                 "Reporter"          => "The Lil' Secret Keeper",
                 "Reporter_plhldr"   => "Name Yourself",
                 "Reporter_default"  => "ANON-XXX",

@@ -22,7 +22,7 @@ h1, h6 {
 }
 
 a {
-    color: white;
+    color: rgb(172, 11, 11);
     text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ main {
 
 .section_container {
     display: grid;
-    grid-template-columns: 1fr 333px;
+    grid-template-columns: 1fr auto;
 }
 
 .fragments {
@@ -57,8 +57,9 @@ main {
 }
 
 .inputs {
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
     text-align: left;
 }
 
@@ -120,7 +121,7 @@ nav li {
 
 .soper_frag {
     display: grid;
-    grid-template-columns: 88px 1fr;
+    grid-template-columns: 145px 1fr;
     gap: 12px;
     align-items: start;
     margin: 0;
@@ -141,10 +142,10 @@ nav li {
 
 textarea, input {
   background: transparent;
-  color: white;
-  caret-color: white;
+  color: var(--accentColor-dark);
+  caret-color: var(--accentColor-dark);
   z-index: 2;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box; /* Crucial for width: 100% */
   padding: 10px;
 }

@@ -1,0 +1,22 @@
+{
+    "VEN": "sopr",
+    "GRAVITY": 21,
+    "ALIAS": [],
+    "NOTES": [],
+    "METADATA": [],
+    "SHELF": {
+        "bbc": {
+            "GRAVITY": 14,
+            "BIN": {
+                "gdd": 7,
+                "bbc-gdd": 7
+            }
+        },
+        "bbc-gdd": {
+            "GRAVITY": 7,
+            "BIN": {
+                "symbolcraft": 7
+            }
+        }
+    }
+}

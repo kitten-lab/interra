@@ -13,6 +13,7 @@
         getA_Style("sky",   $GLOBALS[$SITE]['SYS'], "asSys");
         getA_Style("fonts", $GLOBALS[$SITE]['SYS'], "asSys");
         getA_Style("style", $GLOBALS[$SITE]['DOM'], "asDom");
+        getA_Style("shadowENVO", '_', "cssSlugs");
 
     }
     

@@ -1,4 +1,5 @@
 <?php 
+require __DIR__ . '/NIM/charlieLOOKUP.php';
 
 function aleph($ROUTE){
     // plow the field is there is no directory, so space can exist //
@@ -27,13 +28,14 @@ function tpsREPORTS($sha_env, $tpstime, $ms, $event_time, $syear){
     $tpsDT = new DateTime("@$event_time");
     $tpsDT->setTimezone(new DateTimeZone("UTC"));
     $year = (int)$tpsDT->format('x');
+    $block = intdiv((int)$tpstime, 10000);
 
 
     $router_1 = ROUTE('d', $sha_env);
-    $tpsFiles = $router_1 . '_SATORA/tps_reports/' . $syear . '/' . substr($tpstime, 0, -4) . '-block/';
+    $tpsFiles = $router_1 . '_SATORA/tps_reports/' . $syear . '/' . $block . '-block/';
         aleph($tpsFiles);
     
-    $tpsReport = $tpsFiles . '/' . substr($tpstime, 0, -4) . '-.tps.json';
+    $tpsReport = $tpsFiles . '/' . $block . '-.tps.json';
     $tpsjson = file_get_contents($tpsReport);
     $tpss = json_decode($tpsjson, true);
 
@@ -51,11 +53,7 @@ function tpsREPORTS($sha_env, $tpstime, $ms, $event_time, $syear){
         "cUID" => [$cUID],
         "event_slug" => [],
         "import_unix" => [time()],
-        "time_certainty" => [
-            "radius" => 0,
-            "unit" => "seconds",
-            "confidence" => "exact",
-        ],
+        "time_certainty" => [],
         "event_timezone" => $_POST['POST__TZ'],
         "tps_timzezone" => "UTC",
         "tps_unix" => $event_time,
@@ -123,10 +121,7 @@ function json_environment(){
 //==============================================================================================
 function json_origin(){
 
-    return [];
-}
-
-/* 
+    return [
         "material" => [ 
             "type" => $GLOBALS['MATERIAL']['TYPE'], 
             "source" => [
@@ -139,17 +134,18 @@ function json_origin(){
         "notes" => $GLOBALS['MATERIAL']['DETAILS'],
         ]
     ];
-*/
+}
+
 
 //==============================================================================================
 function buildCHEST($unix, $event_time){
     //GET YOUR COMMONS! 
-    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
     $tUID = $GLOBALS['tUID'];
     $cUID = $GLOBALS['cUID'];
     $SITE = $GLOBALS['SITE'];
     
     
+    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
     $RAW_TAGS = str_replace(["\r","\n", "\t"], '', $RAW_TAGS);
     $RAW_TAGS = trim($RAW_TAGS);
         $TAGS = tagSPLICER($RAW_TAGS);
@@ -195,7 +191,7 @@ function chestersCRATES($sha_env, $event_time, $unix){
     $route = ROUTE('d', $sha_env);
     $BUILD_CHEST = buildCHEST($unix, $event_time);
 
-    $router_1 = $route . $a['SYS_SLUG'] . '/';
+    $router_1 = $route . $a['URI'] . '/';
      aleph($router_1);
 
     $router_2 = $route . '_CHESTER/search_by_crate/sort_by_event/' . $tpsDT->format('Y') . '/';
@@ -256,15 +252,15 @@ function catalogUNIX($sha_env, $tpstime){
     $year = (int)$tpsDT->format('x');
     $date = (int)$tpsDT->format('x-m-d');
 
-
+    $block = intdiv((int)$tpstime, 10000);
 
     //--## router settings ------- ##
 
     $ROUTE__LINE = ROUTE('d', $sha_env);
-    $ROUTE = $ROUTE__LINE . '/_DEWEY/lookup/by_tps/' . $year . '/' . substr($tpstime, 0, -4)  . '-block/';
+    $ROUTE = $ROUTE__LINE . '/_DEWEY/lookup/by_tps/' . $year . '/' . $block  . '-block/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-    $UNIX_CHEST = $ROUTE . substr($tpstime, 0, -4) . '.lookup.json';
+    $UNIX_CHEST = $ROUTE . $block . '.lookup.json';
     $json = file_get_contents($UNIX_CHEST);
     $payload = json_decode($json, true);
 
@@ -307,78 +303,6 @@ function charlieCATALOG($sha_env, $group, $add, $level){
 }
 
 
-function charlieLOOKUP($tpstime, $sha_env, $add, $level,$level2,$level3){
-    //GET YOUR COMMONS! 
-    $tUID = $GLOBALS['tUID'];
-    $cUID = $GLOBALS['cUID'];
-    $SITE = $GLOBALS['SITE'];
-    $MOD = $GLOBALS[$SITE]['MOD_SLUG'];
-
-        foreach ($add as $entity => $objs){
-        foreach ($objs as $objects => $tags){
-        foreach ($tags as $tag){
-
-
-    $router_1 = ROUTE('d', $sha_env);
-        $catalog_rt = $router_1 . '_DEWEY/lookup/by_tag/';
-          aleph($catalog_rt);
-          $obj_catalog = $catalog_rt . $$level . '.lookup.json';
-          $oc = json_decode(file_get_contents($obj_catalog), true);
-
-        if (!$oc) {
-            $oc = [];
-        }
-
-        if (!isset($oc['SHELF'][$$level])) {
-            $oc['SHELF'][$$level] = [
-                'METADATA' => [
-                    'GRAVITY' => 0,
-                    'FIRST_USED' => time(),                
-                ]
-            ];
-        }
-
-        if (!isset($oc['SHELF'][$$level][$$level2])) {
-            $oc['SHELF'][$$level][$$level2] = [
-                'METADATA' => [
-                    'GRAVITY' => 0,
-                    'FIRST_USED' => time(),                
-                ]
-            ];
-        }
-
-        if (!isset($oc['SHELF'][$$level][$$level2][$$level3])) {
-            $oc['SHELF'][$$level][$$level2][$$level3] = [
-                'METADATA' => [
-                    'GRAVITY' => 0,
-                    'FIRST_USED' => time(),                
-                ]
-            ];
-        }
-
-            if (!isset($oc['SHELF'][$$level]['METADATA']['GRAVITY'])) $oc['SHELF'][$$level]['METADATA']['GRAVITY'] ?? [];
-            $oc['SHELF'][$$level]['METADATA']['GRAVITY']++;
-
-            if (!isset($oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY'])) $oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY'] ?? [];
-            $oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY']++;
-
-            if (!isset($oc['SHELF'][$$level][$$level2][$$level3]['GRAVITY'])) $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['GRAVITY'] ?? [];
-            $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['GRAVITY']++;
-            
-            if (!isset($oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['INSTANCES'][$tpstime][$MOD][$cUID]))
-             $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['INSTANCES'][$tpstime][$MOD][] = $cUID;
-            
-
-
-    file_put_contents($obj_catalog, json_encode($oc, JSON_PRETTY_PRINT));
-
-        }
-        }
-        }
-    
-
-}
-
 
 
 //--------------------------------------------------------------------------------
@@ -404,7 +328,7 @@ function charliesTHREADS($sha_env, $tpstime){
         foreach ($objs as $object => $tags){
             foreach ($tags as $tag){
 
-        $catalog_rt = $router_1 . '_CHARLIE/tags/by_entity/';
+        $catalog_rt = $router_1 . '_CHARLIE/threads/by_aven/';
             aleph($catalog_rt);
             $MTAG_CHEST = $catalog_rt . $entity . '.ven.json';
             $json1 = file_get_contents($MTAG_CHEST);
@@ -413,7 +337,7 @@ function charliesTHREADS($sha_env, $tpstime){
         
     if (!$tc) {
         $tc = [
-            'ENTITY' => $entity,
+            'VEN' => $entity,
             'GRAVITY' => 0,
             'ALIAS' => [],
             'NOTES' => [],
@@ -448,7 +372,7 @@ function charliesTHREADS($sha_env, $tpstime){
             foreach ($tags as $tag){
 
 
-    $catalog_rt = $router_1 . '_CHARLIE/tags/by_relativity/';
+    $catalog_rt = $router_1 . '_CHARLIE/threads/by_relativity/';
             aleph($catalog_rt);
             $impact_catalog = $catalog_rt . $tag . '.rel.json';
             $json5 = file_get_contents($impact_catalog);
@@ -457,7 +381,7 @@ function charliesTHREADS($sha_env, $tpstime){
     
     if (!$impact) {
         $impact = [
-            'ENTITY' => $tag,
+            'VEN' => $tag,
             'GRAVITY' => 0,
             'METADATA' => [],
         ];
@@ -489,14 +413,14 @@ function charliesTHREADS($sha_env, $tpstime){
             foreach ($tags as $tag){
 
 
-    $catalog_rt = $router_1 . '_CHARLIE/tags/by_insect/';
+    $catalog_rt = $router_1 . '_CHARLIE/threads/by_insect/';
             aleph($catalog_rt);
             $impact2_catalog = $catalog_rt . $object . '.ins.json';
             $json5 = file_get_contents($impact2_catalog);
             $impac2 = json_decode($json5, true);
     if (!$impac2) {
         $impac2 = [
-                'VENN' => $object,
+                'VEN' => $object,
                 'GRAVITY' => 0,
                 'METADATA' => [],
         ];

@@ -18,7 +18,7 @@ $room = $_GET['w'];
 $SHADOW_PROD_TOGGLE = $sha_env;
 $router_1 = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-$route = $router_1 . $GLOBALS[$SITE]['SYS_SLUG'] . '/';
+$route = $router_1 . $GLOBALS[$SITE]['URI'] . '/';
     $CHEST = $route . $GLOBALS[$SITE]['DOM_SLUG'] . '-' . $room . '.post.json';    
   
 
