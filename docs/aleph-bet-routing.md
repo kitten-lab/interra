@@ -1,6 +1,6 @@
 # **silo** alef-bet router system
-the silo is organized by top-level route partitions 
-[ A ] [ B ] [ C ] [ D ] [ K ] [ M ]
+the silo is organized by top-level route partitions   
+[ A ] [ B ] [ C ] [ D ] [ K ] [ M ]  
 each partition has a distinct responsibility and controls a specific aspect of the silo.  
 
 this structure separates identity, authorization, configuration, data, and rendering concerns.  
