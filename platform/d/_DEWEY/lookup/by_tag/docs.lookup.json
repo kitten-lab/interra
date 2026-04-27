@@ -2,41 +2,19 @@
     "CABINET": {
         "docs": {
             "METADATA": {
-                "GRAVITY": 24,
+                "GRAVITY": 28,
                 "INGEST": {
                     "FIRST": 1777157704,
-                    "LAST": 1777159009
+                    "LAST": 1777248798
                 },
                 "EVENT": {
                     "FIRST": [],
                     "LAST": []
                 },
                 "LAST_USAGE": {
-                    "1739984014": [
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft",
-                        "symbolcraft"
+                    "1777248798": [
+                        "sopr",
+                        "sopr"
                     ]
                 }
             },
@@ -406,6 +384,77 @@
                                 "1739984014": {
                                     "DW": [
                                         "crate.26570475582EB59D"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "sopr": {
+                    "METADATA": {
+                        "GRAVITY": 4,
+                        "INGEST": {
+                            "FIRST": 1777248732,
+                            "LAST": 1777248798
+                        },
+                        "EVENT": {
+                            "FIRST": [],
+                            "LAST": []
+                        },
+                        "LAST_USAGE": {
+                            "1777248798": [
+                                "data-forestry",
+                                "nim"
+                            ]
+                        }
+                    },
+                    "BIN": {
+                        "data-forestry": {
+                            "METADATA": {
+                                "GRAVITY": 2,
+                                "INGEST": {
+                                    "FIRST": 1777248732,
+                                    "LAST": 1777248798
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777248732": {
+                                    "1-MIRA-1": [
+                                        "crate.3F6C628C882AF653"
+                                    ]
+                                },
+                                "1777248798": {
+                                    "1-MIRA-1": [
+                                        "crate.8860A24BA6AA4C1B"
+                                    ]
+                                }
+                            }
+                        },
+                        "nim": {
+                            "METADATA": {
+                                "GRAVITY": 2,
+                                "INGEST": {
+                                    "FIRST": 1777248732,
+                                    "LAST": 1777248798
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777248732": {
+                                    "1-MIRA-1": [
+                                        "crate.3F6C628C882AF653"
+                                    ]
+                                },
+                                "1777248798": {
+                                    "1-MIRA-1": [
+                                        "crate.8860A24BA6AA4C1B"
                                     ]
                                 }
                             }

@@ -12,15 +12,18 @@ SKY__AUTH(
     /*ROOM_FLAVOR*/  "skyline-standard"
 );
 openSky($GLOBALS[$SITE]['ROOM_DISPLAY']);
-
 section('', "section_container");
     section('', "fragments");
-        bigHeading($GLOBALS[$SITE]['ROOM_DISPLAY']);
-        getTool("postBASIC", "SoperView");
+        medHeading($GLOBALS[$SITE]['ROOM_DISPLAY']);
+        getTool("soprBASIC", "ViewList");
     close_section();
     section('','inputs');
-        leaf("Thank you for your presence.");
-        getTool("postBASIC", "MakePost");
+        medHeading("jsonREADER");
+        section('background-color:black;color:white; width: 400px; height: 250px; overflow:scroll; padding: 12px; margin: 8px 0', 'json-reader');
+          getTool("json", "Reader");
+        close_section();
+        medHeading("soprBASIC");
+        getTool("soprBASIC", "AddFragment");
     close_section();
 close_section();
 closeSky();

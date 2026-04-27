@@ -11,18 +11,25 @@ That's okay. Each time it WILL GET EASIER.  -abl
 --------------------------------------------------------------*/
 
 
-$GLOBALS[$site]['room'] = [
-                    ["name" => "personal-log"],
-                    ["name" => "archived"],
-                    ["name" => "mystery"],
-                    ["name" => "programs"],
+$GLOBALS[$SITE]['tDOM'] = [
+                    ["DOM" => "personal-log"],
+                    ["DOM" => "archived"],
+                    ["DOM" => "mystery"],
+                    ["DOM" => "programs"],
+                    ["DOM" => "w"],
                     ];
-$GLOBALS[$site]['key'] = "home"; 
+$GLOBALS[$SITE]['key'] = "home"; 
 
 $nav = [ "navSec" => 
-
-    [ "name" => "", "items" => [
-
-        [ "label" => "INBOX", "key" => "filename", "door" => "foldername" ],
-    /* SECTION GROUP -------------------------------- */
-    ]]] ?>
+ [ 
+        "DOM" => "symbolCRAFT", 
+        "BUILDING" => "symbolCRAFT", //nav label
+        "PRIME_KEY" => "home", 
+        "ROOMS" => [
+            [ 
+                "KEY" => "business plan",  //nav label
+                "ROOM" => "business-plan",  // key_name
+            ],
+        ]
+ ]
+ ]; ?>

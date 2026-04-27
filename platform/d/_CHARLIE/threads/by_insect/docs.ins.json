@@ -1,6 +1,6 @@
 {
     "VEN": "docs",
-    "GRAVITY": 24,
+    "GRAVITY": 26,
     "METADATA": [],
     "SHELF": {
         "symbolcraft": {
@@ -22,6 +22,12 @@
                 "resources": 1,
                 "funding": 1,
                 "allocation": 1
+            }
+        },
+        "sopr": {
+            "GRAVITY": 2,
+            "BIN": {
+                "data-forestry": 2
             }
         }
     }

@@ -7,14 +7,14 @@ SKY__AUTH(
     /*DOM_SLUG*/     "personal-log", 
     /*DOM_DISPLAY*/  "personal-log",
 
-    /*ROOM_SLUG*/    "write", 
+    /*ROOM_SLUG*/    "view", 
     /*ROOM_DISPLAY*/  "www's plog",
 
     /*ROOM_FLAVOR*/  "skyline-standard"
 );
 openSky('plog');
 
-getTool("postBASIC","MakePost");    
+getTool("postBASIC","ViewPost");    
 
 closeSky();
 

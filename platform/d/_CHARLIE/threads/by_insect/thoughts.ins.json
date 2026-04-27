@@ -1,0 +1,14 @@
+{
+    "VEN": "thoughts",
+    "GRAVITY": 2,
+    "METADATA": [],
+    "SHELF": {
+        "www": {
+            "GRAVITY": 2,
+            "BIN": {
+                "self-identity": 1,
+                "expectations": 1
+            }
+        }
+    }
+}

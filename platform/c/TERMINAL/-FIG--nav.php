@@ -14,16 +14,24 @@ That's okay. Each time it WILL GET EASIER.  -abl
 
 $GLOBALS[$SITE]['GETS']['navCall'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/nav.php'; 
 
-$GLOBALS[$SITE]['room'] = [
-                    ["name" => "ROOT"],
-                    ["name" => "w"]
+$GLOBALS[$SITE]['tDOM'] = [
+                    ["DOM" => "ROOT"],
+                    ["DOM" => "w"]
                     ]; 
 $GLOBALS[$SITE]['key'] = "home"; 
 
 $nav = [ "navSec" => 
 
-    [ "name" => "ROOT", "items" => [
-
-        [ "label" => "ROOT", "key" => "ROOT", "door" => "ROOT" ],
-    /* SECTION GROUP -------------------------------- */
-    ]]]; ?>
+   
+ [ 
+        "DOM" => "ROOT", 
+        "BUILDING" => "ROOT", //nav label
+        "PRIME_KEY" => "home", 
+        "ROOMS" => [
+            [ 
+                "KEY" => "WHERE",  //nav label
+                "ROOM" => "WHERE",  // key_name
+            ],
+        ]
+ ]
+ ]; ?>

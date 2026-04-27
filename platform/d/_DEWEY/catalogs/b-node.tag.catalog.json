@@ -1,9 +1,9 @@
 {
-    "count": 240,
+    "count": 254,
     "b-node": {
         "bbc": 14,
         "bbc-gdd": 7,
-        "docs": 24,
+        "docs": 26,
         "insights": 2,
         "insights-provider": 2,
         "tier": 1,
@@ -33,6 +33,10 @@
         "intentions": 4,
         "solutions": 5,
         "client-cases": 9,
-        "environment": 9
+        "environment": 9,
+        "nim": 4,
+        "purpose": 4,
+        "thoughts": 2,
+        "fears": 2
     }
 }

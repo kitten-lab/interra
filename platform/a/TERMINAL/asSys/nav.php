@@ -12,14 +12,14 @@ logged in as: <?= $GLOBALS[$SITE]['MOD_DISPLAY'] ?><BR><br>
 
 <ul>
 <span class="navSec">
-<?php echo $section['name']; ?></span>
-<?php foreach ($section['items'] as $item): ?>
+<?php echo $section['BUILDING']; ?></span>
+<?php foreach ($section['ROOMS'] as $item): ?>
 
 <li>
-<a href="<?= b_root . '/' . $GLOBALS[$SITE]['URI'] . '/' . $item['door'] . '/' . $item['key'] ?>">
+<a href="<?= b_root . '/' . $GLOBALS[$SITE]['URI'] . '/' . $section['DOM'] . '/' . $item['ROOM'] ?>">
 
 
-<?= $item['label']; ?></a>
+<?= $item['KEY']; ?></a>
 </li>
 <?php endforeach; ?>
 </ul>

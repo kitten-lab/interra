@@ -14,34 +14,56 @@ That's okay. Each time it WILL GET EASIER.  -abl
 
 $GLOBALS[$SITE]['GETS']['navCall'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/nav.php'; 
 
-$GLOBALS[$SITE]['room'] = [
-                    ["name" => "COMMS"],
-                    ["name" => "SDK-808"],
-                    ["name" => "w"]
+$GLOBALS[$SITE]['tDOM'] = [
+                    ["DOM" => "COMMS"],
+                    ["DOM" => "DAY_INVENTORY"],
+                    ["DOM" => "SDK-808"],
+                    ["DOM" => "w"]
                     ]; 
-$GLOBALS[$SITE]['key'] = "home"; 
+$GLOBALS[$SITE]['KEY'] = "home"; 
 
 $nav = [ "navSec" => 
-
-    [ "name" => "USER_MENU", "items" => [
-        [ "label" => "- IMPORTS", "key" => "IMPORTS", "door" => "SDK-808" ],
-        [ "label" => "- EXPORTS", "key" => "EXPORTS", "door" => "SDK-808" ],
-    ]],
-    [ "name" => "DAY_INVENTORY", "items" => [
-        [ "label" => "- DAILY INVENTS", "key" => "POST", "door" => "SDK-808" ],
-        [ "label" => "- RE: VIEW INVENTS", "key" => "POST-REVIEW", "door" => "SDK-808" ],],],
-    
-    [ "name" => "SAM_SECTION", "items" => [ 
-        ["label" => "- MUSIC", "key" => "MUSIC", "door" => "SDK-808" ],
-        ["label" => "- ALEPH BET A-US", "key" => "ALEPH-BET", "door" => "SDK-808" ],
-        ["label" => "- UNSORTED", "key" => "FILES", "door" => "SDK-808" ],],],
-     
-    /* SECTION GROUP -------------------------------- */
-    
-    [ "name" => "MAIL_ROOM", "items" => [
-
-        [ "label" => "- COMPOSE NEW", "key" => "COMPOSE-MAIL", "door" => "SDK-808" ],
-        [ "label" => "- VIEW INBOX", "key" => "INBOX", "door" => "SDK-808" ],
-        [ "label" => "- VIEW OUTBOX", "key" => "OUTBOX", "door" => "SDK-808" ],
-    ]]
+[ 
+        "DOM" => "SDK-808", 
+        "BUILDING" => "USER_MENU", //nav label
+        "PRIME_KEY" => "IMPORTS", 
+        "ROOMS" => [
+            [ 
+                "KEY" => "IMPORTS",  //nav label
+                "ROOM" => "IMPORTS",  // key_name
+            ],[ 
+                "KEY" => "EXPORTS",  //nav label
+                "ROOM" => "EXPORTS",  // key_name
+            ],
+        ]
+ ], [ 
+        "DOM" => "SDK-808", 
+        "BUILDING" => "DAY_INVENTORY", //nav label
+        "PRIME_KEY" => "SDK-808", 
+        "ROOMS" => [
+            [ 
+                "KEY" => "POST",  //nav label
+                "ROOM" => "POST",  // key_name
+            ],[ 
+                "KEY" => "POST-REVIEW",  //nav label
+                "ROOM" => "POST-REVIEW",  // key_name
+            ],
+        ]
+ ],[ 
+        "DOM" => "SDK-808", 
+        "BUILDING" => "SAM_SECTION", //nav label
+        "PRIME_KEY" => "SDK-808", 
+        "ROOMS" => [
+            [ 
+                "KEY" => "MUSIC",  //nav label
+                "ROOM" => "MUSIC",  // key_name
+            ],[ 
+                "KEY" => "ALEPH-BET",  //nav label
+                "ROOM" => "ALEPH-BET",  // key_name
+            ],[ 
+                "KEY" => "UNSORTED",  //nav label
+                "ROOM" => "UNSORTED",  // key_name
+            ],
+        ]
+ ]
     ]; ?>

@@ -1,5 +1,5 @@
 {
-    "count": 240,
+    "count": 254,
     "c-node": {
         "gdd": 7,
         "bbc-gdd": 7,
@@ -126,6 +126,16 @@
         "unique": 2,
         "rotating": 2,
         "matches": 2,
-        "pseudo-progression": 1
+        "pseudo-progression": 1,
+        "data-forestry": 4,
+        "docs": 2,
+        "ingest-material": 1,
+        "searchable": 1,
+        "storage": 1,
+        "silo": 1,
+        "self-identity": 1,
+        "expectations": 1,
+        "extractive-nature": 1,
+        "corporatization": 1
     }
 }

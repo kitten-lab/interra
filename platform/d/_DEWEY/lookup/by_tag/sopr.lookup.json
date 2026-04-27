@@ -2,38 +2,20 @@
     "CABINET": {
         "sopr": {
             "METADATA": {
-                "GRAVITY": 21,
+                "GRAVITY": 27,
                 "INGEST": {
                     "FIRST": 1777157704,
-                    "LAST": 1777159009
+                    "LAST": 1777248798
                 },
                 "EVENT": {
                     "FIRST": [],
                     "LAST": []
                 },
                 "LAST_USAGE": {
-                    "1739984014": [
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd",
-                        "bbc",
-                        "bbc",
-                        "bbc-gdd"
+                    "1777248798": [
+                        "nim",
+                        "nim",
+                        "docs"
                     ]
                 }
             },
@@ -169,6 +151,122 @@
                                         "crate.3E3DA2432AD6FBF1",
                                         "crate.E219DA26BBBA4650",
                                         "crate.26570475582EB59D"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "nim": {
+                    "METADATA": {
+                        "GRAVITY": 4,
+                        "INGEST": {
+                            "FIRST": 1777248732,
+                            "LAST": 1777248798
+                        },
+                        "EVENT": {
+                            "FIRST": [],
+                            "LAST": []
+                        },
+                        "LAST_USAGE": {
+                            "1777248798": [
+                                "data-forestry",
+                                "docs"
+                            ]
+                        }
+                    },
+                    "BIN": {
+                        "data-forestry": {
+                            "METADATA": {
+                                "GRAVITY": 2,
+                                "INGEST": {
+                                    "FIRST": 1777248732,
+                                    "LAST": 1777248798
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777248732": {
+                                    "1-MIRA-1": [
+                                        "crate.3F6C628C882AF653"
+                                    ]
+                                },
+                                "1777248798": {
+                                    "1-MIRA-1": [
+                                        "crate.8860A24BA6AA4C1B"
+                                    ]
+                                }
+                            }
+                        },
+                        "docs": {
+                            "METADATA": {
+                                "GRAVITY": 2,
+                                "INGEST": {
+                                    "FIRST": 1777248732,
+                                    "LAST": 1777248798
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777248732": {
+                                    "1-MIRA-1": [
+                                        "crate.3F6C628C882AF653"
+                                    ]
+                                },
+                                "1777248798": {
+                                    "1-MIRA-1": [
+                                        "crate.8860A24BA6AA4C1B"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "docs": {
+                    "METADATA": {
+                        "GRAVITY": 2,
+                        "INGEST": {
+                            "FIRST": 1777248732,
+                            "LAST": 1777248798
+                        },
+                        "EVENT": {
+                            "FIRST": [],
+                            "LAST": []
+                        },
+                        "LAST_USAGE": {
+                            "1777248798": [
+                                "data-forestry"
+                            ]
+                        }
+                    },
+                    "BIN": {
+                        "data-forestry": {
+                            "METADATA": {
+                                "GRAVITY": 2,
+                                "INGEST": {
+                                    "FIRST": 1777248732,
+                                    "LAST": 1777248798
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777248732": {
+                                    "1-MIRA-1": [
+                                        "crate.3F6C628C882AF653"
+                                    ]
+                                },
+                                "1777248798": {
+                                    "1-MIRA-1": [
+                                        "crate.8860A24BA6AA4C1B"
                                     ]
                                 }
                             }

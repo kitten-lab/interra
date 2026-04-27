@@ -1,7 +1,7 @@
 {
-    "count": 240,
+    "count": 254,
     "a-node": {
-        "sopr": 21,
+        "sopr": 27,
         "symbolcraft": 32,
         "betsoft": 64,
         "omen": 1,
@@ -9,6 +9,8 @@
         "questions": 1,
         "games": 25,
         "slots": 41,
-        "detective-case_work": 53
+        "detective-case_work": 53,
+        "data-forestry": 4,
+        "www": 4
     }
 }
