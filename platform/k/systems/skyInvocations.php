@@ -54,10 +54,14 @@ function lockAndKey(){
 
     $foundKey = false;
     $foundRoom = false;
-
+    if (empty($_GET)) {
+            notARoom();
+            require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);
+            exit;
+        }
     foreach ($_GET as $room => $key) {
         $doors = $GLOBALS[$SITE]['tDOM'] ?? [];
-
+        
         foreach ($doors as $door){
             if ($room == $door['DOM']) {
                 $foundRoom = true;
@@ -78,6 +82,7 @@ function lockAndKey(){
     }
         if (!$foundRoom) { notARoom(); }
         if (!$foundKey && $foundRoom) { noKeyFound(); }
+        if (!$foundKey && !$foundRoom) { noKeyFound(); }
 
     require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);
 }

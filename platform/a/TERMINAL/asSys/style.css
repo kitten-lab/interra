@@ -15,13 +15,17 @@ body {
     linear-gradient(to right, var(--my-fav-colorInvis) 0.15rem, transparent 0.15rem), /* Vertical lines */
     linear-gradient(to bottom, var(--my-fav-colorInvis) 0.15rem, transparent 0.15rem); /* Horizontal lines */
     font-family: VT323;
-    font-size: 1.2rem;
     box-shadow: inset 0 0 30vh black;
     overflow: hidden;
     padding-top: 1vh;
+    font-size: 1rem;
+    text-transform: uppercase;
+
 }
 
-
+p {
+    margin-bottom: 1rem;
+}
 
 pre {
     font-size: .6rem;
@@ -77,9 +81,6 @@ h1::after {
 content: "  ----";
 }
 
-p {
-    margin: .25vh;
-}
 
 
 .pageTitle {

@@ -1,0 +1,28 @@
+{
+    "VEN": "numbers",
+    "GRAVITY": 6,
+    "METADATA": [],
+    "SHELF": {
+        "symbols": {
+            "GRAVITY": 1,
+            "BIN": {
+                "808": 1
+            }
+        },
+        "omens": {
+            "GRAVITY": 3,
+            "BIN": {
+                "808": 1,
+                "2": 1,
+                "222": 1
+            }
+        },
+        "omen": {
+            "GRAVITY": 2,
+            "BIN": {
+                "3": 1,
+                "333": 1
+            }
+        }
+    }
+}

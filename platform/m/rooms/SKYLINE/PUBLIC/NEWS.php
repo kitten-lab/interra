@@ -17,6 +17,6 @@ bigHeading($GLOBALS[$SITE]['ROOM_SLUG']);
 
 getTool("postBASIC","ViewList");
 
-leaf("<br><br><br><a href='NEWS-REPORT'>Post</a>");
+leaf("<br><br><br><a href='?PUBLIC=NEWS-REPORT'>Post</a>");
 closeSky();
 ?>

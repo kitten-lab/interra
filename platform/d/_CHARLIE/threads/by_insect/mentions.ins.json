@@ -1,0 +1,13 @@
+{
+    "VEN": "mentions",
+    "GRAVITY": 1,
+    "METADATA": [],
+    "SHELF": {
+        "terminal": {
+            "GRAVITY": 1,
+            "BIN": {
+                "sam": 1
+            }
+        }
+    }
+}

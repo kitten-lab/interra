@@ -1,26 +1,21 @@
 <?php
-$nav = $GLOBALS['nav'];
+$topnav = $GLOBALS['nav'];
 $config = $GLOBALS['nav']['navSec'] ?? []; 
-$SKY_AUTH = $GLOBALS[$SITE]; ?>
-<aside class="nav">
-<nav>
-<DIV class="main_nav"><ul>
-<div class="ROOM_ID">
 
-<?php foreach ($nav as $section): ?>
+ ?>
+
+<div class="topNav">
+
+
 <?php 
-echo "<a href='" . b_root . '/' . $SKY_AUTH['URI'] . '?' . $section['DOM'] . '=' . $section['PRIME_KEY'] . "'>" . $section['BUILDING'] . "</a>";
 
- foreach ($section['ROOMS'] as $item) {
-echo "<li><a href='" . b_root . '/' . $SKY_AUTH['URI'] . '?' . $section['DOM'] . '=' . $item['ROOM'] . "'>";
-echo $item['KEY'] . "</a></li>";
- }
 
-endforeach; ?>
+echo "<span>" . $GLOBALS[$SITE]['SYS_SLUG'] . "</span>";
+foreach ($topnav as $section) {
+echo "<span>"; 
+echo "<a href=" . b_root . '/' . $GLOBALS[$SITE]['URI'] . '?' . $section['DOM'] . '=' . $section['PRIME_KEY'] . ">";
+echo $section['BUILDING'] . "</a></span>";
+}
+ ?>
+ 
 </div>
-
-
-</DIV>
-</ul>
-
-</nav></aside>

@@ -1,0 +1,19 @@
+{
+    "VEN": "casey",
+    "GRAVITY": 2,
+    "METADATA": [],
+    "SHELF": {
+        "secret": {
+            "GRAVITY": 1,
+            "BIN": {
+                "jason": 1
+            }
+        },
+        "terminal-io": {
+            "GRAVITY": 1,
+            "BIN": {
+                "daily-inventory": 1
+            }
+        }
+    }
+}

@@ -16,5 +16,5 @@ openSky($GLOBALS[$SITE]['ROOM_DISPLAY']);
 
 bigHeading($GLOBALS[$SITE]['ROOM_DISPLAY']);
 leaf("Thank you for your presence. May we direct you to the correct room?");
-getTool("postBASIC", "MakePost");
+getTool("postBASIC", "charliePOST");
 closeSky();

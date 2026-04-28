@@ -16,5 +16,5 @@ openSky($GLOBALS[$SITE]['ROOM_DISPLAY']);
 
 bigHeading($GLOBALS[$SITE]['ROOM_DISPLAY']);
 medHeading("Reviewing the last SDK's inputs");
-getTool("postBASIC","ViewList");
+getTool("postBASIC","SoperView");
 leaf("Thank you for your presence. May we direct you to the correct room?");

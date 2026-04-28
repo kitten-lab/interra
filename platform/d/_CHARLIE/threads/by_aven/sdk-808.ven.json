@@ -1,0 +1,16 @@
+{
+    "VEN": "sdk-808",
+    "GRAVITY": 2,
+    "ALIAS": [],
+    "NOTES": [],
+    "METADATA": [],
+    "SHELF": {
+        "checkin": {
+            "GRAVITY": 2,
+            "BIN": {
+                "skyline": 1,
+                "live-updates": 1
+            }
+        }
+    }
+}

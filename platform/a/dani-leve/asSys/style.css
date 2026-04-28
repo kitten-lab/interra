@@ -1,26 +1,57 @@
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root { 
     --backgroundColor: #171515;
-    --accentColor-dark: rgb(188, 209, 194);
+    --accentColor-light1: rgb(255, 255, 255);
+    --accentColor-dark: rgb(233, 233, 233);
     --accentColor-light2: rgba(106, 124, 99, 0.24);
     --accentColor-light: rgb(51, 56, 50);
-    --skyFont-family: Zen Dots;
+    --skyFont-family: IBM Plex Mono;
 }
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 
 body {
     background: var(--backgroundColor);
     margin: 0;
-    color: var(--accentColor-dark);
-    font-family:Jetbrains Mono, Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+    color: var(--accentColor-light1);
+    font-family:var(--skyFont-family);
     font-size: .7rem;
-    /* font-family:'Zen Dots', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+    line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 5px 0 13px;
+    line-height: 1.2;
+    color: var(--accentColor-light1);
 }
 
+h1 {
+    margin-bottom: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 300;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--accentColor-light);
+    margin: 2rem 0;
+}
+
+ul {
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.2rem;
+}
 a {
     color: rgb(172, 11, 11);
     text-decoration: none;
@@ -35,10 +66,6 @@ main {
     display: flex;
 }
 
-.NAVIGATION {
-    display: flex;
-    flex-direction: column;
-}
 
 .MAIN {
     flex: 1;
@@ -65,7 +92,6 @@ main {
 
 header {
     position: relative;
-    top: 0;
     left: 0;
     right: 0;
     padding: .5rem;
@@ -74,6 +100,11 @@ header {
   border-bottom: 1px solid var(--accentColor-light2);
     width: 100%;
     text-align: left;
+    background: repeating-linear-gradient(
+    rgb(68, 72, 66) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.3) 2px,
+    rgba(0, 0, 0, 0.3) 4px);
 }
 
 header h1 {
@@ -82,13 +113,12 @@ header h1 {
     font-weight: 300;
     letter-spacing: .5rem;
     font-size: 1rem;
-    color: var(--accentColor-light);
+    color: var(--accentColor-dark);
 }
 footer {
     font-size: .5rem;
     padding: .7rem;
     position: relative;
-    bottom: 0;
     left: 0;
     right: 0;
     height: 5.5rem;
@@ -97,40 +127,18 @@ footer {
     width: 100%;
 }
 
-nav {
-    position: relative;
-    left: 0;
-    right: 0;
-}
-
-nav ul {
-  list-style-type: none; /* Removes bullet points */
-  margin: 0;
-  padding: 0;
-}
-
-nav li a::before {
-    content: "- ";
-}
-
-
-nav li {
-  text-decoration: none; /* Removes link underline */
-  display: block;        /* Makes the entire area clickable */
-  padding: 12px;
-}
-
 .soper_frag {
     display: grid;
-    grid-template-columns: 145px 1fr;
+    grid-template-columns: 88px 1fr;
     gap: 12px;
     align-items: start;
     padding-top: 5px;
     margin-top: 6px;
-    width: 50vw;
+    width: 80vw;
 }
 
 .slug {
+    text-align: center;
     font-size: smaller;
     font-weight: 600;
     text-transform: uppercase;
@@ -145,6 +153,11 @@ nav li {
     margin-top:-7px;
     line-height: 1.4;
 }
+
+.content img {
+    width: 100%;
+}
+
 
 textarea, input {
   background: transparent;
@@ -162,3 +175,37 @@ button {
     padding: 10px;
     margin: 6px 0;
 }
+
+
+.topNav {
+    position: relative;
+    flex-direction: column;
+    grid: flex;
+    gap: 10px;
+    left: 0;
+    background-color: var(--accentColor-light2);
+    border-bottom: 2px solid var(--accentColor-light2);
+    right: 0;
+
+}
+
+
+.topNav span {
+    display: inline-block;
+  text-decoration: none; /* Removes link underline */
+  padding: 8px 12px;
+    
+}
+.selected {
+  background-color: var(--accentColor-dark);
+    display: inline-block;
+  text-decoration: none; /* Removes link underline */
+  padding: 4px 12px;
+
+}
+.topNav a {
+  text-decoration: none; /* Removes link underline */
+  color: var(--accentColor-dark);
+
+}
+

@@ -280,9 +280,15 @@ function catalogUNIX($sha_env, $tpstime){
 function charlieCATALOG($sha_env, $group, $add, $level){
 
     $router_1 = ROUTE('d', $sha_env);
+    $router_2 = ROUTE('b', $sha_env);
         $catalog_rt = $router_1 . '_DEWEY/catalogs/';
+        $catalog_rt2 = $router_2 . 'DEWEY/catalogs/';
+
           aleph($catalog_rt);
+          aleph($catalog_rt2);
+
           $obj_catalog = $catalog_rt . $group. '.tag.catalog.json';
+          $obj_catalog2 = $catalog_rt2 . $group. '.tag.catalog.json';
           $oc = json_decode(file_get_contents($obj_catalog), true);
 
         foreach ($add as $entity => $objs){
@@ -299,6 +305,7 @@ function charlieCATALOG($sha_env, $group, $add, $level){
         }
     
     file_put_contents($obj_catalog, json_encode($oc, JSON_PRETTY_PRINT));
+    file_put_contents($obj_catalog2, json_encode($oc, JSON_PRETTY_PRINT));
 
 }
 

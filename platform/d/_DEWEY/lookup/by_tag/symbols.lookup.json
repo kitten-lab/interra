@@ -2,28 +2,18 @@
     "CABINET": {
         "symbols": {
             "METADATA": {
-                "GRAVITY": 11,
+                "GRAVITY": 12,
                 "INGEST": {
                     "FIRST": 1777221805,
-                    "LAST": 1777221805
+                    "LAST": 1777378279
                 },
                 "EVENT": {
                     "FIRST": [],
                     "LAST": []
                 },
                 "LAST_USAGE": {
-                    "1777221804": [
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "detective-case_work",
-                        "slots"
+                    "1777372800": [
+                        "numbers"
                     ]
                 }
             },
@@ -291,6 +281,46 @@
                                 "1777221804": {
                                     "DW": [
                                         "crate.2A2552B8908F9A3F"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "numbers": {
+                    "METADATA": {
+                        "GRAVITY": 1,
+                        "INGEST": {
+                            "FIRST": 1777378279,
+                            "LAST": 1777378279
+                        },
+                        "EVENT": {
+                            "FIRST": [],
+                            "LAST": []
+                        },
+                        "LAST_USAGE": {
+                            "1777372800": [
+                                "808"
+                            ]
+                        }
+                    },
+                    "BIN": {
+                        "808": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777378279,
+                                    "LAST": 1777378279
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777372800": {
+                                    "OM": [
+                                        "crate.44889914DFFDE6B9"
                                     ]
                                 }
                             }

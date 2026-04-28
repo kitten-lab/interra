@@ -2,18 +2,19 @@
     "CABINET": {
         "omen": {
             "METADATA": {
-                "GRAVITY": 1,
+                "GRAVITY": 3,
                 "INGEST": {
                     "FIRST": 1777209023,
-                    "LAST": 1777209023
+                    "LAST": 1777404875
                 },
                 "EVENT": {
                     "FIRST": [],
                     "LAST": []
                 },
                 "LAST_USAGE": {
-                    "1777209023": [
-                        "animal"
+                    "1777404875": [
+                        "numbers",
+                        "numbers"
                     ]
                 }
             },
@@ -52,6 +53,67 @@
                                 "1777209023": {
                                     "OM": [
                                         "crate.91EE24AE1C223ADC"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "numbers": {
+                    "METADATA": {
+                        "GRAVITY": 2,
+                        "INGEST": {
+                            "FIRST": 1777404875,
+                            "LAST": 1777404875
+                        },
+                        "EVENT": {
+                            "FIRST": [],
+                            "LAST": []
+                        },
+                        "LAST_USAGE": {
+                            "1777404875": [
+                                "3",
+                                "333"
+                            ]
+                        }
+                    },
+                    "BIN": {
+                        "3": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777404875,
+                                    "LAST": 1777404875
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777404875": {
+                                    "OM": [
+                                        "crate.69797D90B6847337"
+                                    ]
+                                }
+                            }
+                        },
+                        "333": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777404875,
+                                    "LAST": 1777404875
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777404875": {
+                                    "OM": [
+                                        "crate.69797D90B6847337"
                                     ]
                                 }
                             }

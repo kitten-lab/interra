@@ -14,6 +14,5 @@ SKY__AUTH(
 );
 
 bigHeading($GLOBALS['SITE']);
-leaf("Thank you for your presence. May we direct you to the correct room?");
-getTool("postBASIC", "MakePost");
+getTool("postBASIC", "SoperView");
 closeSky();

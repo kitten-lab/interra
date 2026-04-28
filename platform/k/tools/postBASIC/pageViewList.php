@@ -37,5 +37,7 @@ foreach ($CHEST_THINGS as $TIMBER => $contents) {
   echo $contents['payload']['post']['topic'] . "</a> posted by " . $contents['import_env']['mod_slug'];
   echo "</div>";
 }
-}
+}else { 
+    echo "No fragments found."; 
+    }
 ?>

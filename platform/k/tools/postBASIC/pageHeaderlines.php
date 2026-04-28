@@ -44,5 +44,7 @@ foreach ($CHEST_THINGS as $TIMBER => $contents) {
   echo "<hr>";
   echo "</div>";
 }
-}
+}else { 
+    echo "No fragments found."; 
+    }
 ?>

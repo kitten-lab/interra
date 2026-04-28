@@ -35,3 +35,10 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 </body>
 </html>
 <!-- AMEN -->
+<script>
+if (window.location.pathname === '/dani-leve/' &&
+    !window.location.search
+) {
+  window.location.replace("/dani-leve?resume=home");
+  }
+</script>

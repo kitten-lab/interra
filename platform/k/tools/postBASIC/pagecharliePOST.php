@@ -82,5 +82,8 @@ $assistant = 'ADM-' . $FIG['assistant'];
 <script>
   document.getElementById('tz-input').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
 </script>
-<script src="../../../k/systems/NIM/localSTORE.js"></script>
-<script src="../../../k/systems/NIM/getTAGGED.js"></script>
+<?php 
+$scripts = (string)$GLOBALS['INTERA']['SYSTEM'];
+include $scripts . 'NIM/getTAGGED.php';
+include $scripts . 'NIM/localSTORE.php';
+?>

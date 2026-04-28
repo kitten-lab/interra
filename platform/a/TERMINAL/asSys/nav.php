@@ -16,7 +16,7 @@ logged in as: <?= $GLOBALS[$SITE]['MOD_DISPLAY'] ?><BR><br>
 <?php foreach ($section['ROOMS'] as $item): ?>
 
 <li>
-<a href="<?= b_root . '/' . $GLOBALS[$SITE]['URI'] . '/' . $section['DOM'] . '/' . $item['ROOM'] ?>">
+<a href="<?= b_root . '/' . $GLOBALS[$SITE]['URI'] . '?' . $section['DOM'] . '=' . $item['ROOM'] ?>">
 
 
 <?= $item['KEY']; ?></a>

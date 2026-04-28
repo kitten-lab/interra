@@ -25,44 +25,18 @@ $nav = [ "navSec" =>
 
     [ 
         "DOM" => "resume", 
-        "BUILDING" => "resume", //nav label
-        "PRIME_KEY" => "overview", 
-        "ROOMS" => [
-
-            [ 
-                "KEY" => "work history",  //nav label
-                "ROOM" => "work-history",  // key_name
-            ],
-
-            [ 
-                "KEY" => "skills",  //nav label
-                "ROOM" => "skills",  // key_name
-            ],
+        "BUILDING" => "home", //nav label
+        "PRIME_KEY" => "home"
     /* SECTION GROUP -------------------------------- */
-    ]],[ 
-        "DOM" => "portfolio", 
-        "BUILDING" => "portfolio", 
-        "PRIME_KEY" => "overview", 
-        "ROOMS" => [
-
-            [ 
-                "KEY" => "game design", 
-                "ROOM" => "game-design", 
-            ],
-
-            [ 
-                "KEY" => "system design", 
-                "ROOM" => "system-design", 
-            ],
-
-    /* SECTION GROUP -------------------------------- */
-    ]],[ 
-        "DOM" => "contact", 
-        "BUILDING" => "contact", 
-        "PRIME_KEY" => "me", 
-        "ROOMS" => [
-    /* SECTION GROUP -------------------------------- */
-    ]],
+    ],[ 
+        "DOM" => "resume", 
+        "BUILDING" => "system", 
+        "PRIME_KEY" => "system", 
+    ],[ 
+        "DOM" => "resume", 
+        "BUILDING" => "experience", 
+        "PRIME_KEY" => "experience", 
+    ],
     ];
 
 ?>

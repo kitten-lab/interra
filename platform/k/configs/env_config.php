@@ -15,21 +15,21 @@ if ($ENV === 'ROSEWOOD8') {
     define('d_root', 'https://d.imported.to');
     define('b_root', 'https://b.imported.to');
     define('k_root', 'https://k.imported.to');
-    define('i_root', 'https://i.imported.to');
+    define('i_root', 'http://i.imported.to');
 }
 
 
 
-$GLOBALS['MATERIAL']['TYPE'] = "";//"Obsidian Vault";
-$GLOBALS['MATERIAL']['SOURCE']['NAME'] = "";// "kitten-lab";
-$GLOBALS['MATERIAL']['SOURCE']['ID'] = "";//"design-ideas/game-design-ideas/slot-ideas/detective-mystery-slot";
-$GLOBALS['MATERIAL']['SOURCE']['CREATED'] = "";//1773318609;
-$GLOBALS['MATERIAL']['SOURCE']['LAST_MODIFIED'] = "";// 1773326109;
+$GLOBALS['MATERIAL']['TYPE'] = "Obsidian Vault";
+$GLOBALS['MATERIAL']['SOURCE']['NAME'] = "TERMINAL IO";
+$GLOBALS['MATERIAL']['SOURCE']['ID'] = "I AM MINE/_Chesters Imports/TERMINAL IO/";
+$GLOBALS['MATERIAL']['SOURCE']['CREATED'] = "check crate";
+$GLOBALS['MATERIAL']['SOURCE']['LAST_MODIFIED'] = "check crate";
 $GLOBALS['MATERIAL']['REFS'] = [];
 #    "ORIGIN_SOURCE" => "Imported to Vault from Glass_Chats"
 #];
 $GLOBALS['MATERIAL']['DETAILS'] = [];
-$GLOBALS['MATERIAL']['USER'] = "JackWEAK";
-$GLOBALS['MATERIAL']['ASSISTANT'] = "JackNIM"
+$GLOBALS['MATERIAL']['USER'] = "SDK-808";
+$GLOBALS['MATERIAL']['ASSISTANT'] = "WIRE-WOLF"
 
 ?>

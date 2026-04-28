@@ -29,8 +29,8 @@ $nav = [ "navSec" =>
         "PRIME_KEY" => "home", 
         "ROOMS" => [
             [ 
-                "KEY" => "WHERE",  //nav label
-                "ROOM" => "WHERE",  // key_name
+                "KEY" => "SAM.TXT",  //nav label
+                "ROOM" => "SAM.TXT",  // key_name
             ],
         ]
  ]
