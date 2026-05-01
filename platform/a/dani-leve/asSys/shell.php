@@ -20,9 +20,16 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <!-- END OPENING PRAYERS -->
 <body>
 
-<?php include 'header.php'; ?>
 <main>
 
+<div class="NAVIGATION">
+<?php 
+if (!empty($GETS__SITE['sideNav']) 
+    && file_exists($GETS__SITE['sideNav'])) {
+  require $GETS__SITE['sideNav']; 
+  } 
+?>
+</div>
 <div class="MAIN">
 
 <?php foreach ($GLOBALS['GETS']['set'] as $fn) {
@@ -39,6 +46,6 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 if (window.location.pathname === '/dani-leve/' &&
     !window.location.search
 ) {
-  window.location.replace("/dani-leve?resume=home");
+  window.location.replace("/dani-leve?portfolio=home");
   }
 </script>

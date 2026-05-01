@@ -1,9 +1,6 @@
 <?php 
 openSky("FILE A REPORT");
 SKY__AUTH(
-    $site,
-    $sys,
-    $site,
     "SIGHTSMAN", // storage slug of #MOD
     "SIR SIGHTSMAN", // display name of MOD
     "REGISTRAR", // building slug #DOM

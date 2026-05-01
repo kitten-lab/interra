@@ -1,12 +1,12 @@
 {
     "VEN": "3",
-    "GRAVITY": 1,
+    "GRAVITY": 2,
     "METADATA": [],
     "SHELF": {
         "omen": {
-            "GRAVITY": 1,
+            "GRAVITY": 2,
             "BIN": {
-                "numbers": 1
+                "numbers": 2
             }
         }
     }

@@ -1,31 +1,44 @@
-<?php 
-$GLOBALS[$SITE]['GETS']['topNav'] = $GLOBALS['SONAR'] . 'a/' . $SITE . '/asSys/nav.php'; 
 
-$GLOBALS[$SITE]['room'] = [
-                    ["name" => "public"],
-                    ["name" => "{{ROOM_NAME}}"],
-                    ["name" => "w"]
-                    ]; 
+
+<?php /* 
+
+==================== C O N F I G . f i l e  ==================== 
+================================================================
+----------------------------------------------------------------
+~                terminal navigation config file              ~
+----------------------------------------------------------------
+Listen, you are going to need to TRUST THE [] colors. They 
+don't lie. But sometimes, you will be confused by this nest.
+That's okay. Each time it WILL GET EASIER.  -abl 
+--------------------------------------------------------------*/
+
+
+$GLOBALS[$SITE]['tDOM'] = [
+                    ["DOM" => "public"],
+                    ["DOM" => "{{DOM_SLUG}}"],
+                    ["DOM" => "w"],
+                    ];
 $GLOBALS[$SITE]['key'] = "home"; 
 
 $nav = [ "navSec" => 
-
-    [ 
-        "DOOR" => "root", 
-        "BUILDING" => "public", 
-        "KEY" => "home", 
+        [ 
+        "DOM" => "public", 
+        "BUILDING" => "public", //LABEL
+        "PRIME_KEY" => "home", 
         "ROOMS" => [
-
             [ 
+                "KEY" => "Welcome Home!", //LABEL
                 "ROOM" => "home", 
-                "KEY" => "home", 
             ],
-            [ 
-                "ROOM" => "{{ROOM_NAME}}", 
-                "KEY" => "{{KEY_NAME}}", 
+        ]
+ ],[ 
+        "DOM" => "{{DOM_SLUG}}", 
+        "BUILDING" => "{{DOM_DISPLAY}}", 
+        "KEY" => "home", 
+        "ROOMS" => [ [
+                "KEY" => "{{KEY_SLUG}}", 
+                "ROOM" => "{{KEY_DISPLAY}}", 
             ],
-    /* SECTION GROUP -------------------------------- */
-    ]]
-    ];
-
-?>
+        ]
+ ]
+ ]; ?>

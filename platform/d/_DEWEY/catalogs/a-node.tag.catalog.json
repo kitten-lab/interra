@@ -1,10 +1,10 @@
 {
-    "count": 286,
+    "count": 323,
     "a-node": {
         "sopr": 27,
         "symbolcraft": 32,
         "betsoft": 64,
-        "omen": 3,
+        "omen": 12,
         "symbol": 2,
         "questions": 1,
         "games": 25,
@@ -13,11 +13,19 @@
         "data-forestry": 4,
         "www": 4,
         "dani": 13,
-        "sdk-808": 2,
+        "sdk-808": 6,
         "secret": 6,
         "chesters-imports": 2,
         "terminal": 1,
         "terminal-io": 3,
-        "omens": 3
+        "omens": 3,
+        "topics": 4,
+        "": 3,
+        "hymn": 3,
+        "symbols": 3,
+        "projects": 1,
+        "crate": 4,
+        "systems": 3,
+        "glitch-slip": 3
     }
 }

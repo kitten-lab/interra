@@ -1,6 +1,6 @@
 {
     "VEN": "angel-numbers",
-    "GRAVITY": 2,
+    "GRAVITY": 3,
     "METADATA": [],
     "SHELF": {
         "terminal-io": {
@@ -13,6 +13,12 @@
             "GRAVITY": 1,
             "BIN": {
                 "signs": 1
+            }
+        },
+        "omen": {
+            "GRAVITY": 1,
+            "BIN": {
+                "numbers": 1
             }
         }
     }

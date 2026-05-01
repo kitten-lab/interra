@@ -5,7 +5,12 @@ function SHADOW_PROD_ENV($IS_IT) {
     if ($IS_IT == true) { return '_____/'; }
 }
 
-function TEMPLATE($FILE,$VARIANT=null) {
+function TEMPLATE($FILE) {
+    $GET = __DIR__ . '/templates/' . $FILE;
+    return $GET;
+}
+
+function THEME_TEMPLATE($FILE,$VARIANT=null) {
     $GET = __DIR__ . '/templates/' . $VARIANT . $FILE;
     return $GET;
 }
@@ -36,8 +41,8 @@ function KDE($ERROR_TYPE, $SOURCE, $ECHO_CHAIN, $ERROR) {
 
 // create a WORLD AUTH file //
 function CREATE_SKY_AUTH() {
-    $template = file_get_contents(TEMPLATE('/SKY_AUTH.php', $GLOBALS['VARIANT'])); 
-    return str_replace('{{WORLD_NAME}}', $GLOBALS['WORLD_NAME'], $template);
+    $template = file_get_contents(TEMPLATE('/SKY_AUTH.php')); 
+    return str_replace('{{SYS_DISPLAY}}', $_POST['GEN_SYS_DISPLAY'], $template);
 }
 
 // create a WORLD SIG file //

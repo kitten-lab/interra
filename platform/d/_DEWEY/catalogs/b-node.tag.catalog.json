@@ -1,5 +1,5 @@
 {
-    "count": 286,
+    "count": 323,
     "b-node": {
         "bbc": 14,
         "bbc-gdd": 7,
@@ -36,16 +36,26 @@
         "environment": 9,
         "nim": 4,
         "purpose": 4,
-        "thoughts": 2,
+        "thoughts": 3,
         "fears": 2,
         "materials": 13,
         "checkin": 2,
         "jason": 3,
         "coa": 3,
-        "numbers": 4,
+        "numbers": 16,
         "messages": 2,
         "mentions": 1,
         "daily-inventory": 3,
-        "signs": 1
+        "signs": 1,
+        "listening-to": 1,
+        "set-up": 2,
+        "hymn": 6,
+        "archetype": 3,
+        "letter-board": 1,
+        "relates-to": 4,
+        "letter-boards": 3,
+        "dorn": 2,
+        "thorn": 1,
+        "animusanima": 1
     }
 }

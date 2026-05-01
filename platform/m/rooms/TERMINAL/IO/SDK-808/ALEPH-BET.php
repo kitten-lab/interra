@@ -18,8 +18,5 @@ bigHeading("TERMINAL.IO FILE EXPLORER");
 leaf($GLOBALS[$SITE]['ROOM_SLUG'] . "<br>");
 medHeading("SAM'S FILES > ALEPH-BET A-US");
 getTool("postBASIC", "ViewList");
-hr();
-medHeading("Post a New File Here");
-getTool("postBASIC", "MakePost");
 
 closeSky();

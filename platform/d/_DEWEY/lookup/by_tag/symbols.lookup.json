@@ -2,17 +2,18 @@
     "CABINET": {
         "symbols": {
             "METADATA": {
-                "GRAVITY": 12,
+                "GRAVITY": 15,
                 "INGEST": {
                     "FIRST": 1777221805,
-                    "LAST": 1777378279
+                    "LAST": 1777418089
                 },
                 "EVENT": {
                     "FIRST": [],
                     "LAST": []
                 },
                 "LAST_USAGE": {
-                    "1777372800": [
+                    "1777418089": [
+                        "numbers",
                         "numbers"
                     ]
                 }
@@ -289,18 +290,19 @@
                 },
                 "numbers": {
                     "METADATA": {
-                        "GRAVITY": 1,
+                        "GRAVITY": 4,
                         "INGEST": {
                             "FIRST": 1777378279,
-                            "LAST": 1777378279
+                            "LAST": 1777418089
                         },
                         "EVENT": {
                             "FIRST": [],
                             "LAST": []
                         },
                         "LAST_USAGE": {
-                            "1777372800": [
-                                "808"
+                            "1777418089": [
+                                "101",
+                                "100001"
                             ]
                         }
                     },
@@ -321,6 +323,66 @@
                                 "1777372800": {
                                     "OM": [
                                         "crate.44889914DFFDE6B9"
+                                    ]
+                                }
+                            }
+                        },
+                        "555": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777418027,
+                                    "LAST": 1777418027
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777418027": {
+                                    "OM": [
+                                        "crate.97331F97B9ABD46B"
+                                    ]
+                                }
+                            }
+                        },
+                        "101": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777418089,
+                                    "LAST": 1777418089
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777418089": {
+                                    "OM": [
+                                        "crate.E581A5110DF12FA1"
+                                    ]
+                                }
+                            }
+                        },
+                        "100001": {
+                            "METADATA": {
+                                "GRAVITY": 1,
+                                "INGEST": {
+                                    "FIRST": 1777418089,
+                                    "LAST": 1777418089
+                                },
+                                "EVENT": {
+                                    "FIRST": [],
+                                    "LAST": []
+                                }
+                            },
+                            "INSTANCES": {
+                                "1777418089": {
+                                    "OM": [
+                                        "crate.E581A5110DF12FA1"
                                     ]
                                 }
                             }

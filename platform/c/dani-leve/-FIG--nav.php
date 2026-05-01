@@ -20,23 +20,50 @@ $GLOBALS[$SITE]['tDOM'] = [
                     ];
 $GLOBALS[$SITE]['key'] = "home"; //FOR LATER USE
 
-
 $nav = [ "navSec" => 
 
     [ 
-        "DOM" => "resume", 
-        "BUILDING" => "home", //nav label
-        "PRIME_KEY" => "home"
+        "DOM" => "portfolio", 
+        "BUILDING" => "portfolio home", //nav label
+        "PRIME_KEY" => "home", 
+        "ROOMS" => [
+
+            [ 
+                "KEY" => "silo: my pocket internet",  //nav label
+                "ROOM" => "silo_mypi",  // key_name
+            ],[ 
+                "KEY" => "tiles: narrative loops",  //nav label
+                "ROOM" => "tiles_Casework",  // key_name
+            ],[ 
+                "KEY" => "smh: terminal prolog",  //nav label
+                "ROOM" => "smh_terminalprolog",  // key_name
+            ],[ 
+                "KEY" => "smh: the forgetting house",  //nav label
+                "ROOM" => "smh_forgettinghouse",  // key_name
+            ],
     /* SECTION GROUP -------------------------------- */
-    ],[ 
+    ]],[ 
         "DOM" => "resume", 
-        "BUILDING" => "system", 
-        "PRIME_KEY" => "system", 
-    ],[ 
-        "DOM" => "resume", 
-        "BUILDING" => "experience", 
-        "PRIME_KEY" => "experience", 
-    ],
+        "BUILDING" => "resume", 
+        "PRIME_KEY" => "home", 
+        "ROOMS" => [
+
+            [ 
+                "KEY" => "overview", 
+                "ROOM" => "home", 
+            ],
+
+            [ 
+                "KEY" => "experience",  //nav label
+                "ROOM" => "experience",  // key_name
+            ],
+
+            [ 
+                "KEY" => "system",  //nav label
+                "ROOM" => "system",  // key_name
+            ],
+    /* SECTION GROUP -------------------------------- */
+    ]],
     ];
 
 ?>

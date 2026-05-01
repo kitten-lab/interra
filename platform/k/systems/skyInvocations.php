@@ -132,7 +132,9 @@ function skylite($result) {
 
 
 function getImg($img, $alt = '',$class = '') {
-    $path = "/" . $GLOBALS['sys'] . '/' . $GLOBALS['dom'] . "/" . $img;
+    $SITE = $GLOBALS['SITE'];
+
+    $path = "/" . $GLOBALS[$SITE]['SYS_SLUG'] . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . "/" . $img;
     $result = $GLOBALS['SONAR'] . "/i/" . $path;
     if (is_file($result)) {
         $hasClass = $class ? " class='$class'" : "";

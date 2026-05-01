@@ -14,7 +14,7 @@ SKY__AUTH(
 );
 
 
-bigHeading("Welcome to home {{WORLD_NAME}}! You are now on SKYLINE On INTERA.");
+bigHeading("Welcome to home {{SYS_DISPLAY}}! You are now on SKYLINE On INTERA.");
 medHeading("THANK YOU FOR JOINING US.");
 
 leaf("Thank you for becoming part of our SIGHT. We CUKRA.");

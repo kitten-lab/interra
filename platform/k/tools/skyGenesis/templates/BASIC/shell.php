@@ -20,7 +20,6 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <!-- END OPENING PRAYERS -->
 <body>
 
-<?php include 'header.php'; ?>
 <main>
 
 <div class="NAVIGATION">
@@ -43,3 +42,10 @@ if (!empty($GETS__SITE['sideNav'])
 </body>
 </html>
 <!-- AMEN -->
+<script>
+if (window.location.pathname === '/{{WORLD_NAME}}/' &&
+    !window.location.search
+) {
+  window.location.replace("/dani-leve?portfolio=home");
+  }
+</script>
